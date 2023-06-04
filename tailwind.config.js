@@ -14,10 +14,10 @@ module.exports = {
     extend: {
       fontFamily: {
         // montserrat: ['Montserrat', 'sans-serif'],
-        merriweather: ['Merriweather', 'serif'],
-        raleway: ['Raleway', 'sans-serif'],
-        // merriweather: 'var(--merriweather)',
-        // raleway: 'var(--raleway)',
+        // merriweather: ['Merriweather', 'serif'],
+        // raleway: ['Raleway', 'sans-serif'],
+        merriweather: 'var(--merriweather)',
+        raleway: 'var(--raleway)',
       },
       colors: {
         brightBlue: '#ECF2F8',
