@@ -1,0 +1,42 @@
+{
+  "Header": {
+    "home": "Home",
+    "projects": "Projects",
+    "showcase": "Showcase",
+    "packages": "NPM Packages",
+    "contact": "Contact Me",
+    "blog": "Blog",
+    "en": "EN",
+    "jp": "JP"
+  },
+  "Intro": {
+    "greeting": "Hello",
+    "about": "I am passionate about delivering the best user experience using the latest cutting-edge technologies, I build robust, secure, and accessible websites that are interactive and fun to use. I am familiar with back-end technologies and integrate them into my workflow. I have excellent attention to detail and deliver a product that perfectly matches the design.",
+    "sendMessage": "Send me a message",
+    "iam": "I'm",
+    "name": "Rashid Shamloo",
+    "developer": "a developer",
+    "programmer": "a programmer",
+    "learner": "an avid learner",
+    "resume": "Check my resume"
+  },
+  "TechnologyAndPassion": {
+    "techTitle": "Technology",
+    "techText1": "helps us create better user experiences",
+    "techText2": "optimize performance, and ensure security",
+    "techText3": "implement the latest web standards, best practices, and design trends",
+    "techText4": "simplify and speed up the development process",
+    "passionTitle": "Passion and Human Touch",
+    "passionText1": "help us empathize with our users, understand their needs, and deliver value",
+    "passionText2": "communicate effectively, collaborate productively, and build trust",
+    "passionText3": "add personality, emotion, and creativity to our work",
+    "passionText4": "stay motivated, curious, and enthusiastic"
+  },
+  "Footer": {
+    "navigation": "Site Navigation",
+    "sns": "Social Media",
+    "tech": "Built Using",
+    "my": "Rashid Shamloo's",
+    "portfolio": "Portfolio"
+  }
+}

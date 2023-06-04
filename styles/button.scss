@@ -1,0 +1,16 @@
+.aws-btn--github .aws-btn__content {
+  background: #27222e;
+}
+.aws-btn--github .aws-btn__wrapper:before {
+  background: darken(#27222e, 5);
+}
+.aws-btn,
+.aws-btn--github,
+.aws-btn__wrapper {
+  --button-primary-color-light: #ecf2f8;
+  // --button-default-font-size: 0.75em;
+  --button-raise-level: 6px;
+  --button-default-border-radius: 12px;
+  --button-github-color: #426c94;
+  --button-github-color-dark: #406687;
+}

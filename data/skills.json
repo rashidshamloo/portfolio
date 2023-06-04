@@ -1,0 +1,62 @@
+[
+  {
+    "text": "HTML5",
+    "image": "html5-original.svg"
+  },
+  {
+    "text": "CSS3",
+    "image": "css3-original.svg"
+  },
+  {
+    "text": "JavaScript",
+    "image": "javascript-original.svg"
+  },
+  {
+    "text": "TypeScript",
+    "image": "typescript-original.svg"
+  },
+  {
+    "text": "SASS",
+    "image": "sass-original.svg"
+  },
+  {
+    "text": "Tailwind",
+    "image": "tailwindcss-plain.svg"
+  },
+  {
+    "text": "Material-UI",
+    "image": "materialui-original.svg"
+  },
+  {
+    "text": "React.js",
+    "image": "react-original.svg"
+  },
+  {
+    "text": "Next.js",
+    "image": "nextjs-original.svg"
+  },
+  {
+    "text": "Firebase",
+    "image": "firebase-plain.svg"
+  },
+  {
+    "text": "Node.js",
+    "image": "nodejs-original.svg"
+  },
+  {
+    "text": "Express",
+    "image": "express-original.svg"
+  },
+  {
+    "text": "Jest",
+    "image": "jest-plain.svg"
+  },
+  {
+    "text": "GitHub",
+    "image": "github-original.svg"
+  },
+  {
+    "text": "VS Code",
+    "image": "vscode-original.svg"
+  }
+]

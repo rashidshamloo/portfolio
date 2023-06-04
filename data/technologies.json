@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Next.js",
+    "link": "https://nextjs.org/",
+    "icon": "/images/icons/nextjs-original.svg"
+  },
+  {
+    "title": "React.js",
+    "link": "https://react.dev/",
+    "icon": "/images/icons/react-original.svg"
+  },
+  {
+    "title": "TypeScript",
+    "link": "https://www.typescriptlang.org/",
+    "icon": "/images/icons/typescript-original.svg"
+  },
+  {
+    "title": "Tailwind",
+    "link": "https://tailwindcss.com/",
+    "icon": "/images/icons/tailwindcss-plain.svg"
+  },
+  {
+    "title": "Material UI",
+    "link": "https://mui.com/",
+    "icon": "/images/icons/materialui-original.svg"
+  }
+]

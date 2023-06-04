@@ -1,0 +1,48 @@
+[
+  {
+    "title": "linkedin",
+    "link": "https://www.linkedin.com/in/rashid-shamloo/",
+    "icon": "/images/icons/linkedin-original.svg"
+  },
+  {
+    "title": "GitHub",
+    "link": "https://github.com/rashidshamloo/",
+    "icon": "/images/icons/github.svg",
+    "iconDark": "/images/icons/github-dark.svg"
+  },
+  {
+    "title": "Twitter",
+    "link": "https://twitter.com/rashidshamloo",
+    "icon": "/images/icons/twitter.svg",
+    "size": 1.54
+  },
+  {
+    "title": "FEM",
+    "link": "https://www.frontendmentor.io/profile/rashidshamloo",
+    "icon": "/images/icons/fem.png",
+    "size": 0.96
+  },
+  {
+    "title": "Wantedly",
+    "link": "https://www.wantedly.com/id/rashid_shamloo",
+    "icon": "/images/icons/wantedly.svg",
+    "iconDark": "/images/icons/wantedly-dark.svg",
+    "size": 1.54
+  },
+  {
+    "title": "Dev.to",
+    "link": "https://dev.to/rashidshamloo",
+    "icon": "/images/icons/devto.svg"
+  },
+  {
+    "title": "Hashnode",
+    "link": "https://rashidshamloo.hashnode.dev/",
+    "icon": "/images/icons/hashnode.svg"
+  },
+  {
+    "title": "Email",
+    "link": "mailto:rashidshamloo@gmail.com",
+    "icon": "/images/icons/email.svg",
+    "size": 1.25
+  }
+]
