@@ -32,6 +32,32 @@
     "passionText3": "個性、感情、創造性を仕事に加える",
     "passionText4": "やる気、好奇心、熱意を保つ"
   },
+  "Contact": {
+    "pageTitle": "お問い合わせ",
+    "formTitle": "お問い合わせ",
+    "placeholderName": "お名前",
+    "placeholderEmail": "メールアドレス",
+    "placeholderMessage": "メッセージ",
+    "errorNameEmpty": "お名前を入力してください",
+    "errorNameShort": "少なくとも 2 文字入力してください",
+    "errorEmailEmpty": "メールアドレスを入力してください",
+    "errorEmailInvalid": "有効なメールアドレスを入力してください",
+    "errorMessageEmpty": "メッセージを入力してください",
+    "errorCaptcha": "キャプチャを解いてください",
+    "buttonSend": "メッセージを送る",
+    "from": "送り主：",
+    "email": "メール：",
+    "withLove": "愛を込めて",
+    "sending": "送り中 ...",
+    "sent": "成功!",
+    "error": "エラー!"
+  },
+  "Social": {
+    "otherWaysToContactMe": "他の連絡方法",
+    "linkedin": "常に Linkedin を利用しています。 お気軽にメッセージや接続リクエストをお送りください。",
+    "twitter": "ご質問がある場合でも、単にご挨拶したい場合でも、お気軽に Twitter でメッセージを送ってください。",
+    "email": "メールを送って私に直接ご連絡いただくこともできます。"
+  },
   "Footer": {
     "navigation": "ナビゲーション",
     "sns": "ソーシャルメディア",

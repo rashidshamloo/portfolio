@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 // font
-import { Raleway, Merriweather } from 'next/font/google';
+import { Raleway, Merriweather, Alex_Brush } from 'next/font/google';
 const raleway = Raleway({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -24,6 +24,11 @@ const merriweather = Merriweather({
   weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--merriweather',
+});
+const alexBrush = Alex_Brush({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--alexBrush',
 });
 
 // context
@@ -65,7 +70,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <body className={`${raleway.variable} ${merriweather.variable}`}>
+      <body
+        className={`${raleway.variable} ${merriweather.variable} ${alexBrush.variable}`}
+      >
         <Logo />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Context>

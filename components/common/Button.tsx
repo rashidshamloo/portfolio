@@ -17,7 +17,7 @@ import darkModeSetting from '@/context/darkModeSetting';
 // types
 interface buttonProps {
   text: string;
-  href: string;
+  href?: string;
   type?: 'contact' | 'resume';
 }
 
@@ -26,7 +26,6 @@ const Button = ({ text, href, type = 'contact' }: buttonProps) => {
   const Icon = () => (type === 'contact' ? <FaPaperPlane /> : <FaRegFileAlt />);
   return (
     <AwesomeButton
-      key="button"
       type={darkMode ? 'github' : 'primary'}
       before={
         <span key={text} className="mr-3">

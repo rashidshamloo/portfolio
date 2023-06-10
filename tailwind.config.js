@@ -1,28 +1,38 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './styles/*.ts',
   ],
   darkMode: 'class',
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
+  // future: {
+  //   hoverOnlyWhenSupported: true,
+  // },
+  mode: 'jit',
   theme: {
     extend: {
       fontFamily: {
         // montserrat: ['Montserrat', 'sans-serif'],
         // merriweather: ['Merriweather', 'serif'],
         // raleway: ['Raleway', 'sans-serif'],
+        // alexBrush: ['Alex Brush', 'cursive'],
+        mui: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
         merriweather: 'var(--merriweather)',
         raleway: 'var(--raleway)',
+        alexBrush: 'var(--alexBrush)',
       },
       colors: {
         brightBlue: '#ECF2F8',
+        brightBlue2: '#DAE0E5',
+        brightBlue3: '#C2C7CC',
+        brightBlue4: '#DAE0EA',
         grayishGreen: '#6B7D7D',
         grayishBlue: '#5B6B8D',
+        grayishBlue2: '#424e66',
+        darkGrayishBlue: '#323a4d',
+        veryLightViolet: '#5e4b66',
+        lightViolet: '#4e3e54',
         mediumViolet: '#3F3244',
         grayishBrown: '#59432D',
         darkViolet: '#2F2235',
