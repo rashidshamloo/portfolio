@@ -67,7 +67,12 @@ const ContactTop = () => {
           >
             <PostCardAndLetter userName={userName} userEmail={userEmail} />
           </div>
-          <Transition effect="fadeRTL" duration={0.75} threshold={0}>
+          <Transition
+            effect="fadeRTL"
+            duration={0.75}
+            threshold={0}
+            className="lg:pr-4 xl:pr-6"
+          >
             <ContactForm
               setUserName={setUserName}
               setUserEmail={setUserEmail}

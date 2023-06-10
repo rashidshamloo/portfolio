@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { useContext, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 
 // emailjs
 import emailjs from '@emailjs/browser';
@@ -54,6 +54,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
   const [showCaptchaError, setShowCaptchaError] = useState(false);
   const [nameShrink, setNameShrink] = useState(false);
   const [emailShrink, setEmailShrink] = useState(false);
+  const [messageShrink, setMessageShrink] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -74,7 +75,6 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
 
   // handle events
   const onSubmit = handleSubmit(async (d) => {
-    console.log(d);
     if (!captcha) {
       setShowCaptchaError(true);
       return;
@@ -96,11 +96,16 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
       );
       setIsSending(false);
       setTimeout(() => setIsLoading(false), 1000);
+      // reset the form
       reset();
+      // reset name and email on letter
       setUserName('');
       setUserEmail('');
+      // reset shrink states
+      setNameShrink(false);
+      setEmailShrink(false);
+      setMessageShrink(false);
     } catch (e) {
-      console.error(e);
       setIsError(true);
       setIsSending(false);
       setTimeout(() => setIsLoading(false), 1000);
@@ -155,7 +160,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
         </h1>
 
         <form
-          className="flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform sm:gap-y-[0.5em]"
+          className="flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform"
           onSubmit={onSubmit}
         >
           <TextField
@@ -173,9 +178,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
             }}
             onFocus={() => setNameShrink(true)}
             {...register('user_name', {
-              onBlur: (e) => {
-                setNameShrink(!!e.target.value);
-              },
+              onBlur: (e) => setNameShrink(!!e.target.value),
               required: t('errorNameEmpty'),
               minLength: {
                 value: 2,
@@ -208,9 +211,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
             }}
             onFocus={() => setEmailShrink(true)}
             {...register('user_email', {
-              onBlur: (e) => {
-                setEmailShrink(!!e.target.value);
-              },
+              onBlur: (e) => setEmailShrink(!!e.target.value),
               required: t('errorEmailEmpty'),
               pattern: {
                 value: /\S+@\S+\.\S+/,
@@ -229,8 +230,13 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
             fullWidth
             multiline
             minRows={6}
+            InputLabelProps={{
+              shrink: messageShrink,
+            }}
+            onFocus={() => setMessageShrink(true)}
             {...register('message', {
               required: t('errorMessageEmpty'),
+              onBlur: (e) => setMessageShrink(!!e.target.value),
             })}
             error={!!errors.message}
             helperText={errors.message?.message}

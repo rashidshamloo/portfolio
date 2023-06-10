@@ -45,13 +45,19 @@ const ContactFormLoading = ({
             )}
             {!isSending && !isError && (
               <>
-                <CheckCircleOutlineRoundedIcon className="text-[6rem] text-green-300 dark:text-green-600" />
+                <CheckCircleOutlineRoundedIcon
+                  fontSize="inherit"
+                  className="text-[6rem] text-green-300 dark:text-green-600"
+                />
                 <p className="text-xl font-medium">{t('sent')}</p>
               </>
             )}
             {!isSending && isError && (
               <>
-                <CancelOutlinedIcon className="text-[6rem] text-red-300 dark:text-red-600" />
+                <CancelOutlinedIcon
+                  fontSize="inherit"
+                  className="text-[6rem] text-red-300 dark:text-red-600"
+                />
                 <p className="text-center text-xl font-medium">{t('error')}</p>
               </>
             )}
