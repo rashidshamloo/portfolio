@@ -9,7 +9,7 @@ const WordBreak = ({ children }: React.PropsWithChildren) => {
   const locale = useLocale();
   return (
     <>
-      {typeof children === 'string' && locale === 'jp' && !!parser
+      {typeof children === 'string' && locale === 'ja' && !!parser
         ? parser.parse(children).map((word, index) => (
             <span className="inline-block" key={index}>
               {word}
