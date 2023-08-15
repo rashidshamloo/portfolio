@@ -60,8 +60,12 @@ const ProjectsTop = () => {
           </Transition>
           {projects.map((data, i) => {
             return (
-              <Transition threshold={0.1} className="w-full" key={i}>
-                <hr className="mx-auto w-[70%] border-b-2 border-t-0 border-dashed border-darkViolet/10 drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] dark:border-brightBlue/10" />
+              <Transition
+                threshold={0.15}
+                className="w-full min-h-[31.25rem]"
+                key={i}
+              >
+                <hr className="mx-auto w-[70%] border-b-2 border-t-0 border-dashed border-darkViolet/10 drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] dark:border-brightBlue/10 mb-4" />
                 <Project data={data} reverse={!!(i % 2)} />
               </Transition>
             );
