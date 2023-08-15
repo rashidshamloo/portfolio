@@ -70,7 +70,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <body className={raleway.className}>
+      <body
+        className={`${raleway.variable} ${merriweather.variable} ${alexBrush.variable}`}
+      >
         <Logo />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Context>
