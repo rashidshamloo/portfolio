@@ -30,7 +30,6 @@ interface transitionProps extends React.HTMLAttributes<HTMLElement> {
   once?: boolean;
   ease?: string;
   component?: string;
-  className?: string;
   ref?: React.Ref<HTMLElement>;
 }
 
@@ -42,7 +41,6 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
       delay = 0,
       threshold = 0.5,
       once = true,
-      className = '',
       ease = 'easeOut',
       component = 'div',
       children,
@@ -70,7 +68,6 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
           ease,
           staggerChildren: effect === 'textReveal' ? 0.5 : 0,
         }}
-        className={className}
         {...props}
         ref={ref}
       >

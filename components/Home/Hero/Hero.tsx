@@ -6,6 +6,9 @@ import { useContext } from 'react';
 // next
 import dynamic from 'next/dynamic';
 
+// next-intl
+import { useTranslations } from 'next-intl';
+
 // components
 import Transition from '@/components/common/Transition';
 import HeroCard from './HeroCard/HeroCard';
@@ -16,6 +19,7 @@ const Particles = dynamic(() => import('@/components/common/Particles'));
 import darkModeSetting from '@/context/darkModeSetting';
 
 function Hero() {
+  const t = useTranslations('Intro');
   const [darkMode] = useContext(darkModeSetting)!;
   return (
     <section className="relative z-[1] -mb-[50px]">
@@ -26,7 +30,7 @@ function Hero() {
         className="pointer-events-none absolute -bottom-[40px] left-0 right-0 -z-[1] h-[80px] bg-[url('/images/shadow.png')]"
         aria-hidden="true"
       ></div>
-      <h1 className="sr-only">Portfolio</h1>
+      <h1 className="sr-only">{t('pageTitle')}</h1>
       <div
         className={`min-h-[calc(100dvh_+_50px)] overflow-x-hidden bg-cover bg-scroll pb-10 pt-20 text-darkGrayishViolet/90 dark:text-brightBlue lg:pb-0 lg:pt-0 [&_li]:font-medium ${
           // flicker prevention
@@ -58,6 +62,7 @@ function Hero() {
           </Transition>
         </div>
         <Particles />
+        {/* <div className="absolute inset-0 -z-[1] bg-[url('/images/bg2.svg')] opacity-30 blur-[2px]"></div> */}
       </div>
     </section>
   );

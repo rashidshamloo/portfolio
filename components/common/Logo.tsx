@@ -1,4 +1,5 @@
 const Logo = () => {
+  return <></>;
   return (
     <script type="text/comment">{`
 
