@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 
 // next
 import dynamic from 'next/dynamic';
@@ -60,12 +60,10 @@ const ProjectsTop = () => {
           </Transition>
           {projects.map((data, i) => {
             return (
-              <Fragment key={i}>
+              <Transition threshold={0.1} className="w-full" key={i}>
                 <hr className="mx-auto w-[70%] border-b-2 border-t-0 border-dashed border-darkViolet/10 drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] dark:border-brightBlue/10" />
-                <Transition threshold={0.1} className="w-full">
-                  <Project data={data} reverse={!!(i % 2)} />
-                </Transition>
-              </Fragment>
+                <Project data={data} reverse={!!(i % 2)} />
+              </Transition>
             );
           })}
         </div>
