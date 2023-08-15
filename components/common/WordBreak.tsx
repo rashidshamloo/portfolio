@@ -1,3 +1,6 @@
+// react
+import React from 'react';
+
 // next-intl
 import { useLocale } from 'next-intl';
 
@@ -5,8 +8,36 @@ import { useLocale } from 'next-intl';
 import { loadDefaultJapaneseParser } from 'budoux';
 const parser = loadDefaultJapaneseParser();
 
-const WordBreak = ({ children }: React.PropsWithChildren) => {
+// marked
+import { marked } from 'marked';
+
+// types
+interface wordBreakProps extends React.PropsWithChildren {
+  markdown?: boolean;
+}
+
+const WordBreak = ({ children, markdown = false }: wordBreakProps) => {
   const locale = useLocale();
+
+  if (markdown && typeof children === 'string') {
+    const renderer = new marked.Renderer();
+    const linkRenderer = renderer.link;
+    renderer.link = (href, title, text) => {
+      const html = linkRenderer.call(renderer, href, title, text);
+      return html.replace(/^<a /, '<a target="_blank" rel="nofollow" ');
+    };
+    marked.setOptions({ renderer, mangle: false, headerIds: false });
+    return (
+      <p
+        dangerouslySetInnerHTML={{
+          __html:
+            locale === 'ja'
+              ? parser.translateHTMLString(marked.parse(children))
+              : marked.parse(children),
+        }}
+      ></p>
+    );
+  }
   return (
     <>
       {typeof children === 'string' && locale === 'ja' && !!parser

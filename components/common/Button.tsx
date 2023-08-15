@@ -10,6 +10,7 @@ import '@/styles/button.scss';
 
 // icons
 import { FaPaperPlane, FaRegFileAlt } from 'react-icons/fa';
+import { BsLightningFill, BsGithub } from 'react-icons/bs';
 
 // context
 import darkModeSetting from '@/context/darkModeSetting';
@@ -18,14 +19,36 @@ import darkModeSetting from '@/context/darkModeSetting';
 interface buttonProps {
   text: string;
   href?: string;
-  type?: 'contact' | 'resume';
+  type?: 'contact' | 'resume' | 'source' | 'live';
+  className?: string;
+  target?: string;
 }
 
-const Button = ({ text, href, type = 'contact' }: buttonProps) => {
+const Button = ({
+  text,
+  href,
+  type = 'contact',
+  className = '',
+  target = '',
+}: buttonProps) => {
   const [darkMode] = useContext(darkModeSetting)!;
-  const Icon = () => (type === 'contact' ? <FaPaperPlane /> : <FaRegFileAlt />);
+  const Icon = () => {
+    switch (type) {
+      case 'contact':
+        return <FaPaperPlane />;
+      case 'resume':
+        return <FaRegFileAlt />;
+      case 'source':
+        return <BsGithub />;
+      case 'live':
+      default:
+        return <BsLightningFill />;
+    }
+  };
+
   return (
     <AwesomeButton
+      className={className}
       type={darkMode ? 'github' : 'primary'}
       before={
         <span key={text} className="mr-3">
@@ -34,6 +57,7 @@ const Button = ({ text, href, type = 'contact' }: buttonProps) => {
       }
       ripple
       href={href}
+      containerProps={target ? { target } : undefined}
     >
       {text.toUpperCase()}
     </AwesomeButton>

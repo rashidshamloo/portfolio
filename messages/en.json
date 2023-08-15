@@ -33,6 +33,23 @@
     "passionText3": "add personality, emotion, and creativity to our work",
     "passionText4": "stay motivated, curious, and enthusiastic"
   },
+  "Projects": {
+    "pageTitle": "Featured Projects",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "backendSourceCode": "Back-end Source Code"
+  },
+  "MoreProjects": {
+    "title": "More Projects",
+    "github": "I have many more projects on my GitHub account. make sure to check it out.",
+    "frontendmentor": "I regularly do coding challenges on frontendmentor.io. you can see my progress over time."
+  },
+  "Packages": {
+    "pageTitle": "NPM Packages",
+    "npm": "NPM.js",
+    "sourceCode": "Source Code",
+    "blog": "Blog Post"
+  },
   "Contact": {
     "pageTitle": "Contact Me",
     "formTitle": "Send me a message",

@@ -1,8 +1,8 @@
 [
   { "link": "/", "translation": "home" },
   { "link": "#", "translation": "showcase" },
-  { "link": "#", "translation": "projects" },
-  { "link": "#", "translation": "packages" },
+  { "link": "/projects", "translation": "projects" },
+  { "link": "/packages", "translation": "packages" },
   { "link": "/contact", "translation": "contact" },
   { "link": "#", "translation": "blog" }
 ]

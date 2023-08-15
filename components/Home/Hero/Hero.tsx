@@ -62,6 +62,7 @@ function Hero() {
           </Transition>
         </div>
         <Particles />
+        {/* <div className="absolute inset-0 -z-[1] bg-[url('/images/bg2.svg')] opacity-30 blur-[2px]"></div> */}
       </div>
     </section>
   );

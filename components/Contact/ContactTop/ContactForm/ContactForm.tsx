@@ -13,8 +13,8 @@ import ReCAPTCHA from 'react-google-recaptcha';
 // react-hook-form
 import { useForm } from 'react-hook-form';
 
-// react parallex tilt for tilt effect
-import Tilt from 'react-parallax-tilt';
+// react-next-tilt
+import { Tilt } from 'react-next-tilt';
 
 // material-ui
 import { TextField, InputAdornment } from '@mui/material';
@@ -135,10 +135,14 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
 
   return (
     <Tilt
-      perspective={2000}
-      glareEnable={false}
-      tiltReverse={true}
-      gyroscope={true}
+      perspective="2000px"
+      tiltMaxAngleX={15}
+      tiltMaxAngleY={15}
+      gyroMaxAngleY={15}
+      spotGlareMaxOpacity={!darkMode ? 0.7 : 0.2}
+      lineGlareMaxOpacity={!darkMode ? 0.3 : 0.02}
+      lineGlareColor={!darkMode ? undefined : 'silver'}
+      borderRadius="12px"
       className={
         'relative inline-flex items-center justify-center rounded-xl text-[0.75rem] sm:text-sm lg:text-[0.925rem] xl:text-base' +
         glassProvider
@@ -160,7 +164,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
         </h1>
 
         <form
-          className="flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform"
+          className="flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform [&_input]:autofill:bg-transparent [&_textarea]:autofill:bg-transparent"
           onSubmit={onSubmit}
         >
           <TextField
@@ -272,7 +276,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
               {t('errorCaptcha')}
             </p>
           </div>
-          <div className="mt-[0.5em] transform">
+          <div className="mt-[0.5em] inline-block rounded-xl bg-darkViolet/10 p-1 dark:bg-brightBlue/10 dark:[&_.aws-btn>span>span>*]:opacity-80 [&_a>span>span>span>svg]:text-base [&_.aws-btn>span>span>span]:text-xs [&_.aws-btn>span>span>span]:font-medium xl:[&_.aws-btn>span>span>span]:text-sm">
             <Button type="contact" text={t('buttonSend')} />
           </div>
         </form>

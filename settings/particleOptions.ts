@@ -7,10 +7,10 @@ const particleOptions: ISourceOptions = {
   interactivity: {
     events: {
       onHover: {
-        enable: true,
+        enable: false,
         mode: 'repulse',
       },
-      resize: true,
+      resize: false,
     },
     modes: {
       repulse: {
@@ -27,11 +27,11 @@ const particleOptions: ISourceOptions = {
       color: '#ffffff',
       distance: 150,
       enable: true,
-      opacity: 0.5,
+      // opacity: 0.5,
       width: 1,
     },
     collisions: {
-      enable: true,
+      enable: false,
     },
     move: {
       direction: 'none',
@@ -40,7 +40,7 @@ const particleOptions: ISourceOptions = {
         default: 'bounce',
       },
       random: false,
-      speed: 1.25,
+      speed: 1,
       straight: false,
     },
     number: {
@@ -48,10 +48,10 @@ const particleOptions: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 80,
+      value: 50,
     },
     opacity: {
-      value: 0.5,
+      // value: 0.5,
     },
     shape: {
       type: 'circle',

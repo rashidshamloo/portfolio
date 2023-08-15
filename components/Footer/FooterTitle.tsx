@@ -13,6 +13,7 @@ const FooterTitle = () => {
           src="/images/profile.webp"
           alt="Profile Photo"
           aria-hidden="true"
+          sizes="400px"
           fill
         />
       </div>
