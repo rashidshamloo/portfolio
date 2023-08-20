@@ -1,18 +1,13 @@
 'use client';
 
 // react
-import { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 
 //next
 import Image from 'next/image';
 
 // framer motion
-import {
-  AnimatePresence,
-  motion,
-  useMotionValue,
-  animate,
-} from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 // theme-toggles
 import '@theme-toggles/react/css/Within.css';
@@ -21,6 +16,7 @@ import { Within } from '@theme-toggles/react';
 // components
 import Transition from '@/components/common/Transition';
 import HeaderSideNav from './HeaderSideNav';
+import Glow from './Glow';
 
 // context
 import darkModeSetting from '@/context/darkModeSetting';
@@ -49,12 +45,6 @@ function Header() {
   // ref
   const dummyRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
-
-  // motionValue
-  const translateX = useMotionValue(0);
-  const scaleX = useMotionValue(1);
-  const scaleY = useMotionValue(1);
 
   // it was not possible to show the hamburger menu icon on top
   // of the mobile menu due to z-index hell (believe me, i tried)
@@ -71,72 +61,6 @@ function Header() {
       document.body.classList.remove('overflow-hidden');
     }
   }, [isOpen]);
-
-  // animates the glow
-  const animateGlow = useCallback(
-    async (jump = false) => {
-      if (!glowRef.current) return;
-
-      const pathNametoCheck =
-        locale === 'en'
-          ? pathname
-          : '/' + locale + (pathname === '/' ? '' : pathname);
-
-      const currentPathElement = document.querySelector<HTMLAnchorElement>(
-        `[href="${pathNametoCheck}"]`
-      );
-
-      if (!currentPathElement) return;
-
-      const boundigRect = currentPathElement.getBoundingClientRect();
-      const currentPathElementCenter = boundigRect.left + boundigRect.width / 2;
-
-      if (jump) {
-        scaleX.jump(boundigRect.width / 12);
-        scaleY.jump(0.25);
-        translateX.jump(currentPathElementCenter);
-      } else {
-        glowRef.current.classList.add(
-          'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]'
-        );
-        glowRef.current.classList.remove(
-          'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]'
-        );
-        await Promise.all([animate(scaleX, 1), animate(scaleY, 1)]);
-
-        await animate(translateX, currentPathElementCenter, {
-          type: 'spring',
-          mass: 0.5,
-          stiffness: 120,
-        });
-        glowRef.current.classList.add(
-          'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]'
-        );
-        glowRef.current.classList.remove(
-          'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]'
-        );
-        await Promise.all([
-          animate(scaleX, boundigRect.width / 12),
-          animate(scaleY, 0.25),
-        ]);
-      }
-    },
-    [pathname, locale, translateX, scaleX, scaleY]
-  );
-
-  useEffect(() => {
-    animateGlow();
-  }, [animateGlow]);
-
-  const handleResize = useCallback(() => {
-    animateGlow(true);
-  }, [animateGlow]);
-
-  // adding resize event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
 
   // sets icon position to the dummy element position
   const setIconPosition = () => {
@@ -161,17 +85,8 @@ function Header() {
         component="header"
         className="absolute left-0 right-0 top-0 z-10 flex h-14 items-center justify-center border-b-2 bg-white/40 shadow-md shadow-black/5 dark:border-darkGrayishViolet/50 dark:bg-darkGrayishViolet/40 lg:h-12"
       >
-        <motion.div
-          style={{ translateX, scaleX, scaleY }}
-          ref={glowRef}
-          className="bg-emerald-300/80 shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)] absolute bottom-[5%] -left-[5px] origin-center w-[10px] h-[10px] hidden lg:block rounded-[5px]"
-        ></motion.div>
-        <div
-          className="mx-auto flex w-full items-center justify-between px-4 drop-shadow-sm xl:container xl:px-8"
-          ref={(ref) => {
-            if (ref) animateGlow();
-          }}
-        >
+        <Glow />
+        <div className="mx-auto flex w-full items-center justify-between px-4 drop-shadow-sm xl:container xl:px-8">
           <nav aria-label="Main Navigation Menu">
             <div
               ref={dummyRef}

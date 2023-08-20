@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 import Transition from '@/components/common/Transition';
 import HeroCard from './HeroCard/HeroCard';
 import Intro from './Intro/Intro';
-const Particles = dynamic(() => import('@/components/common/Particles'));
+// const Particles = dynamic(() => import('@/components/common/Particles'));
 
 // context
 import darkModeSetting from '@/context/darkModeSetting';
@@ -32,7 +32,7 @@ function Hero() {
       ></div>
       <h1 className="sr-only">{t('pageTitle')}</h1>
       <div
-        className={`min-h-[calc(100dvh_+_50px)] overflow-x-hidden bg-cover bg-scroll pb-10 pt-20 text-darkGrayishViolet/90 dark:text-brightBlue lg:pb-0 lg:pt-0 [&_li]:font-medium ${
+        className={`min-h-[calc(100dvh_+_50px)] overflow-x-hidden pb-10 bg-[length:1.5rem,auto] pt-20 text-darkGrayishViolet/90 dark:text-brightBlue lg:pb-0 lg:pt-0 [&_li]:font-medium ${
           // flicker prevention
           // if page is not hydrated yet (darkMode === undefined) don't set any background
           // else, set background according to darkMode
@@ -61,7 +61,7 @@ function Hero() {
             <HeroCard />
           </Transition>
         </div>
-        <Particles />
+        {/* <Particles /> */}
         {/* <div className="absolute inset-0 -z-[1] bg-[url('/images/bg2.svg')] opacity-30 blur-[2px]"></div> */}
       </div>
     </section>

@@ -3,7 +3,7 @@ import { createContext } from 'react';
 type darkModeType =
   | [
       boolean | undefined,
-      React.Dispatch<React.SetStateAction<boolean | undefined>>
+      React.Dispatch<React.SetStateAction<boolean | undefined>>,
     ]
   | null;
 
