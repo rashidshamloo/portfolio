@@ -18,7 +18,7 @@ import packages from '@/data/packages.json';
 // components
 import Transition from '@/components/common/Transition';
 const Package = dynamic(() => import('./Package'));
-const Particles = dynamic(() => import('@/components/common/Particles'));
+// const Particles = dynamic(() => import('@/components/common/Particles'));
 
 // glass class
 import glassClass from '@/styles/glassProvider';
@@ -33,7 +33,7 @@ const PackagesTop = () => {
   return (
     <section className="relative z-[1] -mb-[50px]">
       <div
-        className={`flex min-h-[calc(100dvh_+_50px)] items-center justify-center overflow-hidden bg-cover pb-16 pt-[4.5rem] text-darkGrayishViolet/90 dark:text-brightBlue lg:pb-24 lg:pt-16 [&_li]:font-medium ${
+        className={`flex min-h-[calc(100dvh_+_50px)] items-center justify-center overflow-hidden bg-[length:1.5rem,auto] pb-16 pt-[4.5rem] text-darkGrayishViolet/90 dark:text-brightBlue lg:pb-24 lg:pt-16 [&_li]:font-medium ${
           // flicker prevention
           // if page is not hydrated yet (darkMode === undefined) don't set any background
           // else, set background according to darkMode
@@ -64,7 +64,7 @@ const PackagesTop = () => {
             );
           })}
         </div>
-        <Particles />
+        {/* <Particles /> */}
       </div>
     </section>
   );

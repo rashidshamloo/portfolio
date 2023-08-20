@@ -1,3 +1,5 @@
+const { Stars } = require('@mui/icons-material');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -45,8 +47,9 @@ module.exports = {
         moon: '#586570',
       },
       backgroundImage: {
-        heroBg: 'url("/images/bg.webp")',
-        heroBgDark: 'url("/images/bg-dark.webp")',
+        heroBg: 'url("/images/stars.svg"), url("/images/bg.webp")',
+        heroBgDark:
+          'url("/images/stars-dark.svg"), url("/images/bg-dark.webp")',
         glowRotate:
           'linear-gradient(transparent 0% 30%, #E83151 30% 70%,transparent 70%)',
       },

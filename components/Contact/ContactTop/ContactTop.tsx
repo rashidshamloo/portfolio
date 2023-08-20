@@ -35,13 +35,13 @@ const ContactTop = () => {
       {/* shadow */}
       {/* drop-shadow-[0_10px_5px_rgba(0,0,0,0.4)] */}
       {/* using an image for shadow instead of drop-shadow for performance */}
-      {/* <div
+      <div
         className="pointer-events-none absolute -bottom-[40px] left-0 right-0 -z-[1] h-[80px] bg-[url('/images/shadow.png')]"
         aria-hidden="true"
-      ></div> */}
+      ></div>
       <h1 className="sr-only">{t('pageTitle')}</h1>
       <div
-        className={`flex min-h-[calc(100dvh_+_50px)] items-center justify-center overflow-hidden bg-cover pb-16 pt-14 text-darkGrayishViolet/90 dark:text-brightBlue sm:pb-10 sm:pt-20 lg:py-8 [&_li]:font-medium ${
+        className={`flex min-h-[calc(100dvh_+_50px)] items-center justify-center overflow-hidden bg-[length:1.5rem,auto] pb-16 pt-14 text-darkGrayishViolet/90 dark:text-brightBlue sm:pb-10 sm:pt-20 lg:py-8 [&_li]:font-medium ${
           // flicker prevention
           // if page is not hydrated yet (darkMode === undefined) don't set any background
           // else, set background according to darkMode
@@ -79,7 +79,7 @@ const ContactTop = () => {
             />
           </Transition>
         </div>
-        <Particles />
+        {/* <Particles /> */}
       </div>
     </section>
   );

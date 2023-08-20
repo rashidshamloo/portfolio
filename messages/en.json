@@ -76,6 +76,13 @@
     "twitter": "Whether you have a question or just want to say hello, feel free to send me a message on Twitter.",
     "email": "You can also contact me directly by sending me an email."
   },
+  "Blog": {
+    "featuredArticles": "Featured Articles",
+    "popularArticles": "Popular Articles",
+    "published": "Published",
+    "minutesRead": " minutes read",
+    "readTheFullArticle": "Read the full article"
+  },
   "Footer": {
     "navigation": "Site Navigation",
     "sns": "Social Media",

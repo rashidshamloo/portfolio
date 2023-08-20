@@ -13,6 +13,9 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'ja' }];
 }
 
+// providers
+import Providers from '@/providers/Providers';
+
 // font
 import { Raleway, Merriweather, Alex_Brush } from 'next/font/google';
 const raleway = Raleway({
@@ -74,13 +77,15 @@ export default async function RootLayout({
         className={`${raleway.variable} ${merriweather.variable} ${alexBrush.variable}`}
       >
         <Logo />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Context>
-            <Header />
-            <main className={`min-h-screen font-raleway`}>{children}</main>
-            <Footer />
-          </Context>
-        </NextIntlClientProvider>
+        <Providers>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Context>
+              <Header />
+              <main className={`min-h-screen font-raleway`}>{children}</main>
+              <Footer />
+            </Context>
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );
