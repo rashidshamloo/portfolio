@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { useContext, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // next
 import dynamic from 'next/dynamic';
@@ -9,19 +9,19 @@ import dynamic from 'next/dynamic';
 // next-intl
 import { useTranslations } from 'next-intl';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 const TPSection = dynamic(() => import('./TPSection'));
-const MovingBackground = dynamic(() => import('./MovingBackground'));
+// const MovingBackground = dynamic(() => import('./MovingBackground'));
+import MovingBackground from './MovingBackground';
 
 const TechnologyAndPassion = () => {
+  const darkMode = useNextThemes();
+
   // next-intl
   const t = useTranslations('TechnologyAndPassion');
-
-  // context
-  const [darkMode] = useContext(darkModeSetting)!;
 
   // ref
   const containerRef = useRef<HTMLElement>(null);
@@ -34,8 +34,9 @@ const TechnologyAndPassion = () => {
         !containerRef.current ||
         !triggerRef.current ||
         !movingBackgroundRef.current
-      )
+      ) {
         return;
+      }
 
       // classes to switch based on scroll position
       const techClasses = [
@@ -84,8 +85,8 @@ const TechnologyAndPassion = () => {
       }}
     >
       <MovingBackground
-        containerRef={containerRef}
-        movingBackgroundRef={movingBackgroundRef}
+        containerElement={containerRef.current}
+        ref={movingBackgroundRef}
       />
       <div className="relative mx-auto flex flex-col items-center lg:container">
         <TPSection
@@ -96,7 +97,7 @@ const TechnologyAndPassion = () => {
             t('techText3'),
             t('techText4'),
           ]}
-          images={['/images/tech-01.webp', '/images/tech-02.webp']}
+          images={['/images/home/tech-01.webp', '/images/home/tech-02.webp']}
         />
         <TPSection
           title={t('passionTitle')}
@@ -106,7 +107,10 @@ const TechnologyAndPassion = () => {
             t('passionText3'),
             t('passionText4'),
           ]}
-          images={['/images/passion-01.webp', '/images/passion-02.webp']}
+          images={[
+            '/images/home/passion-01.webp',
+            '/images/home/passion-02.webp',
+          ]}
           triggerRef={triggerRef}
         />
       </div>

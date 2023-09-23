@@ -16,6 +16,7 @@ function Skills() {
             <SkillIcon
               text={skill.text}
               image={skill.image}
+              imageDark={skill.imageDark ?? undefined}
               delay={1 + index * 0.1}
             />
           </li>

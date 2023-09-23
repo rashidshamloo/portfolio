@@ -8,13 +8,19 @@ import { isMobile } from 'react-device-detect';
 
 // components
 import SocialSection from './SocialSection';
-import Transition from '@/components/common/Transition';
+import Transition from '@/components/Common/Transition';
+import SectionWrapper from '@/components/Layout/SectionWrapper';
 
 const Social = () => {
   const t = useTranslations('Social');
   return (
-    <section className="overflow-hidden bg-[#95afe5] bg-[url('/images/social-wave.svg'),url('/images/social-dot.svg')] bg-[cover,auto] bg-center py-[100px] dark:bg-grayishBlue dark:bg-[url('/images/social-wave-dark.svg'),url('/images/social-dot-dark.svg')] lg:bg-[cover,auto] lg:py-[150px]">
-      <div className="mx-auto xl:container">
+    <SectionWrapper
+      zIndex={9}
+      innerClass="overflow-hidden bg-[#95afe5] bg-[url('/images/contact/social/social-wave.svg'),url('/images/contact/social/social-dot.svg')] bg-[cover,auto] bg-center dark:bg-grayishBlue dark:bg-[url('/images/contact/social/social-wave-dark.svg'),url('/images/contact/social/social-dot-dark.svg')]"
+      separator={false}
+    >
+      {/* <div className=""> */}
+      <div className="mx-auto xl:container flex-grow flex flex-col justify-center py-[100px] lg:py-[50px]">
         <Transition
           component="h2"
           className="mx-[5%] text-center text-[2rem] font-bold uppercase leading-[1.5] text-brightBlue drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] transition-all duration-500 dark:text-brightBlue/80 md:text-4xl lg:mx-auto lg:text-[2.65rem]"
@@ -30,7 +36,7 @@ const Social = () => {
           >
             <SocialSection
               icon="/images/icons/linkedin-original.svg"
-              iconBg="/images/blob-1.svg"
+              iconBg="/images/contact/social/blob-1.svg"
               iconSize={35}
               title="Linkedin"
               handle="@rashid-shamloo"
@@ -41,7 +47,7 @@ const Social = () => {
           <Transition effect="fadeBTT" threshold={0.5} duration={0.75}>
             <SocialSection
               icon="/images/icons/twitter.svg"
-              iconBg="/images/blob-2.svg"
+              iconBg="/images/contact/social/blob-2.svg"
               iconSize={50}
               title="Twitter"
               handle="@rashidshamloo"
@@ -57,7 +63,7 @@ const Social = () => {
           >
             <SocialSection
               icon="/images/icons/email.svg"
-              iconBg="/images/blob-3.svg"
+              iconBg="/images/contact/social/blob-3.svg"
               iconSize={45}
               title="Email"
               handle="rashidshamloo@gmail.com"
@@ -67,7 +73,8 @@ const Social = () => {
           </Transition>
         </div>
       </div>
-    </section>
+      {/* </div> */}
+    </SectionWrapper>
   );
 };
 

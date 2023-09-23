@@ -5,8 +5,8 @@ const linkStyles =
   ' [&_a]:underline [&_a]:text-[#668cac] hover:[&_a]:text-accent/70 [&_a]:transition-all [&_a]:duration-300';
 
 const listStyles =
-  ' [&_li>p:not(:first-child)]:my-4 [&_ul]:m-4 [&_ol]:m-4 [&_blockquote]:ml-4 [&_ol>li]:relative [&_ol>li]:pl-[1.5rem] [&_ol>li]:bg-[length:14px] [&_ol>li]:bg-[url("/images/heart.svg")] [&_ol>li]:bg-no-repeat [&_ol>li]:bg-[left_0.25rem] md:[&_ol>li]:bg-[left_0.375rem] [&_ul>li]:relative [&_ul>li]:pl-[1.5rem] [&_ul>li]:bg-[length:14px] [&_ul>li]:bg-[url("/images/heart.svg")] [&_ul>li]:bg-no-repeat [&_ul>li]:bg-[left_0.25rem] md:[&_ul>li]:bg-[left_0.375rem] [&_li>p]:p-0';
-// listStyles
+  ' [&_li>p:not(:first-child)]:my-4 [&_ul]:m-4 [&_ul_ul]:my-1 [&_ol]:m-4 [&_blockquote]:ml-4 [&_ol>li]:relative [&_ol>li]:pl-[1.5rem] [&_ol>li]:bg-[length:14px] [&_ol>li]:bg-[url("/images/heart.svg")] [&_ol>li]:bg-no-repeat [&_ol>li]:bg-[left_0.25rem] md:[&_ol>li]:bg-[left_0.375rem] [&_ul>li]:relative [&_ul>li]:pl-[1.5rem] [&_ul>li]:bg-[length:14px] [&_ul>li]:bg-[url("/images/heart.svg")] [&_ul>li]:bg-no-repeat [&_ul>li]:bg-[left_0.25rem] md:[&_ul>li]:bg-[left_0.375rem] [&_li>p]:p-0';
+
 const imageStyles = ' [&_img]:rounded-lg';
 
 const hrStyles =
@@ -19,17 +19,3 @@ export const className =
   listStyles +
   imageStyles +
   hrStyles;
-
-// [&>div>*]:max-w-[90%]
-// const className='font-merriweather'
-// code {
-//     background: rgba(0, 0, 0, 0.1);
-//     color: var(--color-body-color);
-//     border-radius: var(--radius);
-//     max-width: 100%;
-//     font-size: 80%;
-//     padding: 0.1em 0.25em;
-//   }
-//   p > code {
-//     background: var(--code-inline-bg);
-//   }

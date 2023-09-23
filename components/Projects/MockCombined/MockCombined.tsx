@@ -1,8 +1,10 @@
-// react
-import { useState, useContext, useEffect } from 'react';
+'use client';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// react
+import { useState, useEffect } from 'react';
+
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import MockDesktop from './MockDesktop';
@@ -22,14 +24,15 @@ const MockCombined = ({
   imageMobile,
   imageMobileDark,
 }: mockCombinedProps) => {
-  const [darkMode] = useContext(darkModeSetting)!;
-  const [imageDarkMode, setImageDarkMode] = useState(
-    imageDesktopDark && imageMobileDark && darkMode
-  );
+  const darkMode = useNextThemes();
+
+  const [imageDarkMode, setImageDarkMode] = useState(false);
+
   useEffect(() => {
     if (imageDesktopDark && imageMobileDark && darkMode) setImageDarkMode(true);
     else setImageDarkMode(false);
   }, [darkMode, imageDesktopDark, imageMobileDark]);
+
   return (
     <div className="relative" style={{ containerType: 'inline-size' }}>
       <div className="w-[93%]">
@@ -67,23 +70,3 @@ const MockCombined = ({
 };
 
 export default MockCombined;
-
-{
-  /* <div className="relative">
-      <div className="w-[93%]">
-        <MockDesktop image={imageDesktop} />
-      </div>
-      <div className="absolute bottom-0 right-[0] w-[22%]">
-        <MockMobile image={imageMobile} />
-      </div>
-    </div> */
-}
-
-// <div className="flex items-end">
-//       <div className="w-[76.65%]">
-//         <MockDesktop image={imageDesktop} />
-//       </div>
-//       <div className="w-[23.35%]">
-//         <MockMobile image={imageMobile} />
-//       </div>
-//     </div>

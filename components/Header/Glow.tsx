@@ -28,7 +28,6 @@ const Glow = () => {
   // animates the glow
   const animateGlow = useCallback(
     async (jump = false) => {
-      console.log(pathname);
       if (!glowRef.current) return;
 
       const pathName = pathname.includes('blog') ? '/blog' : pathname;
@@ -72,7 +71,7 @@ const Glow = () => {
         scaleY.jump(0.25);
         translateX.jump(currentPathElementCenter);
       } else {
-        if (currentId === animationId.current) {
+        if (currentId === animationId.current && glowRef.current) {
           glowRef.current.classList.add(
             'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]'
           );
@@ -125,8 +124,9 @@ const Glow = () => {
   return (
     <motion.div
       style={{ translateX, scaleX, scaleY }}
+      // style={{ transform: 'none' }}
       ref={glowRef}
-      className="bg-emerald-300/80 shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)] absolute bottom-[5%] -left-[5px] origin-center w-[10px] h-[10px] hidden lg:block rounded-[5px]"
+      className="bg-emerald-300/80 shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)] absolute bottom-[5%] -left-[5px] origin-center w-[10px] h-[10px] hidden lg:block rounded-[5px] translate-z-0"
     ></motion.div>
   );
 };

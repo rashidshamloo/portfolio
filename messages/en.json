@@ -11,13 +11,14 @@
   },
   "Intro": {
     "pageTitle": "Rashid Shamloo's Portfolio",
-    "greeting": "Hello",
+    "greeting": "Hello,",
     "about": "I am passionate about delivering the best user experience using the latest cutting-edge technologies, I build robust, secure, and accessible websites that are interactive and fun to use. I am familiar with back-end technologies and integrate them into my workflow. I have excellent attention to detail and deliver a product that perfectly matches the design.",
     "sendMessage": "Send me a message",
     "iam": "I'm",
     "name": "Rashid Shamloo",
     "developer": "a developer",
     "programmer": "a programmer",
+    "engineer": "an engineer",
     "learner": "an avid learner",
     "resume": "Check my resume"
   },
@@ -33,8 +34,25 @@
     "passionText3": "add personality, emotion, and creativity to our work",
     "passionText4": "stay motivated, curious, and enthusiastic"
   },
+  "Showcase": {
+    "photo": "Photo: ",
+    "slideTitle": "Japan's Attractions",
+    "flowersTitle": "Beautiful Flowers",
+    "fishTitle": "Playful Fish",
+    "pageTitle": "Showcase",
+    "pageInfo": "Most of the projects on this page are built using my own NPM packages. They demonstrate my ability to build innovative, customizable, reusable, visually stunning, and functionally robust components and applications.",
+    "topFooter1": "Made using the [react-next-parallax](https://www.npmjs.com/package/react-next-parallax) NPM package.",
+    "topFooter2": "Images by [Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) on [vecteezy.com](https://www.vecteezy.com/).",
+    "japanSliderFooter": "Made using the [swiper](https://www.npmjs.com/package/swiper), [swiper-mods](https://www.npmjs.com/package/swiper-mods), and [react-next-tilt](https://www.npmjs.com/package/react-next-tilt) NPM packages.",
+    "fishFooter1": "Made using the [react-flip-tilt](https://www.npmjs.com/package/react-flip-tilt) and [react-next-parallax](https://www.npmjs.com/package/react-next-parallax) NPM packages.",
+    "fishFooter2": "Images by [Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) on [vecteezy.com](https://www.vecteezy.com/).",
+    "flowersFooter1": "Made using the [react-flip-tilt](https://www.npmjs.com/package/react-flip-tilt) and [react-next-tilt](https://www.npmjs.com/package/react-next-tilt) NPM packages.",
+    "flowersFooter2": "Images by [Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) on [vecteezy.com](https://www.vecteezy.com/).",
+    "parallaxLine1": "Never stop learning",
+    "parallaxLine2": "Never give up"
+  },
   "Projects": {
-    "pageTitle": "Featured Projects",
+    "pageTitle": "Projects",
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code",
     "backendSourceCode": "Back-end Source Code"
@@ -86,8 +104,13 @@
   "Footer": {
     "navigation": "Site Navigation",
     "sns": "Social Media",
-    "tech": "Built Using",
+    "tech": "Built with",
     "my": "Rashid Shamloo's",
     "portfolio": "Portfolio"
-  }
+  },
+  "Error": {
+    "notFound": "Not Found",
+    "message": "Error: No route matches"
+  },
+  "Other": { "backToTop": "Back to Top" }
 }

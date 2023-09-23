@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { useContext, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // emailjs
 import emailjs from '@emailjs/browser';
@@ -27,11 +27,11 @@ import { useLocale, useTranslations } from 'next-intl';
 import { isMobile } from 'react-device-detect';
 
 // components
-import Button from '@/components/common/Button';
+import Button from '@/components/Common/Button';
 import ContactFormLoading from './ContactFormLoading';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // styles
 import inputStyles from '@/styles/inputStyles';
@@ -46,8 +46,7 @@ interface contactFormProps {
 }
 
 const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
-  // context
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
 
   // states
   const [captcha, setCaptcha] = useState('');
@@ -144,9 +143,10 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
       lineGlareColor={!darkMode ? undefined : 'silver'}
       borderRadius="12px"
       className={
-        'relative inline-flex items-center justify-center rounded-xl text-[0.75rem] sm:text-sm lg:text-[0.925rem] xl:text-base' +
+        'relative mx-auto max-w-[98%] inline-flex items-center justify-center rounded-xl text-[0.75rem] sm:text-sm lg:text-[0.925rem] xl:text-base' +
         glassProvider
       }
+      disableScrollOnTouch={false}
     >
       <ContactFormLoading
         isLoading={isLoading}
@@ -155,7 +155,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
       />
       {/* setting backdrop-blur on a child div because it flattens the transform-style-3d if set on parent */}
       <div className="absolute inset-0 -z-[1] backdrop-blur-[2px]"></div>
-      <div className="glass relative flex aspect-[3/4] w-[30em] max-w-[95%] flex-col items-center justify-center gap-y-[3em] rounded-xl px-[1.5em] py-[3em] text-darkViolet/70 transform-style-3d dark:text-brightBlue/50 sm:max-w-[unset] sm:pb-[1.5em] sm:pt-[2em]">
+      <div className="max-w-full glass relative flex aspect-[3/4] w-[30em] flex-col items-center justify-center gap-y-[3em] rounded-xl px-[1.5em] py-[3em] text-darkViolet/70 transform-style-3d dark:text-brightBlue/50 sm:max-w-[unset] sm:pb-[1.5em] sm:pt-[2em]">
         <h1
           className="
         text-center text-[1.875em] font-bold uppercase translate-z-16 transform"
@@ -164,7 +164,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
         </h1>
 
         <form
-          className="flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform [&_input]:autofill:bg-transparent [&_textarea]:autofill:bg-transparent"
+          className="will-change-transform flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform [&_input]:autofill:bg-transparent [&_textarea]:autofill:bg-transparent"
           onSubmit={onSubmit}
         >
           <TextField

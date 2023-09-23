@@ -6,8 +6,8 @@ import { useLocale, useTranslations } from 'next-intl';
 
 // components
 import MockCombined from './MockCombined/MockCombined';
-import Button from '../common/Button';
-import WordBreak from '../common/WordBreak';
+import Button from '../Common/Button';
+import WordBreak from '../Common/WordBreak';
 
 // types
 interface projectData {
@@ -94,7 +94,7 @@ const Project = ({ reverse = false, data }: projectProps) => {
         <div className="text-lg leading-loose underline-offset-2 [&_a]:text-grayishBlue/90 [&_a]:underline [&_a]:transition-colors [&_a]:duration-300 hover:[&_a]:text-accent/80 dark:[&_a]:text-lightGrayishBlue dark:hover:[&_a]:text-accent/80">
           <WordBreak markdown={true}>{data.description[locale]}</WordBreak>
         </div>
-        <ul className="mx-auto inline-block list-none text-center leading-loose lg:mx-0 lg:block lg:text-left [&>li]:my-3">
+        <ul className="mx-auto inline-block list-none text-center leading-loose lg:mx-0 lg:block lg:text-left [&>li]:my-2">
           {data.points[locale].map((point, index) => (
             <li key={index}>
               <Image

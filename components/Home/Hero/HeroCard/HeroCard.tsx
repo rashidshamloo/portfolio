@@ -1,3 +1,6 @@
+// react
+import { useState, useEffect } from 'react';
+
 // next
 import Image from 'next/image';
 
@@ -10,15 +13,15 @@ import SocialLinks from './SocialLinks';
 // icons
 import { FaLaptopCode, FaHeart, FaCoffee } from 'react-icons/fa';
 
-// context
-import { useContext } from 'react';
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // glass provider
 import glassProvider from '@/styles/glassProvider';
 
 function HeroCard() {
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
+
   return (
     <Tilt
       className={
@@ -33,7 +36,7 @@ function HeroCard() {
       lineGlareColor={!darkMode ? undefined : 'silver'}
       borderRadius="12px"
     >
-      <div className="glass relative aspect-[3/4] w-[25em] rounded-xl transform-style-3d">
+      <div className="will-change-transform glass relative aspect-[3/4] w-[25em] rounded-xl transform-style-3d">
         <div className="glass relative -top-[2.5em] mx-auto aspect-square w-3/4 select-none rounded-full p-[1em] translate-z-16 transform">
           <span
             className="absolute -inset-[0.1rem] block animate-rotate rounded-full bg-glowRotate blur-md "
@@ -43,13 +46,14 @@ function HeroCard() {
                 'radial-gradient(transparent 0% 69.5%,#0000dd 70.2%)',
             }}
           ></span>
-          <div className="translae-z-16 relative aspect-square w-full overflow-hidden rounded-full">
+          <div className="translae-z-16 relative aspect-square overflow-hidden rounded-full">
             <Image
               src="/images/profile.webp"
               alt="Profile Photo"
               fill
               sizes="400px"
               aria-hidden="true"
+              priority
             />
           </div>
         </div>

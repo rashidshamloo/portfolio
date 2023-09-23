@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 
 // next
 import Link from 'next-intl/link';
@@ -17,12 +17,12 @@ import { useTranslations } from 'next-intl';
 // react-next-tilt
 import { Tilt } from 'react-next-tilt';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import Pagination from '@/components/Blog/Pagination';
-import Loading from '@/components/common/Loading';
+import Loading from '@/components/Common/Loading';
 
 // settings
 import { blogSettings } from '@/settings/blog';
@@ -31,8 +31,7 @@ import { blogSettings } from '@/settings/blog';
 import { Pages } from '@/types/types';
 
 const BlogPage = () => {
-  // context
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
 
   // redux-toolkit
   const dispatch = useDispatch();
@@ -139,7 +138,11 @@ const BlogPage = () => {
                   </article>
                 </Tilt>
               ))}
-          <Pagination pages={pages} url="/blog/page/" className="mt-4" />
+          <Pagination
+            pages={pages}
+            url="/blog/page/"
+            className="mt-4 text-sm lg:text-base"
+          />
         </div>
       ) : (
         <Loading />

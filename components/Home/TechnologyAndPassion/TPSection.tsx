@@ -5,8 +5,8 @@ import { RefObject } from 'react';
 import Image from 'next/image';
 
 // components
-import Transition from '@/components/common/Transition';
-import WordBreak from '@/components/common/WordBreak';
+import Transition from '@/components/Common/Transition';
+import WordBreak from '@/components/Common/WordBreak';
 
 // types
 interface tPSectionProps {
@@ -41,6 +41,7 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
                 className="w-full"
                 alt={title + ' Image 1'}
                 aria-hidden="true"
+                sizes="(min-width: 768px) 50vw, (min-width: 1024px) 25vw, 100vw"
                 fill
               />
             </Transition>
@@ -66,6 +67,7 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
                 className="w-full"
                 alt={title + ' Image 2'}
                 aria-hidden="true"
+                sizes="(min-width: 768px) 50vw, (min-width: 1024px) 25vw, 100vw"
                 fill
               />
             </Transition>

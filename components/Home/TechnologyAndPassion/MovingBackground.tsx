@@ -1,55 +1,82 @@
 // react
-import { useEffect, useState, RefObject } from 'react';
-
-// react-device-detect
-import { isDesktop } from 'react-device-detect';
+import { useEffect, useState, forwardRef } from 'react';
 
 // types
 interface movingBackgroundProps {
-  containerRef: RefObject<HTMLElement>;
-  movingBackgroundRef: RefObject<HTMLDivElement>;
+  containerElement: HTMLElement | null;
 }
-type mousePosition = { x: number; y: number };
+type Position = { x: number | undefined; y: number | undefined };
 
-const MovingBackground = ({
-  containerRef,
-  movingBackgroundRef,
-}: movingBackgroundProps) => {
-  // states
-  const [mousePosition, setMousePosition] = useState<mousePosition>({
-    x: -50,
-    y: -50,
-  });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.x / window.innerWidth) * 100 * -1;
-      const y = (e.y / window.innerHeight) * 100 * -1;
-      setMousePosition({ x, y });
-    };
-
-    const tempEle = containerRef.current;
-
-    // only add mousemove event listener on desktop
-    if (isDesktop && tempEle) {
-      tempEle.addEventListener('mousemove', handleMouseMove, {
-        passive: true,
+const MovingBackground = forwardRef<HTMLDivElement, movingBackgroundProps>(
+  ({ containerElement }: movingBackgroundProps, ref) => {
+    // states
+    const [previousMousePosition, setPreviousMousePosition] =
+      useState<Position>({
+        x: undefined,
+        y: undefined,
       });
-    }
-    return () => {
-      if (tempEle) tempEle?.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, [containerRef]);
+    const [translate, setTranslate] = useState<Position>({
+      x: 0,
+      y: 0,
+    });
 
-  return (
-    <div
-      ref={movingBackgroundRef}
-      className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/tech-bg.webp')] bg-[length:max(calc(100dvw_+_100px)_,_1000px)] bg-center transition-opacity duration-1000"
-      style={{
-        transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
-      }}
-    ></div>
-  );
-};
+    useEffect(() => {
+      if (!containerElement) return;
+
+      const handleMouseMove = (e: MouseEvent) => {
+        if (
+          previousMousePosition.x === undefined ||
+          previousMousePosition.y === undefined
+        )
+          return;
+
+        setTranslate((prev) => {
+          if (
+            prev.x === undefined ||
+            prev.y === undefined ||
+            previousMousePosition.x === undefined ||
+            previousMousePosition.y === undefined
+          )
+            return { x: undefined, y: undefined };
+          return {
+            x: prev.x + (previousMousePosition.x - e.clientX) / 10,
+            y: prev.y + (previousMousePosition.y - e.clientY) / 10,
+          };
+        });
+
+        setPreviousMousePosition({ x: e.clientX, y: e.clientY });
+      };
+      const handleMouseEnter = (e: MouseEvent) => {
+        setPreviousMousePosition({ x: e.clientX, y: e.clientY });
+      };
+      const handleMouseLeave = () => {
+        setPreviousMousePosition({ x: undefined, y: undefined });
+      };
+
+      containerElement.addEventListener('mouseenter', handleMouseEnter);
+      containerElement.addEventListener('mousemove', handleMouseMove);
+      containerElement.addEventListener('mouseleave', handleMouseLeave);
+
+      return () => {
+        containerElement.removeEventListener('mouseenter', handleMouseEnter);
+        containerElement.removeEventListener('mousemove', handleMouseMove);
+        containerElement.removeEventListener('mouseleave', handleMouseLeave);
+      };
+    }, [containerElement, previousMousePosition.x, previousMousePosition.y]);
+
+    return (
+      <div
+        ref={ref}
+        className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/home/tech-bg.webp')] bg-[length:max(calc(100dvw_+_100px)_,_1000px)] bg-center transition-opacity duration-1000"
+        style={{
+          backgroundPositionX: String(translate.x) + 'px',
+          backgroundPositionY: String(translate.y) + 'px',
+        }}
+      ></div>
+    );
+  }
+);
+
+MovingBackground.displayName = 'MovingBackground';
 
 export default MovingBackground;

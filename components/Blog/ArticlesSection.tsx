@@ -1,5 +1,5 @@
 // react
-import { useContext } from 'react';
+import { useState, useEffect } from 'react';
 
 // next
 import Link from 'next/link';
@@ -8,11 +8,11 @@ import Image from 'next/image';
 // react-next-tilt
 import { Tilt } from 'react-next-tilt';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
-import Loading from '@/components/common/Loading';
+import Loading from '@/components/Common/Loading';
 
 // types
 import { BlogPost } from '@/types/types';
@@ -23,8 +23,7 @@ interface ArticleSectionProps {
 }
 
 const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
-  // context
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
 
   return (
     <>
