@@ -49,7 +49,7 @@ const TopWrapper = ({
       <div
         className={
           'text-mediumViolet/90 relative max-w-full overflow-x-hidden bg-heroBg bg-[length:1.5rem,auto] pb-10 lg:py-0 dark:bg-heroBgDark dark:text-brightBlue/90 flex flex-col items-center justify-center ' +
-          (!separator ? `min-h-[calc(100dvh_+_50px)] pb-14 lg:pb-20` : '') +
+          (!separator ? `min-h-[calc(100vh_+_50px)] pb-14 lg:pb-20` : '') +
           innerClass
         }
         style={
