@@ -14,7 +14,7 @@ const MDBlogPost = ({ postBody }: { postBody: string }) => {
         'javascript',
         'typescript',
         'html',
-        'plain',
+        'plaintext',
       ]).value;
     });
   }, []);
