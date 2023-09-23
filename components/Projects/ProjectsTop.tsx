@@ -11,7 +11,7 @@ import projects from '@/data/projects.json';
 
 // components
 import Transition from '@/components/Common/Transition';
-const Project = dynamic(() => import('./Project'));
+import Project from './Project';
 import PageTitle from '../Layout/PageTitle';
 import TopWrapper from '../Layout/TopWrapper';
 

@@ -83,6 +83,7 @@ function Intro() {
                   ? '/resume/rashid-shamloo-resume.pdf'
                   : '/resume/rashid-shamloo-rerikisho.pdf'
               }
+              target="_blank"
             />
           </Transition>
           <Transition effect="fadeLTR" duration={0.75} delay={1}>
