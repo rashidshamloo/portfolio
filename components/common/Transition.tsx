@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { forwardRef, useContext, useMemo } from 'react';
+import { forwardRef, useMemo } from 'react';
 
 // media query
 import { isMobile } from 'react-device-detect';
@@ -12,14 +12,11 @@ import {
   useReducedMotion,
   CustomDomComponent,
   MotionProps,
+  Transition,
 } from 'framer-motion';
-
-// context
-import AnimationSetting from '@/context/animationSetting';
 
 // variants
 import { variants, variantsType } from '@/settings/variants';
-import React from 'react';
 
 // types
 interface transitionProps extends React.HTMLAttributes<HTMLElement> {
@@ -44,37 +41,45 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
       ease = 'easeOut',
       component = 'div',
       children,
+      className,
       ...props
     },
     ref
   ) => {
     const disableMotion = useReducedMotion();
-    const enableAnimation = useContext(AnimationSetting);
     const MotionElement = useMemo(
       () => motion(component) as CustomDomComponent<transitionProps>,
       [component]
     );
+
+    const transition: Transition = {
+      duration: disableMotion ? 0 : duration,
+      delay: disableMotion || isMobile ? 0 : delay,
+      ease,
+      staggerChildren: effect === 'textReveal' ? 0.1 : 0,
+    };
     return (
       <MotionElement
-        variants={variants[effect]}
+        variants={effect !== 'textReveal' ? variants[effect] : undefined}
         initial="initial"
         whileInView="animate"
         animate="animateNIV"
         exit="exit"
         viewport={{ amount: threshold, once }}
-        transition={{
-          duration: disableMotion || !enableAnimation ? 0 : duration,
-          delay: disableMotion || !enableAnimation || isMobile ? 0 : delay,
-          ease,
-          staggerChildren: effect === 'textReveal' ? 0.5 : 0,
-        }}
+        transition={transition}
+        className={'will-change-transform ' + className}
         {...props}
         ref={ref}
       >
         {!!children &&
           (effect === 'textReveal' && typeof children === 'string'
             ? children.split('').map((char, index) => (
-                <motion.span variants={variants[effect]} key={index}>
+                <motion.span
+                  variants={variants[effect]}
+                  // transition={transition}
+                  key={index}
+                  className="relative inline-block whitespace-pre"
+                >
                   {char}
                 </motion.span>
               ))

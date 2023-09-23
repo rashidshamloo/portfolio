@@ -15,3 +15,12 @@ export const postsSchema = z.array(
     reactionCount: z.number(),
   })
 );
+
+export const postSingleSchema = z.object({
+  title: z.string(),
+  body: z.string(),
+  url: z.string(),
+  publishedAt: z.string(),
+  tagList: z.string(),
+  coverImage: z.union([z.string(), z.null()]),
+});

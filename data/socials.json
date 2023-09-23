@@ -1,6 +1,6 @@
 [
   {
-    "title": "linkedin",
+    "title": "Linkedin",
     "link": "https://www.linkedin.com/in/rashid-shamloo/",
     "icon": "/images/icons/linkedin-original.svg"
   },
@@ -13,8 +13,9 @@
   {
     "title": "Twitter",
     "link": "https://twitter.com/rashidshamloo",
-    "icon": "/images/icons/twitter.svg",
-    "size": 1.54
+    "icon": "/images/icons/x.svg",
+    "iconDark": "/images/icons/x-dark.svg",
+    "size": 0.85
   },
   {
     "title": "FEM",

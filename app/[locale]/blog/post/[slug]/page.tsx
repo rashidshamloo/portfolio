@@ -8,30 +8,25 @@ import Image from 'next/image';
 
 // components
 import BlogPostHighlight from '@/components/Blog/BlogPostHighlight';
-import Loading from '@/components/common/Loading';
+import Loading from '@/components/Common/Loading';
 
 // styles
 import { className } from '@/styles/blogPostStyle';
 
+// settings
+import { blogSettings } from '@/settings/blog';
+
 // types
+import { BlogPostSingle } from '@/types/types';
 interface articleProps {
   params: {
     slug: string;
   };
 }
 
-interface post {
-  title: string;
-  body: string;
-  url: string;
-  publishedAt: string;
-  tagList: string[];
-  coverImage: string | null;
-}
-
 const Post = ({ params }: articleProps) => {
   // state
-  const [post, setPost] = useState<post | null>(null);
+  const [post, setPost] = useState<BlogPostSingle | null>(null);
 
   // articleId
   const articleId = params.slug.slice(params.slug.lastIndexOf('-') + 1);
@@ -40,19 +35,10 @@ const Post = ({ params }: articleProps) => {
     // get posts with needed fields from Dev.to API
     const getPost = async (signal: AbortSignal, articleId: number) => {
       try {
-        const res = await fetch('https://dev.to/api/articles/' + articleId, {
+        const res = await fetch(blogSettings.apiUrlSingleLocal + articleId, {
           signal,
         });
-        const post: any = await res.json();
-        const tempPost: post = {
-          title: post.title,
-          body: post.body_html,
-          url: post.url,
-          publishedAt: post.published_at,
-          tagList: post.tag_list,
-          coverImage: post.cover_image,
-        };
-        setPost(tempPost);
+        setPost(await res.json());
       } catch (e) {
         console.error(e);
       }
@@ -73,7 +59,13 @@ const Post = ({ params }: articleProps) => {
         >
           {post.coverImage && (
             <div className="w-full aspect-[50/21] relative rounded-lg overflow-hidden">
-              <Image src={post.coverImage} alt={post.title} fill />
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                priority
+                sizes="100vw"
+              />
             </div>
           )}
           <h1>{post.title}</h1>

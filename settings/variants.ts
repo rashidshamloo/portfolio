@@ -3,6 +3,7 @@ import { Variants } from 'framer-motion';
 export interface variantsType {
   fadeIn: Variants;
   scaleUp: Variants;
+  scaleUpS: Variants;
   fadeLTR: Variants;
   fadeLTRS: Variants;
   fadeLTRPN: Variants;
@@ -11,6 +12,10 @@ export interface variantsType {
   fadeTTBP: Variants;
   fadeTTBPN: Variants;
   fadeBTT: Variants;
+  fadeBTTS: Variants;
+  fadeBTTSScale: Variants;
+  fadeBTTSScaleR: Variants;
+  fadeTTBSScaleR: Variants;
   heightUp: Variants;
   textReveal: Variants;
 }
@@ -39,6 +44,20 @@ export const variants: variantsType = {
     exit: {
       opacity: 0,
       scale: 0,
+    },
+  },
+  scaleUpS: {
+    initial: {
+      opacity: 0,
+      scale: 0.85,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.85,
     },
   },
   fadeLTR: {
@@ -153,6 +172,71 @@ export const variants: variantsType = {
       y: 50,
     },
   },
+  fadeBTTS: {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+    },
+  },
+  fadeBTTSScale: {
+    initial: {
+      opacity: 0,
+      y: 10,
+      scale: 0.95,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 0.95,
+    },
+  },
+  fadeBTTSScaleR: {
+    initial: {
+      opacity: 0,
+      y: 10,
+      scale: 1.05,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 1.05,
+    },
+  },
+  fadeTTBSScaleR: {
+    initial: {
+      opacity: 0,
+      y: -10,
+      scale: 1.05,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      scale: 1.05,
+    },
+  },
   heightUp: {
     initial: {
       opacity: 0,
@@ -170,12 +254,15 @@ export const variants: variantsType = {
   textReveal: {
     initial: {
       opacity: 0,
+      y: -10,
     },
     animate: {
       opacity: 1,
+      y: 0,
     },
     exit: {
       opacity: 0,
+      y: -10,
     },
   },
 };

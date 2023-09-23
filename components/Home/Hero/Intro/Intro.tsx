@@ -11,12 +11,12 @@ import { useLocale } from 'next-intl';
 import { isMobile } from 'react-device-detect';
 
 // components
-import Transition from '@/components/common/Transition';
-import WordBreak from '@/components/common/WordBreak';
+import Transition from '@/components/Common/Transition';
+import WordBreak from '@/components/Common/WordBreak';
 import Skills from './Skills/Skills';
-import Button from '@/components/common/Button';
+import Button from '@/components/Common/Button';
 // import Typed from '@/components/common/Typed';
-const Typed = dynamic(() => import('@/components/common/Typed'));
+const Typed = dynamic(() => import('@/components/Common/Typed'));
 
 // next-intl
 import { useTranslations } from 'next-intl';
@@ -57,6 +57,7 @@ function Intro() {
               strings={[
                 t('name'),
                 t('developer'),
+                t('engineer'),
                 t('programmer'),
                 t('learner'),
               ]}
@@ -75,7 +76,15 @@ function Intro() {
         </Transition>
         <div className="mb-8 mt-2 flex w-full flex-col justify-center gap-4 lg:mt-0 lg:flex-row xl:justify-end xl:gap-x-6 [&_span]:font-semibold [&_span]:tracking-wide">
           <Transition effect="fadeRTL" duration={0.75} delay={1.25}>
-            <Button text={t('resume')} type="resume" href="#" />
+            <Button
+              text={t('resume')}
+              type="resume"
+              href={
+                locale === 'en'
+                  ? '/resume/rashid-shamloo-resume.pdf'
+                  : '/resume/rashid-shamloo-rerikisho.pdf'
+              }
+            />
           </Transition>
           <Transition effect="fadeLTR" duration={0.75} delay={1}>
             <Button

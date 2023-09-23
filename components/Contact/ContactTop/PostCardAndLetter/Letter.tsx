@@ -6,6 +6,13 @@ interface letterProps {
   userName: string;
   userEmail: string;
 }
+// font
+import { Alex_Brush } from 'next/font/google';
+const alexBrush = Alex_Brush({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--alexBrush',
+});
 
 const Letter = ({ userName, userEmail }: letterProps) => {
   const t = useTranslations('Contact');
@@ -13,10 +20,11 @@ const Letter = ({ userName, userEmail }: letterProps) => {
   return (
     <div
       className={
-        "relative -translate-y-[2em] translate-x-[3em] rotate-[-25deg] skew-x-[25deg] rounded-md bg-[url('/images/paper.webp')] bg-cover font-alexBrush text-[1.875em] leading-[1.25] text-darkViolet/70 drop-shadow-md dark:bg-[url('/images/paper-dark.webp')] " +
+        "relative -translate-y-[2em] translate-x-[3em] rotate-[-25deg] skew-x-[25deg] rounded-md bg-[url('/images/contact/paper.webp')] bg-cover font-alexBrush text-[1.875em] leading-[1.25] text-darkViolet/70 drop-shadow-md dark:bg-[url('/images/contact/paper-dark.webp')] " +
+        alexBrush.variable +
         (locale === 'ja'
-          ? 'px-[0.5em] pt-2 [&_p]:text-[0.65em] [&_p]:leading-relaxed'
-          : 'px-[0.75em]')
+          ? ' px-[0.5em] pt-2 [&_p]:text-[0.65em] [&_p]:leading-relaxed'
+          : ' px-[0.75em]')
       }
     >
       <p

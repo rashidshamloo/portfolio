@@ -9,7 +9,7 @@ const FlipTiltDemo = () => {
     <FlipTilt
       className="w-[60%] lg:w-1/2 max-w-[280px]"
       borderRadius="12px"
-      borderWidth="24px"
+      borderWidth="16px"
       front="/images/packages/front.webp"
       back={
         <div

@@ -3,7 +3,7 @@ import Link from 'next-intl/link';
 import { useTranslations, useLocale } from 'next-intl';
 
 // components
-import Transition from '@/components/common/Transition';
+import Transition from '@/components/Common/Transition';
 
 // data
 import navigation from '@/data/navigation.json';

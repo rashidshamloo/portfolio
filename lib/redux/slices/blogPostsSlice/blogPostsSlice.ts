@@ -44,22 +44,10 @@ export const blogPostsSlice = createSlice({
         state.error = '';
       })
       .addCase(fetchPosts.fulfilled, (state, action) => {
-        const posts: BlogPost[] = action.payload.map((post: any) => ({
-          id: post.id,
-          slug: post.slug,
-          title: post.title,
-          description: post.description,
-          url: post.url,
-          publishedAt: post.published_at,
-          readingTime: post.reading_time_minutes,
-          tagList: post.tag_list,
-          coverImage: post.cover_image,
-          reactionCount: post.public_reactions_count,
-        }));
         // validate API response using Zod
-        if (postsSchema.safeParse(posts).success) {
+        if (postsSchema.safeParse(action.payload).success) {
           state.status = 'idle';
-          state.posts = posts;
+          state.posts = action.payload;
         } else {
           state.status = 'error';
           state.error = 'wrong API response';

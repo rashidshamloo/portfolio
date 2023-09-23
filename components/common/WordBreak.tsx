@@ -28,19 +28,20 @@ const WordBreak = ({ children, markdown = false }: wordBreakProps) => {
     };
     marked.setOptions({ renderer, mangle: false, headerIds: false });
     return (
-      <p
+      <span
         dangerouslySetInnerHTML={{
           __html:
             locale === 'ja'
               ? parser.translateHTMLString(marked.parse(children))
               : marked.parse(children),
         }}
-      ></p>
+      ></span>
     );
   }
+
   return (
     <>
-      {typeof children === 'string' && locale === 'ja' && !!parser
+      {typeof children === 'string' && locale === 'ja' && parser
         ? parser.parse(children).map((word, index) => (
             <span className="inline-block" key={index}>
               {word}

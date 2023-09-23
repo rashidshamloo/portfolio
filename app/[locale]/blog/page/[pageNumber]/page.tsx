@@ -1,7 +1,7 @@
 'use client';
 
 // react
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 
 // next
 import Link from 'next-intl/link';
@@ -17,12 +17,12 @@ import { useTranslations } from 'next-intl';
 // react-next-tilt
 import { Tilt } from 'react-next-tilt';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// next-themes
+import { useTheme } from 'next-themes';
 
 // components
 import Pagination from '@/components/Blog/Pagination';
-import Loading from '@/components/common/Loading';
+import Loading from '@/components/Common/Loading';
 
 // settings
 import { blogSettings } from '@/settings/blog';
@@ -31,8 +31,8 @@ import { blogSettings } from '@/settings/blog';
 import { Pages } from '@/types/types';
 
 const BlogPage = () => {
-  // context
-  const [darkMode] = useContext(darkModeSetting)!;
+  // next-themes
+  const { theme } = useTheme();
 
   // redux-toolkit
   const dispatch = useDispatch();
@@ -46,6 +46,12 @@ const BlogPage = () => {
 
   //state
   const [pages, setPages] = useState<Pages>({ total: 1, current: 1 });
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (theme === undefined) return;
+    setDarkMode(theme === 'dark' ? true : false);
+  }, [theme]);
 
   // fetch blog posts if not already in state
   useEffect(() => {
@@ -139,7 +145,11 @@ const BlogPage = () => {
                   </article>
                 </Tilt>
               ))}
-          <Pagination pages={pages} url="/blog/page/" className="mt-4" />
+          <Pagination
+            pages={pages}
+            url="/blog/page/"
+            className="mt-4 text-sm lg:text-base"
+          />
         </div>
       ) : (
         <Loading />

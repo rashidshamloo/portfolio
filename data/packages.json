@@ -1,4 +1,42 @@
-[
+[ {
+  "title": {
+    "en": "React Next Parallax",
+    "ja": "React Next Parallax"
+  },
+  "description": {
+    "en": "A Performant Customizable React Component Providing the Parallax Effect",
+    "ja": "視差効果を提供する高性能でカスタマイズ可能な React コンポーネント"
+  },
+  "points": {
+    "en": [
+      "Easy to use",
+      "Zero dependencies",
+      "Highly customizable",
+      "Built with performance in mind",
+      "Built from the ground up using React Hooks/TypeScript (is not a port of another library)",
+      "Minimum amount of component re-renders",
+      "Typed props with JSDoc descriptions",
+      "Tested extensively using Cypress/Storybook",
+      "Plus all of the features of React Next Tilt"
+    ],
+    "ja": [
+      "使いやすい",
+      "依存関係ゼロ",
+      "高度にカスタマイズ可能",
+      "パフォーマンスを念頭に置いて開発",
+      "React Hooks/TypeScript を使用してゼロから開発されています (別のライブラリの移植ではありません)",
+      "コンポーネントの再レンダリングの最小量",
+      "JSDocによるプロップの説明",
+      "Cypress/Storybook を使用して広範囲にテスト済み",
+      "React Next Tilt のすべての機能を追加"
+    ]
+  },
+  "tags": ["TypeScript", "React", "Component", "Cypress", "Storybook"],
+  "code": "import { Parallax } from 'react-next-parallax';\n\n<Parallax>\n  <div className=\"container\">\n    <img src=\"image1.jpg\" data-parallax-offset=\"-5\" />\n    <img src=\"image2.jpg\" />\n    <img src=\"image3.jpg\" data-parallax-offset=\"5\" />\n  </div>\n</Parallax>",
+  "npmLink": "https://www.npmjs.com/package/react-next-parallax",
+  "sourceLink": "https://github.com/rashidshamloo/react-next-parallax",
+  "blogLink": "https://dev.to/rashidshamloo/introducing-the-react-next-parallax-component-npm-package-emm"
+},
   {
     "title": {
       "en": "React Flip Tilt",

@@ -1,5 +1,5 @@
 // react
-import { useContext } from 'react';
+import { useState, useEffect } from 'react';
 
 // react-awesome-button
 import { AwesomeButton } from 'react-awesome-button';
@@ -12,8 +12,8 @@ import '@/styles/button.scss';
 import { FaPaperPlane, FaRegFileAlt } from 'react-icons/fa';
 import { BsLightningFill, BsGithub } from 'react-icons/bs';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // types
 interface buttonProps {
@@ -31,7 +31,8 @@ const Button = ({
   className = '',
   target = '',
 }: buttonProps) => {
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
+
   const Icon = () => {
     switch (type) {
       case 'contact':

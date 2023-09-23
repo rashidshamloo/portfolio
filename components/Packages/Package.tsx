@@ -1,5 +1,5 @@
 // react
-import { useContext } from 'react';
+import { useState, useEffect } from 'react';
 
 // next
 import dynamic from 'next/dynamic';
@@ -15,14 +15,15 @@ import {
   atelierSulphurpoolLight,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// next-themes
+import { useTheme } from 'next-themes';
 
 // components
-import Button from '../common/Button';
-import WordBreak from '../common/WordBreak';
+import Button from '../Common/Button';
+import WordBreak from '../Common/WordBreak';
 const TiltDemo = dynamic(() => import('./TiltDemo'));
 const FlipTiltDemo = dynamic(() => import('./FlipTiltDemo'));
+const ParallaxDemo = dynamic(() => import('./ParallaxDemo'));
 
 // types
 interface projectData {
@@ -44,7 +45,17 @@ interface projectProps {
 const Package = ({ reverse = false, data }: projectProps) => {
   const t = useTranslations('Packages');
   const locale = useLocale();
-  const [darkMode] = useContext(darkModeSetting)!;
+
+  // next-themes
+  const { theme } = useTheme();
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (theme === undefined) return;
+    setDarkMode(theme === 'dark' ? true : false);
+  }, [theme]);
+
   return (
     <article
       className={
@@ -57,9 +68,14 @@ const Package = ({ reverse = false, data }: projectProps) => {
           <WordBreak>{data.title[locale]}</WordBreak>
         </h2>
         <div className="mx-auto w-[90%] sm:min-w-[450px] lg:mt-4 lg:w-auto 2xl:min-w-[600px]">
-          {data.title.en.includes('Tilt') && (
+          {(data.title.en.includes('Tilt') ||
+            data.title.en.includes('Parallax')) && (
             <div className="mb-16 flex items-center justify-center">
-              {data.title.en.includes('Flip') ? <FlipTiltDemo /> : <TiltDemo />}
+              {data.title.en.includes('React Flip Tilt') && <FlipTiltDemo />}
+              {data.title.en.includes('React Next Tilt') && <TiltDemo />}
+              {data.title.en.includes('React Next Parallax') && (
+                <ParallaxDemo />
+              )}
             </div>
           )}
           <div className="overflow-hidden rounded-xl bg-[rgba(245,247,255,0.4)] text-xs opacity-90 dark:bg-[rgba(40,42,54,0.5)] sm:text-sm md:p-2 lg:p-4 lg:text-base [&>pre]:!bg-transparent">
@@ -116,7 +132,7 @@ const Package = ({ reverse = false, data }: projectProps) => {
         <div className="text-lg leading-loose underline-offset-2 [&_a]:text-grayishBlue/90 [&_a]:underline [&_a]:transition-colors [&_a]:duration-300 hover:[&_a]:text-accent/80 dark:[&_a]:text-lightGrayishBlue dark:hover:[&_a]:text-accent/80">
           <WordBreak markdown={true}>{data.description[locale]}</WordBreak>
         </div>
-        <ul className="mx-auto inline-block list-none text-center leading-loose lg:mx-0 lg:block lg:text-left [&>li]:my-3">
+        <ul className="mx-auto inline-block list-none text-center leading-loose lg:mx-0 lg:block lg:text-left [&>li]:my-2">
           {data.points[locale].map((point, index) => (
             <li key={index}>
               <Image

@@ -17,7 +17,7 @@ export function generateStaticParams() {
 import Providers from '@/providers/Providers';
 
 // font
-import { Raleway, Merriweather, Alex_Brush } from 'next/font/google';
+import { Raleway, Merriweather } from 'next/font/google';
 const raleway = Raleway({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -28,19 +28,12 @@ const merriweather = Merriweather({
   subsets: ['latin'],
   variable: '--merriweather',
 });
-const alexBrush = Alex_Brush({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--alexBrush',
-});
-
-// context
-import Context from '@/components/common/Context';
 
 // components
 const Header = dynamic(() => import('@/components/Header/Header'));
 const Footer = dynamic(() => import('@/components/Footer/Footer'));
-const Logo = dynamic(() => import('@/components/common/Logo'));
+const Logo = dynamic(() => import('@/components/Common/Logo'));
+import ScrollToTop from '@/components/Layout/ScrollToTop';
 
 // metadata
 export const metadata: Metadata = {
@@ -48,7 +41,7 @@ export const metadata: Metadata = {
   description: "Rashid Shamloo's Portfolio",
   keywords:
     'Rashid Shamloo, Rashid, Shamloo, Portfolio, Web Developer, Front-end Developer, Project, Showcase, Contact Info, Blog',
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: 'width=device-width, initial-scale=1.0',
   icons: {
     icon: '/images/favicon.webp',
   },
@@ -72,20 +65,21 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body
-        className={`${raleway.variable} ${merriweather.variable} ${alexBrush.variable}`}
-      >
+    <html
+      lang={locale}
+      className="scroll-smooth snap-proximity snap-y"
+      suppressHydrationWarning
+    >
+      <body className={`${raleway.variable} ${merriweather.variable}`}>
         <Logo />
-        <Providers>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <Context>
-              <Header />
-              <main className={`min-h-screen font-raleway`}>{children}</main>
-              <Footer />
-            </Context>
-          </NextIntlClientProvider>
-        </Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>
+            <ScrollToTop />
+            <Header />
+            <main className={`min-h-screen font-raleway`}>{children}</main>
+            <Footer />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

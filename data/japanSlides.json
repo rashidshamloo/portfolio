@@ -1,0 +1,200 @@
+[
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Tokyo Tower", "ja": "東京タワー" },
+    "description": {
+      "en": "Tokyo Tower is a communications and observation tower located in the Shiba-koen district of Minato, Tokyo, Japan. It was built in 1958 and is the second-tallest structure in Japan at 332.9 meters (1,092 ft). The tower is an Eiffel Tower-inspired lattice tower that is painted white and international orange to comply with air safety regulations. It is also the world's tallest self-supported steel tower.",
+      "ja": "東京タワーは、東京港区芝公園地区にある通信および展望塔です。 1958 年に建てられ、高さ 332.9 メートル (1,092 フィート) で日本で 2 番目に高い建造物です。 この塔はエッフェル塔にインスピレーションを得た格子塔で、航空安全規制に準拠するために白とインターナショナルオレンジで塗装されています。 自立式鉄塔としては世界一の高さでもあります。"
+    },
+    "image": "tokyo-tower.webp",
+    "photographer": "Nick Kwan",
+    "photoLink": "https://www.pexels.com/photo/illuminated-tower-2614818/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Rainbow Bridge", "ja": "レインボーブリッジ" },
+    "description": {
+      "en": "Rainbow Bridge is a suspension bridge crossing northern Tokyo Bay between Shibaura Pier and the Odaiba waterfront development in Minato, Tokyo, Japan. The bridge was completed in 1993 and spans 798 meters with a main span of 580 meters. There are lamps placed on the wires supporting the bridge, which are illuminated into three different colors, red, white and green every night using solar energy obtained during the day.",
+      "ja": "レインボーブリッジは、東京港の芝浦埠頭とお台場ウォーターフロント開発の間の東京湾北部を渡る吊り橋です。 この橋は 1993 年に完成し、全長 798 メートル、主径間 580 メートルです。 橋を支える電線にはランプが設置されており、日中に得られる太陽エネルギーを利用して毎晩赤・白・緑の3色に点灯します。"
+    },
+    "image": "rainbow-bridge.webp",
+    "photographer": "Aleksandar Pasaric",
+    "photoLink": "https://www.pexels.com/photo/body-of-water-across-bridge-during-nighttime-2341830/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Shinjuku", "ja": "新宿" },
+    "description": {
+      "en": "Shinjuku is a bustling ward in the Tokyo prefecture, Japan. It is filled with skyscrapers and malls and home to the world’s busiest railway station. Visitors can find many things to do in this city, from shopping to bar hopping, to feasting on ramen to staying in a luxury hotel. It is certainly a city that never sleeps.",
+      "ja": "新宿は日本の東京都にある賑やかな区です。 高層ビルやショッピングモールが立ち並び、世界で最も混雑する鉄道駅もあります。 この街では、ショッピング、バー巡り、ラーメンのグルメ、高級ホテルの宿泊など、さまざまなアクティビティが見つかります。 確かに眠らない街ですね。"
+    },
+    "image": "shinjuku.webp",
+    "photographer": "Satoshi Hirayama",
+    "photoLink": "https://www.pexels.com/photo/photo-of-signages-during-the-night-11233537/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Asakusa", "ja": "浅草" },
+    "description": {
+      "en": "Asakusa is a district with an atmosphere of old Tokyo. It is the center of Tokyo’s shitamachi (literally “low city”), one of Tokyo’s districts, where an atmosphere of the Tokyo of past decades survives. Asakusa’s main attraction is Sensoji, a very popular Buddhist temple, built in the 7th century.",
+      "ja": "浅草は、昔ながらの東京の雰囲気が残る街です。 東京の下町の中心であり、数十年前の東京の雰囲気が今も残っている場所です。 浅草の主な観光スポットは、7 世紀に建てられた非常に人気のある仏教寺院である浅草寺です。"
+    },
+    "image": "asakusa.webp",
+    "photographer": "Yumiko Yamanaka",
+    "photoLink": "https://www.pexels.com/photo/the-kaminarimon-gate-in-tokyo-japan-5425522/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Tokyo Skytree", "ja": "東京スカイツリー" },
+    "description": {
+      "en": "The Tokyo Skytree is a broadcasting and observation tower in Sumida, Tokyo. It became the tallest structure in Japan in 2010 and reached its full height of 634 meters (2,080 ft) in March 2011, making it the tallest tower in the world at that time. It gives incredible panoramic views of Tokyo from its observatories.",
+      "ja": "東京スカイツリーは、東京都墨田区にある放送兼展望塔です。 2010 年に日本で最も高い建造物となり、2011 年 3 月には高さ 634 メートル (2,080 フィート) に達し、当時世界で最も高いタワーとなりました。 展望台からは東京の素晴らしいパノラマの景色を眺めることができます。"
+    },
+    "image": "skytree.webp",
+    "photographer": "Evgeny Tchebotarev",
+    "photoLink": "https://www.pexels.com/photo/river-near-a-city-2187456/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Shibuya", "ja": "渋谷区" },
+    "description": {
+      "en": "Shibuya is a special ward in Tokyo, Japan. It is known for its busy pedestrian crossing, the Shibuya Crossing, which is located in front of the Shibuya Station Hachiko exit and stops vehicles in all directions to allow pedestrians to inundate the entire intersection.",
+      "ja": "渋谷区は東京の特別区です。 交通量の多い横断歩道である渋谷交差点は、渋谷駅ハチ公口の正面に位置し、四方八方の車両を停止させて歩行者が交差点全体に浸水するようになっていることで知られています。"
+    },
+    "image": "shibuya.webp",
+    "photographer": "Aleksandar Pasaric",
+    "photoLink": "https://www.pexels.com/photo/traffic-jam-scenery-during-night-time-3402955/"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Asahi Beer Hall", "ja": "アサヒビールホール" },
+    "description": {
+      "en": "The Asahi Beer Hall is a building adjacent to the headquarters of Asahi Breweries. It’s home to a three-story restaurant serving beer straight from the factory. Designed by French designer Philippe Starck, the building was completed in 1989.",
+      "ja": "アサヒビールホールは、アサヒビール本社に隣接する建物です。 工場から直送のビールを提供する 3 階建てのレストランがあります。 フランス人デザイナー、フィリップ・スタルク氏が設計し、1989年に完成した。"
+    },
+    "image": "asahi-beer-hall.webp",
+    "photographer": "AXP Photography",
+    "photoLink": "https://unsplash.com/photos/rrwkR74RCZI"
+  },
+  {
+    "city": { "en": "Tokyo", "ja": "東京" },
+    "title": { "en": "Tokyo Cruise Ship", "ja": "東京都観光汽船" },
+    "description": {
+      "en": "Tokyo Cruise Ship has a wide fleet of boats to ferry people up and down the waterways of Tokyo, but the best experience lies in riding the Himiko or Hotaluna, two space-age ships designed by the animator Leiji Matsumoto.",
+      "ja": "東京都観光汽船には、東京の水路を行き来するための幅広い船団がありますが、最高の体験は、アニメーターの松本零士が設計した 2 つの宇宙時代の船、ヒミコまたはホタルナに乗ることです。"
+    },
+    "image": "tokyo-cruise-ship.webp",
+    "photographer": "jun560",
+    "photoLink": "https://www.flickr.com/photos/47741487@N06/4473690746/"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Dotonbori", "ja": "道頓堀" },
+    "description": {
+      "en": "Dotonbori is a popular street along an eponymous canal, located in the southern district of Namba in Osaka, Japan. It is known as one of Osaka’s principal tourist and nightlife areas. The colorful area is an explosion of neon lights, mouth-watering street food, retro vibes, clubs, stores, and bars.",
+      "ja": "道頓堀は、大阪の難波南部にある、その名を冠した運河沿いの人気の通りです。 大阪の主要な観光地とナイトライフエリアの 1 つとして知られています。 このカラフルなエリアには、ネオン、美味しそうな屋台の食べ物、レトロな雰囲気、クラブ、店舗、バーが溢れています。"
+    },
+    "image": "dotonbori.webp",
+    "photographer": "Ramon Kagie",
+    "photoLink": "https://unsplash.com/photos/LoJ87AsXbFw"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Tsutenkaku", "ja": "通天閣" },
+    "description": {
+      "en": "Tsutenkaku is a tower and well-known landmark of Osaka, Japan. It is located in the Shinsekai district of Naniwa-ku, Osaka. Its total height is 103 meters (338 ft); the main observation deck is at a height of 91 meters (299 ft).",
+      "ja": "通天閣は大阪のタワーであり、有名なランドマークです。 大阪市浪速区新世界にあります。 その全高は 103 メートル (338 フィート) です。 メイン展望台の高さは 91 メートル (299 フィート) です。"
+    },
+    "image": "tsutenkaku.webp",
+    "photographer": "Nguyen Hung",
+    "photoLink": "https://www.pexels.com/photo/illuminated-stores-during-night-time-13522646/"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Osaka Castle", "ja": "大阪城" },
+    "description": {
+      "en": "Osaka Castle is a Japanese castle in Chūō-ku, Osaka, Japan. The castle is one of Japan’s most famous landmarks and it played a major role in the unification of Japan during the sixteenth century of the Azuchi-Momoyama period.",
+      "ja": "大阪城は、大阪市中央区にある日本の城です。 この城は日本で最も有名なランドマークの 1 つであり、16 世紀の安土桃山時代に日本の統一に大きな役割を果たしました。"
+    },
+    "image": "osaka-castle.webp",
+    "photographer": "Pixabay",
+    "photoLink": "https://www.pexels.com/photo/green-leafed-tree-near-white-and-blue-house-161923/"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Umeda Sky Building", "ja": "梅田スカイビル" },
+    "description": {
+      "en": "The Umeda Sky Building is a landmark skyscraper in Osaka, Japan. It consists of two 40-story towers that connect at their two uppermost stories, with bridges and an escalator crossing the wide atrium-like space in the center.",
+      "ja": "梅田スカイビルは、大阪のランドマーク的な超高層ビルです。 40階建ての2棟のタワーが最上階2階で接続され、中央の広い吹き抜け空間を橋とエスカレーターで横断して構成されています。"
+    },
+    "image": "umeda-sky-building.webp",
+    "photographer": "Paul Cuoco",
+    "photoLink": "https://unsplash.com/photos/g1_bvwtEEi8"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Kuromon Market", "ja": "黒門市場" },
+    "description": {
+      "en": "Kuromon Ichiba Market is a lively covered market in Osaka, Japan. It is known for its fresh seafood and street food stalls.",
+      "ja": "黒門市場は、大阪にある活気のある屋根付き市場です。 新鮮な魚介類と屋台で知られています。"
+    },
+    "image": "kuromon-market.webp",
+    "photographer": "Helga Christina",
+    "photoLink": "https://unsplash.com/photos/TuIKSIbZqic"
+  },
+  {
+    "city": { "en": "Osaka", "ja": "大阪" },
+    "title": { "en": "Expo '70 Commemorative Park", "ja": "大阪万博記念公園" },
+    "description": {
+      "en": "The Osaka Expo '70 Commemorative Park is a park in Suita, Japan. It is the former site of Expo '70, a World’s Fair held between March 15 and September 13, 1970. The park is about 264 ha of lawn and forest and has education and recreation facilities.",
+      "ja": "大阪万博記念公園は吹田市にある公園です。 ここは、1970 年 3 月 15 日から 9 月 13 日まで開催された万国博覧会、エキスポ '70 の跡地です。この公園は約 264 ヘクタールの芝生と森林があり、教育施設とレクリエーション施設があります。"
+    },
+    "image": "expo-park.webp",
+    "photographer": "伊特諾 雷",
+    "photoLink": "https://www.flickr.com/photos/eternal_ray/48980476938"
+  },
+  {
+    "city": { "en": "Kyoto", "ja": "京都" },
+    "title": { "en": "Kinkakuji Temple", "ja": "金閣寺" },
+    "description": {
+      "en": "Kinkakuji Temple is a Zen temple in northern Kyoto whose top two floors are completely covered in gold leaf. Formally known as Rokuonji, the temple was the retirement villa of the shogun Ashikaga Yoshimitsu, and according to his will it became a Zen temple of the Rinzai sect after his death in 1408.",
+      "ja": "金閣寺は京都北部にある禅寺で、最上階 2 階はすべて金箔で覆われています。 正式には鹿苑寺と呼ばれるこの寺院は、将軍足利義満の別邸であり、1408 年の義満の死後、義満の遺言により臨済宗の禅寺となりました。"
+    },
+    "image": "kinkakuji-temple.webp",
+    "photographer": "Marlon Trottmann",
+    "photoLink": "https://www.pexels.com/photo/brown-and-white-concrete-building-near-green-trees-5843571/"
+  },
+  {
+    "city": { "en": "Kyoto", "ja": "京都" },
+    "title": { "en": "Fushimi Inari Shrine", "ja": "伏見稲荷大社" },
+    "description": {
+      "en": "Fushimi Inari Shrine is an important Shinto shrine in southern Kyoto. It is famous for its thousands of vermilion torii gates, which straddle a network of trails behind its main buildings. The trails lead into the wooded forest of the sacred Mount Inari.",
+      "ja": "伏見稲荷大社は京都南部の重要な神社です。 本殿の裏にある小道網にまたがる何千もの朱色の鳥居で有名です。 トレイルは神聖な稲荷山の森林へと続いています。"
+    },
+    "image": "fushimi-inari-shrine.webp",
+    "photographer": "Stephan Streuders",
+    "photoLink": "https://www.pexels.com/photo/photo-of-walkway-between-shinto-shrine-3767837/"
+  },
+  {
+    "city": { "en": "Kyoto", "ja": "京都" },
+    "title": { "en": "Arashiyama Bamboo Grove", "ja": "嵐山の竹林" },
+    "description": {
+      "en": "The Arashiyama Bamboo Grove is a natural forest of bamboo in Arashiyama, Kyoto, Japan. The forest consists mostly of mōsō bamboo (Phyllostachys edulis) and has several pathways for tourists and visitors. It is believed to be one of the most photographed places in Kyoto.",
+      "ja": "嵐山の竹林は、京都の嵐山にある竹の自然林です。 この森は主に孟宗竹 (Phyllostachys edulis) で構成されており、観光客や訪問者のための小道がいくつかあります。 京都で最も写真が撮られる場所の一つと言われています。"
+    },
+    "image": "arashiyama-bamboo-grove.webp",
+    "photographer": "Des Paroz",
+    "photoLink": "https://www.flickr.com/photos/bluebeyond/49776092558/"
+  },
+  {
+    "city": { "en": "Yokohama", "ja": "横浜" },
+    "title": { "en": "Gundam Factory", "ja": "嵐山の竹林" },
+    "description": {
+      "en": "Gundam Factory Yokohama is an entertainment complex located at Yamashita Pier in Yokohama, Japan. Its main feature is a moving Gundam, an 18-metre tall pilot-operated “mech” (a large mechanical automaton with a human operator inside) from the Japanese animated franchise Gundam.",
+      "ja": "「GUNDAM FACTORY YOKOHAMA」は、横浜の山下ふ頭にある複合エンターテインメント施設です。 その主な特徴は、日本のアニメーションシリーズ「ガンダム」に登場する、身長 18 メートルのパイロットが操作する「メカ」（内部に人間のオペレーターがいる大型の自動機械）である動くガンダムです。"
+    },
+    "image": "gundam-factory.webp",
+    "photographer": "Aniket Hande",
+    "photoLink": "https://unsplash.com/photos/giUSa6gpemY"
+  }
+]

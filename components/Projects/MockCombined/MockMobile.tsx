@@ -11,12 +11,12 @@ const MockMobile = ({ image }: mockMobileProps) => {
     <div className={`relative aspect-[200/387] w-full overflow-auto`}>
       <div
         className="relative mx-auto mt-[9.25%] aspect-[200/433] w-[80.5%] overflow-y-scroll rounded-lg [&::-webkit-scrollbar]:hidden"
-        // calc(100%_/_1.24)
-        // 80.5%
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none',
         }}
+        tabIndex={0}
+        artia-label="Mobile View"
       >
         <Image
           width="150"

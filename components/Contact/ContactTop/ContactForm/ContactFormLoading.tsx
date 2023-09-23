@@ -12,7 +12,7 @@ import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlin
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 
 // components
-import Transition from '@/components/common/Transition';
+import Transition from '@/components/Common/Transition';
 
 // types
 interface contactFormLoadingProps {
@@ -44,7 +44,7 @@ const ContactFormLoading = ({
               </>
             )}
             {!isSending && !isError && (
-              <div className="text-[6rem]">
+              <div className="text-[6rem] flex-col flex items-center justify-center gap-y-4">
                 <CheckCircleOutlineRoundedIcon
                   fontSize="inherit"
                   className="text-green-300 dark:text-green-600"
