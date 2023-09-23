@@ -53,7 +53,7 @@ const Post = ({ params }: articleProps) => {
       {post ? (
         <div
           className={
-            'w-full rounded-xl p-4 md:p-6 glass max-w-full overflow-hidden blog-post' +
+            'w-full rounded-xl p-4 md:p-6 glass max-w-full overflow-hidden blog-post ' +
             className
           }
         >
