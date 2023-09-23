@@ -1,0 +1,9 @@
+// source: https://github.com/highlightjs/highlight.js/issues/2115#issuecomment-1059981062
+@use 'sass:meta';
+
+body {
+  @include meta.load-css('highlight.js/styles/base16/atelier-lakeside-light');
+}
+body.dark {
+  @include meta.load-css('highlight.js/styles/base16/atelier-lakeside');
+}

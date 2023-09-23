@@ -1,0 +1,198 @@
+[ {
+  "title": {
+    "en": "React Next Parallax",
+    "ja": "React Next Parallax"
+  },
+  "description": {
+    "en": "A Performant Customizable React Component Providing the Parallax Effect",
+    "ja": "視差効果を提供する高性能でカスタマイズ可能な React コンポーネント"
+  },
+  "points": {
+    "en": [
+      "Easy to use",
+      "Zero dependencies",
+      "Highly customizable",
+      "Built with performance in mind",
+      "Built from the ground up using React Hooks/TypeScript (is not a port of another library)",
+      "Minimum amount of component re-renders",
+      "Typed props with JSDoc descriptions",
+      "Tested extensively using Cypress/Storybook",
+      "Plus all of the features of React Next Tilt"
+    ],
+    "ja": [
+      "使いやすい",
+      "依存関係ゼロ",
+      "高度にカスタマイズ可能",
+      "パフォーマンスを念頭に置いて開発",
+      "React Hooks/TypeScript を使用してゼロから開発されています (別のライブラリの移植ではありません)",
+      "コンポーネントの再レンダリングの最小量",
+      "JSDocによるプロップの説明",
+      "Cypress/Storybook を使用して広範囲にテスト済み",
+      "React Next Tilt のすべての機能を追加"
+    ]
+  },
+  "tags": ["TypeScript", "React", "Component", "Cypress", "Storybook"],
+  "code": "import { Parallax } from 'react-next-parallax';\n\n<Parallax>\n  <div className=\"container\">\n    <img src=\"image1.jpg\" data-parallax-offset=\"-5\" />\n    <img src=\"image2.jpg\" />\n    <img src=\"image3.jpg\" data-parallax-offset=\"5\" />\n  </div>\n</Parallax>",
+  "npmLink": "https://www.npmjs.com/package/react-next-parallax",
+  "sourceLink": "https://github.com/rashidshamloo/react-next-parallax",
+  "blogLink": "https://dev.to/rashidshamloo/introducing-the-react-next-parallax-component-npm-package-emm"
+},
+  {
+    "title": {
+      "en": "React Flip Tilt",
+      "ja": "React Flip Tilt"
+    },
+    "description": {
+      "en": "A Performant Customizable React Component Providing the Flip-Tilt Effect",
+      "ja": "フリップチルト効果を提供する高性能でカスタマイズ可能な React コンポーネント"
+    },
+    "points": {
+      "en": [
+        "Easy to use",
+        "Zero dependencies",
+        "Highly customizable",
+        "Built with performance in mind",
+        "Built from the ground up using React Hooks/TypeScript (is not a port of another library)",
+        "Minimum amount of component re-renders",
+        "Typed props with JSDoc descriptions",
+        "Tested extensively using Cypress/Storybook",
+        "Plus all of the features of React Next Tilt"
+      ],
+      "ja": [
+        "使いやすい",
+        "依存関係ゼロ",
+        "高度にカスタマイズ可能",
+        "パフォーマンスを念頭に置いて開発",
+        "React Hooks/TypeScript を使用してゼロから開発されています (別のライブラリの移植ではありません)",
+        "コンポーネントの再レンダリングの最小量",
+        "JSDocによるプロップの説明",
+        "Cypress/Storybook を使用して広範囲にテスト済み",
+        "React Next Tilt のすべての機能を追加"
+      ]
+    },
+    "tags": ["TypeScript", "React", "Component", "Cypress", "Storybook"],
+    "code": "import { FlipTilt } from 'react-flip-tilt';\n\n// image source\n<FlipTilt front=\"/front.webp\" back=\"/back.webp\" />\n\n// element/component\n<FlipTilt front={<div>...</div>} back={<MyComponent />} />\n\n// mixture of both\n<FlipTilt front=\"/front.webp\" back={<MyComponent />} />",
+    "npmLink": "https://www.npmjs.com/package/react-flip-tilt",
+    "sourceLink": "https://github.com/rashidshamloo/react-flip-tilt",
+    "blogLink": "https://dev.to/rashidshamloo/react-next-tilt-and-react-flip-tilt-npm-packages-24p0"
+  },
+  {
+    "title": {
+      "en": "React Next Tilt",
+      "ja": "React Next Tilt"
+    },
+    "description": {
+      "en": "A Performant Customizable Tilt Component for React",
+      "ja": "React 用の高性能でカスタマイズ可能な Tilt コンポーネント"
+    },
+    "points": {
+      "en": [
+        "Easy to use",
+        "Zero dependencies",
+        "Highly customizable",
+        "Touch and Gyroscope support",
+        "Two customizable glare effects (spot/line)",
+        "Parallax ready",
+        "\"Scale on Hover/Touch\" support",
+        "\"Disable Scroll on Touch\" support",
+        "\"Full-Page Listening\" support",
+        "\"Control Element\" support",
+        "No jittery movement around the edges",
+        "Built with performance in mind (requestAnimationFrame(), will-change, and other optimizations)",
+        "Built from the ground up using React Hooks/TypeScript (is not a port of another library)",
+        "Minimum amount of component re-renders",
+        "Typed props with JSDoc descriptions",
+        "Tested extensively using Cypress/Storybook"
+      ],
+      "ja": [
+        "使いやすい",
+        "依存関係ゼロ",
+        "高度にカスタマイズ可能",
+        "タッチとジャイロスコープのサポート",
+        "2 つのカスタマイズ可能なグレア効果 (スポット/ライン)",
+        "パララックス対応",
+        "「ホバー/タッチ時の拡大縮小」のサポート",
+        "「タッチ時のスクロールを無効にする」のサポート",
+        "「全ページリスニング」のサポート",
+        "「コントロールエレメント」のサポート",
+        "エッジ付近でのギクシャクした動きはありません",
+        "パフォーマンスを念頭に置いて開発されています (requestAnimationFrame()、will-change、その他の最適化)",
+        "React Hooks/TypeScript を使用してゼロから開発されています (別のライブラリの移植ではありません)",
+        "コンポーネントの再レンダリングの最小量",
+        "JSDocによるプロップの説明",
+        "Cypress/Storybook を使用して広範囲にテスト済み"
+      ]
+    },
+    "tags": ["TypeScript", "React", "Component", "Cypress", "Storybook"],
+    "code": "import { Tilt } from 'react-next-tilt';\n\n// image\n<Tilt>\n  <img src=\"path/to/image.jpg\" />\n</Tilt>\n\n// element\n<Tilt>\n  <div>...</div>\n</Tilt>\n\n// component\n<Tilt>\n <MyComponent /> \n</Tilt>",
+    "npmLink": "https://www.npmjs.com/package/react-next-tilt",
+    "sourceLink": "https://github.com/rashidshamloo/react-next-tilt",
+    "blogLink": "https://dev.to/rashidshamloo/react-next-tilt-and-react-flip-tilt-npm-packages-24p0"
+  },
+  {
+    "title": {
+      "en": "Fetch Multi Signal",
+      "ja": "Fetch Multi Signal"
+    },
+    "description": {
+      "en": "A wrapper for the Fetch API that allows for setting a timeout and using multiple abort signals.",
+      "ja": "タイムアウトの設定と複数の中止信号の使用を可能にする Fetch API のラッパー。"
+    },
+    "points": {
+      "en": [
+        "Adds the timeout option to fetch()",
+        "Accepts multiple AbortSignals and aborts if any of them are aborted.",
+        "Works with both AbortController().signal and AbortSignal.timeout()",
+        "Compatible with fetch() and can be used as a drop-in replacement.",
+        "Custom unit tests using Jest",
+        "Compatible with Node.js v18+"
+      ],
+      "ja": [
+        "fetch() にタイムアウト オプションを追加します。",
+        "複数の AbortSignal を受け入れ、それらのいずれかが中止された場合は中止します。",
+        "AbortController().signal と AbortSignal.timeout() の両方で動作します",
+        "fetch() と互換性があり、ドロップインの代替として使用できます。",
+        "Jest を使用したカスタム単体テスト",
+        "Node.js v18以降と互換性あり"
+      ]
+    },
+    "tags": ["TypeScript", "Fetch API", "Abort Signal", "Async", "Timeout"],
+    "code": "import { fetchMS as fetch } from 'fetch-multi-signal';\n\n// timeout in milliseconds\nconst timeout = 1000;\n\n// signals\nconst controller1 = new AbortController();\nconst controller2 = new AbortController();\nconst controller3 = new AbortController();\nconst signal1 = controller1.signal;\nconst signal2 = controller2.signal;\nconst signal3 = controller3.signal;\n\nfetch('url', {\n  timeout,\n  signal: signal1,\n  signals: [signal2, signal3],\n});",
+    "npmLink": "https://www.npmjs.com/package/fetch-multi-signal",
+    "sourceLink": "https://github.com/rashidshamloo/fetch-multi-signal",
+    "blogLink": "https://dev.to/rashidshamloo/adding-timeout-and-multiple-abort-signals-to-fetch-typescriptreact-33bb"
+  },
+  {
+    "title": {
+      "en": "Multi Signal",
+      "ja": "Multi Signal"
+    },
+    "description": {
+      "en": "A utility that merges multiple abort signals into a single signal.",
+      "ja": "一見するとシンプルなやることアプリのように見えますが、ユーザー認証、データベース統合、遅延補正、ドラッグ アンド ドロップの並べ替え、アニメーションなどの追加機能が含まれています。"
+    },
+    "points": {
+      "en": [
+        "Merges multiple abort signals into a single signal.",
+        "Returned signal will be aborted if any of the input signals are aborted.",
+        "Can be used in place of AbortSignal() in any function/utility.",
+        "Works with both AbortController().signal and AbortSignal.timeout()",
+        "Custom unit tests using Jest",
+        "Compatible with Node.js v16+"
+      ],
+      "ja": [
+        "複数のアボート信号を 1 つの信号にマージします。",
+        "いずれかの入力信号が中止された場合、返された信号も中止されます。",
+        "AbortSignal() の代わりに使用できます。",
+        "AbortController().signal と AbortSignal.timeout() の両方で動作します",
+        "Jest を使用したカスタム単体テスト",
+        "Node.js v16以降と互換性あり"
+      ]
+    },
+    "tags": ["TypeScript", "Abort Signal", "Async", "Timeout"],
+    "code": "import multiSignal from 'multi-signal';\n\n// signals\nconst controller1 = new AbortController();\nconst controller2 = new AbortController();\nconst signal1 = controller1.signal;\nconst signal2 = controller2.signal;\nconst timeoutSignal = AbortSignal.timeout(2000);\n\n// signals as separate arguments\nconst signal = multiSignal(signal1, signal2);\n\n// signals as array\nconst signal = multiSignal([signal1, signal2]);\n\n// different signal types\nconst signal = multiSignal(signal1, signal2, timeoutSignal);",
+    "npmLink": "https://www.npmjs.com/package/multi-signal",
+    "sourceLink": "https://github.com/rashidshamloo/multi-signal",
+    "blogLink": "https://dev.to/rashidshamloo/adding-timeout-and-multiple-abort-signals-to-fetch-typescriptreact-33bb"
+  }
+]

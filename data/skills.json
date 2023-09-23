@@ -33,7 +33,25 @@
   },
   {
     "text": "Next.js",
-    "image": "nextjs-original.svg"
+    "image": "nextjs-original.svg",
+    "imageDark": "nextjs-original-dark.svg"
+  },
+  {
+    "text": "Redux",
+    "image": "redux-original.svg"
+  },
+  {
+    "text": "Storybook",
+    "image": "storybook-original.svg"
+  },
+  {
+    "text": "Jest",
+    "image": "jest-plain.svg"
+  },
+  {
+    "text": "Cypress",
+    "image": "cypress.svg",
+    "imageDark": "cypress-dark.svg"
   },
   {
     "text": "Firebase",
@@ -45,15 +63,17 @@
   },
   {
     "text": "Express",
-    "image": "express-original.svg"
+    "image": "express-original.svg",
+    "imageDark": "express-original-dark.svg"
   },
   {
-    "text": "Jest",
-    "image": "jest-plain.svg"
+    "text": "Git",
+    "image": "git-original.svg"
   },
   {
     "text": "GitHub",
-    "image": "github-original.svg"
+    "image": "github.svg",
+    "imageDark": "github-dark.svg"
   },
   {
     "text": "VS Code",

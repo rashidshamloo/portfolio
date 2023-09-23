@@ -1,14 +1,15 @@
 // react
-import { useContext } from 'react';
+import { useState, useEffect } from 'react';
 
-// context
-import darkModeSetting from '@/context/darkModeSetting';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // data
 import socials from '@/data/socials.json';
 
 function FooterSocialLinks() {
-  const [darkMode] = useContext(darkModeSetting)!;
+  const darkMode = useNextThemes();
+
   return (
     <ul className="[&_a]:flex [&_a]:items-center [&_a]:justify-start [&_a]:gap-x-2">
       {socials.map((item, index) => (

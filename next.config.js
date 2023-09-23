@@ -7,6 +7,13 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'res.cloudinary.com',
+      },
+    ],
+  },
   // experimental: {
   //   serverActions: true,
   // },

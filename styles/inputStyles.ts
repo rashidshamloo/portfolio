@@ -42,6 +42,11 @@ const inputStyles = (
     input: { color: inputColor, pl: 0.5 },
     textArea: { color: inputColor },
     fontSize: '1em',
+    '& input:-webkit-autofill, & input:-webkit-autofill:hover, & input:-webkit-autofill:focus':
+      {
+        backgroundClip: 'text',
+        WebkitTextFillColor: inputColor,
+      },
   });
 };
 

@@ -11,13 +11,14 @@
   },
   "Intro": {
     "pageTitle": "シャムルラシドのポートフォリオ",
-    "greeting": "こんばんは",
+    "greeting": "初めまして、",
     "about": "最新の最先端テクノロジーを使用して最高のユーザー エクスペリエンスを提供することに情熱を持っており、インタラクティブで楽しく使用できる、堅牢で安全でアクセスしやすい Web サイトを構築しています。 バックエンド テクノロジーに精通しており、それらを自分のワークフローに統合しています。 細部にまでこだわり、デザインにマッチした商品をお届けいたします。",
-    "sendMessage": "メッセージを送る",
-    "iam": "僕は",
+    "sendMessage": "お問い合わせ",
+    "iam": "私は",
     "name": "シャムル ラシド",
     "developer": "デベロッパー",
     "programmer": "プログラマー",
+    "engineer": "エンジニア",
     "learner": "熱心な学習者",
     "resume": "履歴書を見る"
   },
@@ -32,6 +33,40 @@
     "passionText2": "効果的にコミュニケーションし、協力的にコラボレーションし、信頼を築く",
     "passionText3": "個性、感情、創造性を仕事に加える",
     "passionText4": "やる気、好奇心、熱意を保つ"
+  },
+  "Showcase": {
+    "photo": "写真：",
+    "slideTitle": "日本の見所",
+    "flowersTitle": "お花たち",
+    "fishTitle": "お魚たち",
+    "pageTitle": "ショーケース",
+    "pageInfo": "このページのプロジェクトのほとんどは、私自身の NPM パッケージを使用して構築されており、革新的でカスタマイズ可能で再利用可能で、見た目が美しく、機能的に堅牢なコンポーネントとアプリケーションを構築する私の能力を実証しています。",
+    "topFooter1": "[react-next-parallax](https://www.npmjs.com/package/react-next-parallax) NPM パッケージを使用して構築されています。",
+    "topFooter2": "画像：[Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) - [vecteezy.com](https://www.vecteezy.com/).",
+    "japanSliderFooter": "[swiper](https://www.npmjs.com/package/swiper)、[swiper-mods](https://www.npmjs.com/package/swiper-mods)、[react-next-tilt](https://www.npmjs.com/package/react-next-tilt) NPM パッケージを使用して構築されています。",
+    "fishFooter1": "[react-flip-tilt](https://www.npmjs.com/package/react-flip-tilt)と[react-next-parallax](https://www.npmjs.com/package/react-next-parallax) NPM パッケージを使用して構築されています。",
+    "fishFooter2": "画像：[Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) - [vecteezy.com](https://www.vecteezy.com/).",
+    "flowersFooter1": "[react-flip-tilt](https://www.npmjs.com/package/react-flip-tilt)と[react-next-tilt](https://www.npmjs.com/package/react-next-tilt) NPM パッケージを使用して構築されています。",
+    "flowersFooter2": "画像：[Yuliya Pauliukevich](https://www.vecteezy.com/members/klyaksun) - [vecteezy.com](https://www.vecteezy.com/).",
+    "parallaxLine1": "学習をし続けろ",
+    "parallaxLine2": "決してあきらめるな"
+  },
+  "Projects": {
+    "pageTitle": "プロジェクト",
+    "liveDemo": "ライブデモ",
+    "sourceCode": "ソースコード",
+    "backendSourceCode": "バックエンドのソースコード"
+  },
+  "MoreProjects": {
+    "title": "その他のプロジェクト",
+    "github": "GitHub アカウントには他にもたくさんのプロジェクトがあります。ぜひチェックしてください。",
+    "frontendmentor": "frontendmentor.io で定期的にコーディングの課題に取り組んでいます。時間の経過とともに私の進歩を確認できます。"
+  },
+  "Packages": {
+    "pageTitle": "NPM パケージ",
+    "npm": "NPM.js",
+    "sourceCode": "ソースコード",
+    "blog": "ブログ記事"
   },
   "Contact": {
     "pageTitle": "お問い合わせ",
@@ -59,11 +94,23 @@
     "twitter": "ご質問がある場合でも、単にご挨拶したい場合でも、お気軽に Twitter でメッセージを送ってください。",
     "email": "メールを送って私に直接ご連絡いただくこともできます。"
   },
+  "Blog": {
+    "featuredArticles": "注目の記事",
+    "popularArticles": "人気の記事",
+    "published": "公開日",
+    "minutesRead": "分で読めます",
+    "readTheFullArticle": "記事全文を読む"
+  },
   "Footer": {
     "navigation": "ナビゲーション",
     "sns": "ソーシャルメディア",
     "tech": "テクノロジー",
     "my": "シャムル ラシド の",
     "portfolio": "ポートフォリオ"
-  }
+  },
+  "Error": {
+    "notFound": "見つかりません",
+    "message": "エラー: 一致するルートがありません"
+  },
+  "Other": { "backToTop": "上に戻る" }
 }
