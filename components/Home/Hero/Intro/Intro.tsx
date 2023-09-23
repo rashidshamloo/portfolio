@@ -15,7 +15,6 @@ import Transition from '@/components/Common/Transition';
 import WordBreak from '@/components/Common/WordBreak';
 import Skills from './Skills/Skills';
 import Button from '@/components/Common/Button';
-// import Typed from '@/components/common/Typed';
 const Typed = dynamic(() => import('@/components/Common/Typed'));
 
 // next-intl
