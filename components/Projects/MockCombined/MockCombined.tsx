@@ -3,8 +3,8 @@
 // react
 import { useState, useEffect } from 'react';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import MockDesktop from './MockDesktop';
@@ -24,19 +24,9 @@ const MockCombined = ({
   imageMobile,
   imageMobileDark,
 }: mockCombinedProps) => {
-  // next-themes
-  const { theme } = useTheme();
+  const darkMode = useNextThemes();
 
-  const [darkMode, setDarkMode] = useState(false);
-  const [imageDarkMode, setImageDarkMode] = useState(
-    // imageDesktopDark && imageMobileDark && theme === 'dark'
-    false
-  );
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
+  const [imageDarkMode, setImageDarkMode] = useState(false);
 
   useEffect(() => {
     if (imageDesktopDark && imageMobileDark && darkMode) setImageDarkMode(true);

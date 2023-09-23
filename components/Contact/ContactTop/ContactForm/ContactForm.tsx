@@ -30,8 +30,8 @@ import { isMobile } from 'react-device-detect';
 import Button from '@/components/Common/Button';
 import ContactFormLoading from './ContactFormLoading';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // styles
 import inputStyles from '@/styles/inputStyles';
@@ -46,8 +46,7 @@ interface contactFormProps {
 }
 
 const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
-  // next-themes
-  const { theme } = useTheme();
+  const darkMode = useNextThemes();
 
   // states
   const [captcha, setCaptcha] = useState('');
@@ -58,7 +57,6 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   // next-intl
   const t = useTranslations('Contact');
@@ -133,11 +131,6 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
     inputBGColor,
     inputHoverBgColor
   );
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
 
   return (
     <Tilt

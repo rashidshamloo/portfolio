@@ -10,8 +10,8 @@ import { Tilt } from 'react-next-tilt';
 // next-intl
 import { useTranslations } from 'next-intl';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // types
 interface SlideProps {
@@ -33,11 +33,10 @@ const Slide = ({
   photoLink,
   hideElement,
 }: SlideProps) => {
+  const darkMode = useNextThemes();
+
   // next-intl
   const t = useTranslations('Showcase');
-
-  // next-themes
-  const { theme } = useTheme();
 
   // toggles visibility of the hideElement
   const toggleElement = useCallback(
@@ -55,8 +54,8 @@ const Slide = ({
         tiltMaxAngleY={5}
         tiltMaxAngleX={5}
         borderRadius="12px"
-        spotGlareMaxOpacity={theme === 'dark' ? 0.1 : 0.2}
-        lineGlareMaxOpacity={theme === 'dark' ? 0.03 : 0.06}
+        spotGlareMaxOpacity={darkMode ? 0.1 : 0.2}
+        lineGlareMaxOpacity={darkMode ? 0.03 : 0.06}
         lineGlareBlurAmount="16px"
         className="w-full"
         scale={1.05}

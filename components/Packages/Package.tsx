@@ -15,8 +15,8 @@ import {
   atelierSulphurpoolLight,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import Button from '../Common/Button';
@@ -43,18 +43,11 @@ interface projectProps {
 }
 
 const Package = ({ reverse = false, data }: projectProps) => {
+  const darkMode = useNextThemes();
+
+  // next-intl
   const t = useTranslations('Packages');
   const locale = useLocale();
-
-  // next-themes
-  const { theme } = useTheme();
-
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
 
   return (
     <article

@@ -8,8 +8,8 @@ import Image from 'next/image';
 // react-next-tilt
 import { Tilt } from 'react-next-tilt';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import Loading from '@/components/Common/Loading';
@@ -23,14 +23,7 @@ interface ArticleSectionProps {
 }
 
 const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
-  // next-themes
-  const { theme } = useTheme();
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
+  const darkMode = useNextThemes();
 
   return (
     <>

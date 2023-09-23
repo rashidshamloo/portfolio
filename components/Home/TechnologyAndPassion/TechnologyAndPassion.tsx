@@ -9,8 +9,8 @@ import dynamic from 'next/dynamic';
 // next-intl
 import { useTranslations } from 'next-intl';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 const TPSection = dynamic(() => import('./TPSection'));
@@ -18,24 +18,15 @@ const TPSection = dynamic(() => import('./TPSection'));
 import MovingBackground from './MovingBackground';
 
 const TechnologyAndPassion = () => {
+  const darkMode = useNextThemes();
+
   // next-intl
   const t = useTranslations('TechnologyAndPassion');
-
-  // next-themes
-  const { theme } = useTheme();
-
-  // state
-  const [darkMode, setDarkMode] = useState(false);
 
   // ref
   const containerRef = useRef<HTMLElement>(null);
   const triggerRef = useRef<HTMLHeadingElement>(null);
   const movingBackgroundRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
 
   useEffect(() => {
     const handleScroll = () => {

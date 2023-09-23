@@ -28,12 +28,16 @@ import { Divide as Cheeseburger } from 'hamburger-react';
 // next-themes
 import { useTheme } from 'next-themes';
 
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
+
 // data
 import navigation from '@/data/navigation.json';
 
 function Header() {
+  const darkMode = useNextThemes();
+
   // states
-  const [darkMode, setDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // next-intl
@@ -42,7 +46,7 @@ function Header() {
   const pathname = usePathname();
 
   // next-themes
-  const { resolvedTheme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   // ref
   const dummyRef = useRef<HTMLDivElement>(null);
@@ -63,10 +67,6 @@ function Header() {
       document.body.classList.remove('overflow-hidden');
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    setDarkMode(resolvedTheme === 'dark');
-  }, [resolvedTheme]);
 
   // sets icon position to the dummy element position
   const setIconPosition = () => {

@@ -1,22 +1,14 @@
 // react
 import { useState, useEffect } from 'react';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // data
 import socials from '@/data/socials.json';
 
 function FooterSocialLinks() {
-  // next-themes
-  const { theme } = useTheme();
-
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
+  const darkMode = useNextThemes();
 
   return (
     <ul className="[&_a]:flex [&_a]:items-center [&_a]:justify-start [&_a]:gap-x-2">

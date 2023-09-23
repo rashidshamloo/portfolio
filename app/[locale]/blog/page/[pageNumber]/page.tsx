@@ -17,8 +17,8 @@ import { useTranslations } from 'next-intl';
 // react-next-tilt
 import { Tilt } from 'react-next-tilt';
 
-// next-themes
-import { useTheme } from 'next-themes';
+// hooks
+import useNextThemes from '@/hooks/useNextThemes';
 
 // components
 import Pagination from '@/components/Blog/Pagination';
@@ -31,8 +31,7 @@ import { blogSettings } from '@/settings/blog';
 import { Pages } from '@/types/types';
 
 const BlogPage = () => {
-  // next-themes
-  const { theme } = useTheme();
+  const darkMode = useNextThemes();
 
   // redux-toolkit
   const dispatch = useDispatch();
@@ -46,12 +45,6 @@ const BlogPage = () => {
 
   //state
   const [pages, setPages] = useState<Pages>({ total: 1, current: 1 });
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (theme === undefined) return;
-    setDarkMode(theme === 'dark' ? true : false);
-  }, [theme]);
 
   // fetch blog posts if not already in state
   useEffect(() => {
