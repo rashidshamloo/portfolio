@@ -69,10 +69,10 @@ const JapanSlider = () => {
     <SectionWrapper
       separator={true}
       className="lg:snap-always lg:snap-center"
-      innerClass="flex flex-col items-center justify-start gap-[4em] dark:bg-[#272a33] bg-grayishBlue bg-[url('/images/showcase/slides/blob.svg'),url('/images/showcase/slides/bg.svg')] bg-[length:100%_100%,auto] text-[6px] xs:text-[9px] sm:gap-[5.5em] sm:text-xs md:justify-center md:text-[0.8rem] lg:text-sm xl:text-base"
+      innerClass="flex flex-col items-center justify-center gap-[8em] sm:gap-[4em] dark:bg-[#272a33] bg-grayishBlue bg-[url('/images/showcase/slides/blob.svg'),url('/images/showcase/slides/bg.svg')] bg-[length:100%_100%,auto] text-[6px] xs:text-[9px] sm:gap-[5.5em] sm:text-xs md:justify-center md:text-[0.8rem] lg:text-sm xl:text-base"
       zIndex={8}
     >
-      <h1 className="relative inline-block font-merriweather text-[3.5em] leading-[1] dark:text-brightGrayishBlue3 text-brightBlue before:absolute before:right-[105%] before:top-1/2 before:w-[1em] before:origin-right before:border-b-2 before:border-brightGrayishBlue before:-translate-y-1/2 after:absolute after:left-[105%] after:top-1/2 after:w-[1em] after:origin-right after:border-b-2 after:border-brightGrayishBlue after:-translate-y-1/2">
+      <h1 className="relative inline-block font-merriweather text-[4.5em] sm:text-[3.5em] leading-[1] dark:text-brightGrayishBlue3 text-brightBlue before:absolute before:right-[105%] before:top-1/2 before:w-[1em] before:origin-right before:border-b-2 before:border-brightGrayishBlue before:-translate-y-1/2 after:absolute after:left-[105%] after:top-1/2 after:w-[1em] after:origin-right after:border-b-2 after:border-brightGrayishBlue after:-translate-y-1/2">
         {t('slideTitle')}
       </h1>
       <div className="relative flex flex-col gap-2 md:gap-4">
