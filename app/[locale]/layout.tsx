@@ -32,7 +32,7 @@ const merriweather = Merriweather({
 // components
 const Header = dynamic(() => import('@/components/Header/Header'));
 const Footer = dynamic(() => import('@/components/Footer/Footer'));
-const Logo = dynamic(() => import('@/components/Common/Logo'));
+// const Logo = dynamic(() => import('@/components/Common/Logo'));
 import ScrollToTop from '@/components/Layout/ScrollToTop';
 
 // metadata
@@ -71,7 +71,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className={`${raleway.variable} ${merriweather.variable}`}>
-        <Logo />
+        {/* <Logo /> */}
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <ScrollToTop />
