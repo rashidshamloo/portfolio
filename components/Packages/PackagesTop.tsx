@@ -11,7 +11,7 @@ import packages from '@/data/packages.json';
 
 // components
 import Transition from '@/components/Common/Transition';
-const Package = dynamic(() => import('./Package'));
+import Package from './Package';
 import PageTitle from '../Layout/PageTitle';
 import TopWrapper from '../Layout/TopWrapper';
 

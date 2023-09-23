@@ -47,7 +47,7 @@ const SectionWrapper = ({
                 WebkitMaskPosition: 'bottom',
                 maskSize: '150%',
                 WebkitMaskSize: '150%',
-                minHeight: `calc(100dvh + ${separatorHeight * 2}px)`,
+                minHeight: `calc(100vh + ${separatorHeight * 2}px)`,
                 paddingTop: `calc(${separatorHeight * 2}px)`,
               }
             : {
