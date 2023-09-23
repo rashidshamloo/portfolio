@@ -8,7 +8,15 @@ hljs.configure({});
 
 const MDBlogPost = ({ postBody }: { postBody: string }) => {
   useEffect(() => {
-    hljs.highlightAll();
+    document.querySelectorAll<HTMLElement>('pre').forEach((ele) => {
+      ele.innerHTML = hljs.highlightAuto(ele.textContent || ele.innerText, [
+        'css',
+        'javascript',
+        'typescript',
+        'html',
+        'plaintext',
+      ]).value;
+    });
   }, []);
   return (
     <div
