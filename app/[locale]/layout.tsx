@@ -7,6 +7,9 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 
+// analytics
+import { Analytics } from '@vercel/analytics/react';
+
 // next-intl
 import { NextIntlClientProvider } from 'next-intl';
 export function generateStaticParams() {
@@ -80,6 +83,7 @@ export default async function RootLayout({
             <Footer />
           </Providers>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

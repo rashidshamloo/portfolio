@@ -51,7 +51,7 @@ const FlipTiltParallax = () => {
           </Transition>
         ))}
       </div>
-      <Transition>
+      <Transition className="w-full">
         <Footer
           lines={[t('fishFooter1'), t('fishFooter2')]}
           className="text-slate-500 before:border-slate-500/50"

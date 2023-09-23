@@ -35,7 +35,9 @@ const SectionWrapper = ({
         />
       )}
       <div
-        className={`relative z-[1] text-mediumViolet/90 max-w-full overflow-hidden dark:text-brightBlue/90 flex flex-col ${innerClass}`}
+        className={`relative z-[1] text-mediumViolet/90 max-w-full overflow-hidden dark:text-brightBlue/90 flex flex-col ${innerClass} ${
+          separator ? 'pb-[50px] lg:pb-[100px]' : ''
+        }`}
         style={
           separator
             ? {
@@ -46,10 +48,11 @@ const SectionWrapper = ({
                 maskSize: '150%',
                 WebkitMaskSize: '150%',
                 minHeight: `calc(100dvh + ${separatorHeight * 2}px)`,
-                paddingBottom: `calc(${separatorHeight}px)`,
                 paddingTop: `calc(${separatorHeight * 2}px)`,
               }
-            : { minHeight: `calc(100dvh + 100px)` }
+            : {
+                minHeight: `calc(100dvh + 100px)`,
+              }
         }
       >
         {children}

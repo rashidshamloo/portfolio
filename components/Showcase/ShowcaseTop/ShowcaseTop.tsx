@@ -51,7 +51,7 @@ const ShowcaseTop = () => {
           <ParallaxBalloonLight className="max-w-[65%] w-[1024px] md:max-w-[90%]" />
         )}
       </Transition>
-      <Transition duration={1} delay={1.5}>
+      <Transition duration={1} delay={1.5} className="w-full">
         <Footer
           lines={[t('topFooter1'), t('topFooter2')]}
           className="text-slate-500/70 before:border-slate-500/30"

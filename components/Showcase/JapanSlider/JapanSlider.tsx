@@ -20,6 +20,7 @@ import NavigationButtons from './NavigationButtons';
 import GithubLink from './GithubLink';
 import Slide from './Slide';
 import SectionWrapper from '@/components/Layout/SectionWrapper';
+import Transition from '@/components/Common/Transition';
 import Footer from '../Footer';
 
 // data
@@ -109,10 +110,12 @@ const JapanSlider = () => {
         </Swiper>
         <NavigationButtons isStart={isStart} isEnd={isEnd} swiper={swiper} />
       </div>
-      <Footer
-        lines={[t('japanSliderFooter')]}
-        className="!text-slate-300/70 before:!border-slate-300/30"
-      />
+      <Transition className="w-full">
+        <Footer
+          lines={[t('japanSliderFooter')]}
+          className="!text-slate-300/70 before:!border-slate-300/30"
+        />
+      </Transition>
     </SectionWrapper>
   );
 };

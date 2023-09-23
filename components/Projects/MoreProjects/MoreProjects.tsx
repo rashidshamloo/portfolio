@@ -22,7 +22,7 @@ const MoreProjects = () => {
       >
         {t('title')}
       </Transition>
-      <div className="flex w-full flex-col items-center justify-evenly gap-y-40 sm:gap-y-52 mt-16 lg:mt-0 lg:flex-row pb-12 lg:pb-20">
+      <div className="flex w-full flex-col items-center justify-evenly gap-y-40 sm:gap-y-52 mt-16 lg:mt-0 lg:flex-row pb-12">
         <Transition effect="fadeLTR" delay={0.5}>
           <MoreProjectsItem
             icon="github"
