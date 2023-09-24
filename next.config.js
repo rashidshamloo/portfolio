@@ -14,6 +14,7 @@ const nextConfig = {
       },
     ],
   },
+  // swcMinify: true,
   // experimental: {
   //   serverActions: true,
   // },
