@@ -10,11 +10,16 @@ import { reduxStore } from '@/lib/redux';
 // nmext-themes
 import { ThemeProvider } from 'next-themes';
 
+// framer-motion
+import { LazyMotion, domAnimation } from 'framer-motion';
+
 const Providers = ({ children }: PropsWithChildren) => {
   return (
-    <ReduxProvider store={reduxStore}>
-      <ThemeProvider attribute="class">{children}</ThemeProvider>
-    </ReduxProvider>
+    <LazyMotion features={domAnimation}>
+      <ReduxProvider store={reduxStore}>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
+      </ReduxProvider>
+    </LazyMotion>
   );
 };
 

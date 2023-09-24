@@ -1,9 +1,6 @@
 // react
 import { useEffect, useRef } from 'react';
 
-// next
-import dynamic from 'next/dynamic';
-
 // next-int
 import { useLocale } from 'next-intl';
 
@@ -15,7 +12,7 @@ import Transition from '@/components/Common/Transition';
 import WordBreak from '@/components/Common/WordBreak';
 import Skills from './Skills/Skills';
 import Button from '@/components/Common/Button';
-const Typed = dynamic(() => import('@/components/Common/Typed'));
+import Typed from '@/components/Common/Typed';
 
 // next-intl
 import { useTranslations } from 'next-intl';

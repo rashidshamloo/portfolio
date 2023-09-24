@@ -10,8 +10,9 @@ interface typedProps {
   className?: string;
 }
 const Typed = ({ strings, className = '' }: typedProps) => {
-  const typedElement = useRef(null);
+  const typedElement = useRef<HTMLSpanElement>(null);
   useEffect(() => {
+    if (!typedElement.current) return;
     const typed = new T(typedElement.current, {
       strings,
       typeSpeed: 100,
@@ -21,10 +22,8 @@ const Typed = ({ strings, className = '' }: typedProps) => {
       loop: true,
       loopCount: Infinity,
     });
-    return () => {
-      typed.destroy();
-    };
-  });
+    return () => typed.destroy();
+  }, [strings]);
   return <span ref={typedElement} className={className}></span>;
 };
 
