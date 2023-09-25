@@ -38,7 +38,7 @@ const ParallaxBalloonDark = ({
       shadowType="drop"
       lineGlareEnable={false}
       shadow="0 0 1rem rgba(0,0,0,0.7)"
-      offsetMultiplier={1.5}
+      // offsetMultiplier={1.5}
       tiltMaxAngleX={15}
       tiltMaxAngleY={15}
       spotGlareEnable={false}
@@ -52,7 +52,7 @@ const ParallaxBalloonDark = ({
             alt=""
             className={
               index === 6
-                ? 'animate-float lg:!left-[46%] hidden lg:block !-top-[10%]'
+                ? 'animate-balloonFloat lg:!-left-[17.5%] hidden lg:block !-top-[10%]'
                 : ''
             }
             width="2722"
@@ -66,7 +66,7 @@ const ParallaxBalloonDark = ({
       <Image
         data-parallax-offset="4.5"
         src="/images/showcase/balloon_dark/09.webp"
-        className="animate-float2 lg:!left-[55%] md:!left-[67%] !left-[100%] scale-[85%] md:scale-100 !-top-[7.5%]"
+        className="animate-balloonFloat2 lg:!-left-[7%] md:!-left-[10%] !-left-[75%] scale-[85%] md:scale-100 md:!-top-[5%] !-top-[10%]"
         alt=""
         width="2722"
         height="1089"

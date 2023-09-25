@@ -27,7 +27,7 @@ const PackagesTop = () => {
       <PageTitle>{t('pageTitle')}</PageTitle>
       <div
         className={
-          'mt-8 gap-y-4 flex flex-col xl:container mx-auto [&_li]:font-medium pb-6 lg:pb-0 ' +
+          'mt-4 lg:mt-8 gap-y-4 flex flex-col xl:container mx-auto [&_li]:font-medium pb-6 lg:pb-0 ' +
           glassClass
         }
       >

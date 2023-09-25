@@ -14,9 +14,9 @@ interface parallaxProps {
 const defaultItems: parallaxItem[] = [
   { offset: -4.5, img: '/images/showcase/balloon_light/01.webp' },
   { offset: -3, img: '/images/showcase/balloon_light/03.webp' },
-  { offset: -1, img: '/images/showcase/balloon_light/07.webp' },
-  { offset: 0, img: '/images/showcase/balloon_light/02.webp' },
-  { offset: 1, img: '/images/showcase/balloon_light/04.webp' },
+  { offset: -2, img: '/images/showcase/balloon_light/02.webp' },
+  { offset: -1, img: '/images/showcase/balloon_light/04.webp' },
+  { offset: 2, img: '/images/showcase/balloon_light/07.webp' },
   { offset: 3, img: '/images/showcase/balloon_light/05.webp' },
   { offset: 4.5, img: '/images/showcase/balloon_light/08.webp' },
 ];
@@ -36,7 +36,7 @@ const ParallaxBalloon = ({
       shadowType="drop"
       lineGlareEnable={false}
       shadow="0 0 1rem rgba(0,0,0,0.5)"
-      offsetMultiplier={1.5}
+      // offsetMultiplier={1}
       tiltMaxAngleX={15}
       tiltMaxAngleY={15}
       spotGlareEnable={false}
@@ -50,7 +50,7 @@ const ParallaxBalloon = ({
             alt=""
             className={
               index === 5
-                ? 'animate-float lg:!left-[46%] hidden lg:block !-top-[10%]'
+                ? 'animate-balloonFloat lg:!-left-[7%] hidden lg:block !-top-[5%]'
                 : ''
             }
             width="2296"
@@ -64,7 +64,7 @@ const ParallaxBalloon = ({
       <Image
         data-parallax-offset="4.5"
         src="/images/showcase/balloon_light/06.webp"
-        className="animate-float2 lg:!left-1/2 md:!left-[62%] !left-[85%] scale-[85%] md:scale-100 !-top-[12.5%]"
+        className="animate-balloonFloat2 lg:!-left-[7%] md:!-left-[10%] !-left-[75%] !-top-[15%] md:!-top-[10%] scale-[85%] md:scale-100"
         alt=""
         width="2296"
         height="1020"
