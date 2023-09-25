@@ -8,7 +8,7 @@ import { isMobile } from 'react-device-detect';
 
 // framer motion
 import {
-  motion,
+  m,
   useReducedMotion,
   CustomDomComponent,
   MotionProps,
@@ -48,7 +48,7 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
   ) => {
     const disableMotion = useReducedMotion();
     const MotionElement = useMemo(
-      () => motion(component) as CustomDomComponent<transitionProps>,
+      () => m(component) as CustomDomComponent<transitionProps>,
       [component]
     );
 
@@ -74,14 +74,14 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
         {!!children &&
           (effect === 'textReveal' && typeof children === 'string'
             ? children.split('').map((char, index) => (
-                <motion.span
+                <m.span
                   variants={variants[effect]}
                   // transition={transition}
                   key={index}
                   className="relative inline-block whitespace-pre"
                 >
                   {char}
-                </motion.span>
+                </m.span>
               ))
             : children)}
       </MotionElement>
