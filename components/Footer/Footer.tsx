@@ -19,7 +19,7 @@ function Footer() {
     <div className="relative z-10">
       {/* using an image for shadow instead of drop-shadow for performance */}
       <div
-        className="pointer-events-none absolute -top-[30px] left-0 right-0 h-[80px] bg-[url('/images/shadow.png')] z-[0] -scale-y-100"
+        className="pointer-events-none absolute -top-[30px] left-0 right-0 h-[80px] bg-[url('/images/shadow.png')] z-[0] -scale-y-100 opacity-80 dark:opacity-100"
         aria-hidden="true"
       ></div>
       <footer

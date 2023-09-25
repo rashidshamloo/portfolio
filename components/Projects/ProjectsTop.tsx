@@ -27,7 +27,7 @@ const ProjectsTop = () => {
       <PageTitle>{t('pageTitle')}</PageTitle>
       <div
         className={
-          'mt-8 gap-y-4 flex flex-col xl:container mx-auto [&_li]:font-medium ' +
+          'mt-4 lg:mt-8 gap-y-4 flex flex-col xl:container mx-auto [&_li]:font-medium ' +
           glassClass
         }
       >

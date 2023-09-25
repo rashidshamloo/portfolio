@@ -8,23 +8,39 @@ import { default as T } from 'typed.js';
 interface typedProps {
   strings: string[];
   className?: string;
+  initialString: string;
 }
-const Typed = ({ strings, className = '' }: typedProps) => {
+
+const Typed = ({ strings, className = '', initialString }: typedProps) => {
   const typedElement = useRef<HTMLSpanElement>(null);
+
   useEffect(() => {
-    if (!typedElement.current) return;
-    const typed = new T(typedElement.current, {
-      strings,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 700,
-      smartBackspace: true,
-      loop: true,
-      loopCount: Infinity,
-    });
-    return () => typed.destroy();
+    let typed: T;
+    const timeoutId = setTimeout(() => {
+      if (!typedElement.current) return;
+      typed = new T(typedElement.current, {
+        strings,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 700,
+        smartBackspace: true,
+        loop: true,
+        loopCount: Infinity,
+        onLastStringBackspaced: () => {
+          typed.destroy();
+        },
+      });
+    }, 3000);
+    return () => {
+      clearTimeout(timeoutId);
+      typed && typed.destroy();
+    };
   }, [strings]);
-  return <span ref={typedElement} className={className}></span>;
+  return (
+    <span ref={typedElement} className={className}>
+      {initialString}
+    </span>
+  );
 };
 
 export default Typed;

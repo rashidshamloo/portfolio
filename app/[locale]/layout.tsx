@@ -43,10 +43,45 @@ export const metadata: Metadata = {
   title: 'Rashid Shamloo | Portfolio',
   description: "Rashid Shamloo's Portfolio",
   keywords:
-    'Rashid Shamloo, Rashid, Shamloo, Portfolio, Web Developer, Front-end Developer, Project, Showcase, Contact Info, Blog',
+    'Rashid Shamloo, Rashid, Shamloo, Portfolio, Web Developer, Front-end Developer, Project, Showcase, Contact Information, Blog',
   viewport: 'width=device-width, initial-scale=1.0',
   icons: {
     icon: '/images/favicon.webp',
+  },
+  metadataBase: new URL('https://www.rashidshamloo.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en',
+      'ja-JP': '/ja',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'ja_JP',
+    url: '/',
+    title: 'Rashid Shamloo | Portfolio',
+    siteName: 'Rashid Shamloo | Portfolio',
+    description:
+      "Rashid Shamloo's portfolio, blog, resume, project showcase, contact information",
+    images: {
+      url: '/images/screenshots/home.webp',
+      alt: "Rashid Shamloo's Portfolio",
+      width: 800,
+      height: 440,
+      type: 'image/webp',
+      secureUrl: '/images/screenshots/home.webp',
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rashid Shamloo | Portfolio',
+    description:
+      "Rashid Shamloo's portfolio, blog, resume, project showcase, contact information",
+    images: '/images/screenshots/home.webp',
+    creator: '@rashidshamloo',
+    site: '@rashidshamloo',
   },
 };
 
@@ -73,6 +108,34 @@ export default async function RootLayout({
       className="scroll-smooth snap-proximity snap-y"
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              email: 'rashidshamloo@gmail.com',
+              image: 'https://www.rashidshamloo.com/images/profile.webp',
+              jobTitle: 'Front-end Developer',
+              name: 'Rashid Shamloo',
+              alumniOf: 'Ferdowsi University of Mashhad',
+              birthPlace: 'Mashhad, Iran',
+              birthDate: '1986-02-21',
+              gender: 'male',
+              nationality: 'Persian',
+              url: 'https://www.rashidshamloo.com',
+              sameAs: [
+                'https://www.linkedin.com/in/rashid-shamloo/',
+                'https://github.com/rashidshamloo/',
+                'https://twitter.com/rashidshamloo',
+                'https://dev.to/rashidshamloo',
+                'https://www.wantedly.com/id/rashid_shamloo',
+              ],
+            }),
+          }}
+        ></script>
+      </head>
       <body className={`${raleway.variable} ${merriweather.variable}`}>
         {/* <Logo /> */}
         <NextIntlClientProvider locale={locale} messages={messages}>
