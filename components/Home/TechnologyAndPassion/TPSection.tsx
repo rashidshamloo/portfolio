@@ -38,10 +38,9 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
             >
               <Image
                 src={images[0]}
-                className="w-full"
                 alt={title + ' Image 1'}
                 aria-hidden="true"
-                sizes="(min-width: 768px) 50vw, (min-width: 1024px) 25vw, 100vw"
+                sizes="(min-width: 768px) 25vw, 100vw"
                 fill
               />
             </Transition>
@@ -64,10 +63,9 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
             >
               <Image
                 src={images[1]}
-                className="w-full"
                 alt={title + ' Image 2'}
                 aria-hidden="true"
-                sizes="(min-width: 768px) 50vw, (min-width: 1024px) 25vw, 100vw"
+                sizes="(min-width: 768px) 25vw, 100vw"
                 fill
               />
             </Transition>

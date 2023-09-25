@@ -15,9 +15,10 @@ const nextConfig = {
     ],
   },
   // swcMinify: true,
-  // experimental: {
-  //   serverActions: true,
-  // },
+  experimental: {
+    optimizeCss: true,
+    // serverActions: true,
+  },
 };
 
 if (
