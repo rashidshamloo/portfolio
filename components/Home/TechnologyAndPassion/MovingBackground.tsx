@@ -67,7 +67,7 @@ const MovingBackground = forwardRef<HTMLDivElement, movingBackgroundProps>(
     return (
       <div
         ref={ref}
-        className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/home/tech-bg.webp')] bg-[length:max(calc(100dvw_+_100px)_,_1000px)] bg-center transition-opacity duration-1000"
+        className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/home/tech-bg-mobile.webp')] md:bg-[url('/images/home/tech-bg.webp')] bg-[length:max(calc(100dvw_+_100px)_,_800px)] md:bg-[length:calc(100dvw_+_100px)] bg-center transition-opacity duration-1000"
         style={{
           backgroundPositionX: String(translate.x) + 'px',
           backgroundPositionY: String(translate.y) + 'px',

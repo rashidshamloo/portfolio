@@ -77,6 +77,7 @@ const Slide = ({
               alt={title}
               className={`h-full w-full object-cover transition-all duration-500`}
               fill
+              sizes="100vw"
               unoptimized
             />
           </div>

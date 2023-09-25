@@ -14,10 +14,10 @@ interface parallaxProps {
 const defaultItems: parallaxItem[] = [
   { offset: -4.5, img: '/images/showcase/balloon_dark/01.webp' },
   { offset: -3.5, img: '/images/showcase/balloon_dark/02.webp' },
-  { offset: -2, img: '/images/showcase/balloon_dark/03.webp' },
-  { offset: -1, img: '/images/showcase/balloon_dark/04.webp' },
+  { offset: -2.5, img: '/images/showcase/balloon_dark/03.webp' },
+  { offset: -1.5, img: '/images/showcase/balloon_dark/06.webp' },
+  { offset: 1, img: '/images/showcase/balloon_dark/04.webp' },
   { offset: 1.5, img: '/images/showcase/balloon_dark/05.webp' },
-  { offset: 2, img: '/images/showcase/balloon_dark/06.webp' },
   { offset: 2.5, img: '/images/showcase/balloon_dark/08.webp' },
   { offset: 3.5, img: '/images/showcase/balloon_dark/07.webp' },
 ];
@@ -32,7 +32,6 @@ const ParallaxBalloonDark = ({
         'relative [&_img]:-top-[5%] [&_img]:absolute [&_img]:left-[30%] md:[&_img]:left-[60%] lg:[&_img]:left-1/2 [&_img]:pointer-events-none [&_img]:-translate-x-1/2 [&_img]:h-[110%] aspect-[3/4] md:aspect-[1.8] lg:aspect-[2.25] [&_img]:w-auto [&_img]:max-w-none ' +
         className
       }
-      // [&_img]:aspect-[2722/1089]
       borderRadius="24px"
       overflowHiddenEnable={false}
       shadowType="drop"

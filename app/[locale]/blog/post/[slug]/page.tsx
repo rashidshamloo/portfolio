@@ -98,7 +98,7 @@ const Post = async ({ params }: articleProps) => {
                 alt={post.title}
                 fill
                 priority
-                sizes="100vw"
+                sizes="(min-width: 1024px) 60vw, 100vw"
               />
             </div>
           )}
