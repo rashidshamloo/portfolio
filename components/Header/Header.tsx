@@ -120,7 +120,7 @@ function Header() {
                 href={pathname}
                 locale="ja"
                 className={
-                  'flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
+                  'will-change-transform flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
                   (locale === 'en'
                     ? 'opacity-50'
                     : 'pointer-events-none font-bold')
@@ -141,7 +141,7 @@ function Header() {
                 href={pathname}
                 locale="en"
                 className={
-                  'flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
+                  'will-change-transform flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
                   (locale === 'ja'
                     ? 'opacity-50'
                     : 'pointer-events-none font-bold')

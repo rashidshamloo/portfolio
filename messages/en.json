@@ -90,8 +90,11 @@
   },
   "Social": {
     "otherWaysToContactMe": "Other ways to contact me",
+    "linkedinTitle": "Linkedin",
+    "twitterTitle": "X",
+    "emailTitle": "Email",
     "linkedin": "I'm always active on Linkedin. Feel free to send me a message or connection request.",
-    "twitter": "Whether you have a question or just want to say hello, feel free to send me a message on Twitter.",
+    "twitter": "Whether you have a question or just want to say hello, feel free to send me a message on X (Twitter).",
     "email": "You can also contact me directly by sending me an email."
   },
   "Blog": {

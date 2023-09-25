@@ -24,7 +24,7 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
         duration={1.5}
         effect="fadeIn"
         component="h2"
-        className="relative mx-auto mt-16 inline-block w-[75%] border-b-2 pb-3 font-merriweather text-4xl font-bold leading-tight drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] transition-all duration-500 after:absolute after:left-[60%] after:top-[100%] after:h-2 after:w-1/2 after:border-b-2 md:text-5xl lg:ml-[17.5%] lg:w-auto lg:pr-16 lg:text-6xl"
+        className="relative mx-auto mt-16 inline-block w-[80%] border-b-2 pb-3 font-merriweather text-4xl font-bold leading-tight drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] transition-all duration-500 after:absolute after:left-[60%] after:top-[100%] after:h-2 after:w-1/2 after:border-b-2 md:text-5xl lg:ml-[17.5%] lg:w-auto lg:pr-16 lg:text-6xl"
       >
         <WordBreak>{title}</WordBreak>
       </Transition>

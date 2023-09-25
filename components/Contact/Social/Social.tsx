@@ -38,7 +38,7 @@ const Social = () => {
               icon="/images/icons/linkedin-original.svg"
               iconBg="/images/contact/social/blob-1.svg"
               iconSize={35}
-              title="Linkedin"
+              title={t('linkedinTitle')}
               handle="@rashid-shamloo"
               link="https://www.linkedin.com/in/rashid-shamloo/"
               text={t('linkedin')}
@@ -46,10 +46,10 @@ const Social = () => {
           </Transition>
           <Transition effect="fadeBTT" threshold={0.5} duration={0.75}>
             <SocialSection
-              icon="/images/icons/twitter.svg"
+              icon="/images/icons/x-dark.svg"
               iconBg="/images/contact/social/blob-2.svg"
-              iconSize={50}
-              title="Twitter"
+              iconSize={29}
+              title={t('twitterTitle')}
               handle="@rashidshamloo"
               link="https://twitter.com/rashidshamloo"
               text={t('twitter')}
@@ -65,7 +65,7 @@ const Social = () => {
               icon="/images/icons/email.svg"
               iconBg="/images/contact/social/blob-3.svg"
               iconSize={45}
-              title="Email"
+              title={t('emailTitle')}
               handle="rashidshamloo@gmail.com"
               link="mailto:rashidshamloo@gmail.com"
               text={t('email')}

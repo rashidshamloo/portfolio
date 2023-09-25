@@ -1,3 +1,5 @@
+'use client';
+
 // next-intl
 import { useTranslations } from 'next-intl';
 

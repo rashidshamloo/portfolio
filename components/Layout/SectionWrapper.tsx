@@ -29,7 +29,7 @@ const SectionWrapper = ({
       {/* using an image for shadow instead of drop-shadow for performance */}
       {separator && (
         <div
-          className="pointer-events-none absolute left-0 right-0 h-[80px] bg-[url('/images/shadow.png')]"
+          className="pointer-events-none absolute left-0 right-0 h-[80px] bg-[url('/images/shadow.png')] opacity-80 dark:opacity-100"
           aria-hidden="true"
           style={{ bottom: `-${separatorHeight - 10}px` }}
         />

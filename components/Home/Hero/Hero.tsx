@@ -21,6 +21,7 @@ function Hero() {
           threshold={0}
           effect="fadeRTL"
           className="p-4"
+          disableOnMobile={true}
         >
           <HeroCard />
         </Transition>

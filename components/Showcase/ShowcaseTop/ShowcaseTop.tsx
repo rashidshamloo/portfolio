@@ -1,3 +1,5 @@
+'use client';
+
 // hooks
 import useNextThemes from '@/hooks/useNextThemes';
 
