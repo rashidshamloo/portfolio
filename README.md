@@ -28,7 +28,7 @@ This is my personal portfolio website. I have implemented various features into 
 
 ### My own packages used in this project
 
-- [react-next-tilt](https://www.npmjs.com/package/react-next-tilt) - used in the profile card, contact form, the showcase page, the blog page, and the packages page
+- [react-next-tilt](https://www.npmjs.com/package/react-next-tilt) - used in the profile card, the contact form, the showcase page, the blog page, and the packages page
 - [react-flip-tilt](https://www.npmjs.com/package/react-flip-tilt) - used in the showcase page and the packages page
 - [react-next-parallax](https://www.npmjs.com/package/react-next-parallax) - used in the showcase page, the packages page, and the error page
 - [swiper-mods](https://www.npmjs.com/package/swiper-mods) - used in the slider in the showcase page
@@ -81,8 +81,8 @@ This is my personal portfolio website. I have implemented various features into 
     - Scroll snapping (proximity) to the top of the first section and center of other sections
     - Multiple Showcase sections to showcase my packages/skills including the [Japan-Slider](https://github.com/rashidshamloo/japan-slider) section.
   - Projects
-    - Mock laptop/mobile preview made from scratch with support for switching between dark/light theme images and scrollable mobile image
-    - Markdown parsing for the project desciption from the JSON file
+    - Mock laptop/mobile preview made from scratch with support for switching between light/dark theme images and scrollable mobile image
+    - Markdown parsing for the project desciption loaded from the JSON file
   - Packages
     - Usage instructions with syntax highlighting and light/dark mode support
     - Demo for packages that need one
@@ -90,15 +90,15 @@ This is my personal portfolio website. I have implemented various features into 
     - Contact form with 3D tilt effect using [react-next-tilt](https://www.npmjs.com/package/react-next-tilt)
     - Form components using [Material UI](https://mui.com) with validation using [react-hook-form](https://react-hook-form.com)
     - Sending emails using [EmailJS](https://www.emailjs.com) with reCAPTCHA v2 validation
-    - Interactive 3D post card CSS effect with changing image based on light/dark mode (inspired by [this video](https://www.youtube.com/watch?v=9KwIE0t9Tkk) but made using Tailwind with adjustable number of segments)
+    - Interactive 3D postcard CSS effect with changing image based on light/dark mode (inspired by [this video](https://www.youtube.com/watch?v=9KwIE0t9Tkk) but made using Tailwind with adjustable number of segments)
     - Dynamic paper element that reflects the sender's name/email
   - Blog
     - Fetching posts from Dev.to API using Redux Thunk and storing them in Redux store
     - API response validation using [Zod](https://zod.dev)
     - Featured Articles section based on custom JSON data and Popular Articles section based on article reaction count
-    - Fetching single blog posts on the server instead of client Using server components
+    - Fetching single blog posts on the server instead of client using server components
     - Custom pagination component
-    - Styling blog posts using Tailwind for dark/light mode
+    - Styling blog posts using Tailwind for light/dark mode
     - Syntax highlighting using [highlight.js](https://highlightjs.org) with light/dark mode support
 
 ## Screenshot
@@ -192,7 +192,7 @@ This is my personal portfolio website. I have implemented various features into 
 - General
 
   - SVG patterns/backgrounds are from either [Hero Patterns](https://heropatterns.com) or [Haikei](https://haikei.app) and modified by me
-  - Background image is by [Alexander Grey](https://unsplash.com/@sharonmccutcheon) on [Unsplash](https://unsplash.com/photos/62vi3TG5EDg) but heavily modified by me.
+  - Background image is by [Alexander Grey](https://unsplash.com/@sharonmccutcheon) on [Unsplash](https://unsplash.com/photos/62vi3TG5EDg) but heavily modified by me
 
 - Pages
 
