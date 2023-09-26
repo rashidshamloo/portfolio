@@ -31,8 +31,8 @@ const PostCardAndLetter = ({ userName, userEmail }: postCardAndLetterProps) => {
       <div className="felx flex-col items-center justify-center">
         <PostCard
           segments={6}
-          darkImage="/images/postcard/night.webp"
-          lightImage="/images/postcard/day.webp"
+          darkImage="/images/contact/postcard/night.webp"
+          lightImage="/images/contact/postcard/day.webp"
         />
         <Letter userName={userName} userEmail={userEmail} />
       </div>
