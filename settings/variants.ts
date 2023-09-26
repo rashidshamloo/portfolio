@@ -9,14 +9,11 @@ export interface variantsType {
   fadeLTRPN: Variants;
   fadeRTL: Variants;
   fadeTTB: Variants;
-  fadeTTBP: Variants;
-  fadeTTBPN: Variants;
   fadeBTT: Variants;
   fadeBTTS: Variants;
   fadeBTTSScale: Variants;
   fadeBTTSScaleR: Variants;
   fadeTTBSScaleR: Variants;
-  heightUp: Variants;
   textReveal: Variants;
 }
 
@@ -130,34 +127,6 @@ export const variants: variantsType = {
       y: -50,
     },
   },
-  fadeTTBP: {
-    initial: {
-      opacity: 0,
-      y: '-100%',
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: '-100%',
-    },
-  },
-  fadeTTBPN: {
-    initial: {
-      opacity: 0,
-      y: '-100%',
-    },
-    animateNIV: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: '-100%',
-    },
-  },
   fadeBTT: {
     initial: {
       opacity: 0,
@@ -235,20 +204,6 @@ export const variants: variantsType = {
       opacity: 0,
       y: -10,
       scale: 1.05,
-    },
-  },
-  heightUp: {
-    initial: {
-      opacity: 0,
-      height: 0,
-    },
-    animate: {
-      opacity: 1,
-      height: 'unset',
-    },
-    exit: {
-      opacity: 0,
-      height: 0,
     },
   },
   textReveal: {
