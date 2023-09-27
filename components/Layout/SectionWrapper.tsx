@@ -51,7 +51,7 @@ const SectionWrapper = ({
                 paddingTop: `calc(${separatorHeight * 2}px)`,
               }
             : {
-                minHeight: `calc(100dvh + 100px)`,
+                minHeight: `calc(100vh + 100px)`,
               }
         }
       >

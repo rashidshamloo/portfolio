@@ -48,7 +48,7 @@ const Slide = ({
   );
 
   return (
-    <div className="relative">
+    <article className="relative">
       <Tilt
         spotGlarePosition="top"
         tiltMaxAngleY={5}
@@ -134,7 +134,7 @@ const Slide = ({
       >
         {description}
       </p>
-    </div>
+    </article>
   );
 };
 
