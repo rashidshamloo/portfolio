@@ -80,7 +80,7 @@ function Intro() {
               href={
                 locale === 'en'
                   ? '/resume/rashid-shamloo-resume.pdf'
-                  : '/resume/rashid-shamloo-rerikisho.pdf'
+                  : '/resume/rashid-shamloo-rirekisho.pdf'
               }
               target="_blank"
             />
