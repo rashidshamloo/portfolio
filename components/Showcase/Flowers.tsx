@@ -18,12 +18,12 @@ const Flowers = () => {
     <SectionWrapper
       separator={false}
       className="lg:snap-always lg:snap-center"
-      innerClass="dark:bg-[#4c314d] bg-[rgb(218,195,231)] bg-[url('/images/showcase/flowers/blob.svg'),url('/images/showcase/flowers/bg.svg')] bg-[length:100%_100%,auto] py-[100px] flex items-center justify-center flex-col gap-16"
+      innerClass="dark:bg-[#4c314d] bg-[rgb(218,195,231)] bg-[url('/images/showcase/flowers/blob.svg'),url('/images/showcase/flowers/bg.svg')] bg-[length:100%_100%,auto] py-[100px] lg:py-0 lg:!min-h-[calc(100vh_+_200px)] flex items-center justify-center flex-col gap-16"
     >
       <Transition
         effect="textReveal"
         threshold={1}
-        component="h1"
+        component="h2"
         className="relative inline-block font-merriweather text-[clamp(1.5rem,_1rem_+_3vw,_3.5rem)] leading-[1] dark:text-brightGrayishBlue3 text-darkGrayishBlue/90 before:absolute before:right-[105%] before:top-1/2 before:w-[1em] before:origin-right before:border-b-2 before:border-brightGrayishBlue before:-translate-y-1/2 after:absolute after:left-[105%] after:top-1/2 after:w-[1em] after:origin-right after:border-b-2 after:border-brightGrayishBlue after:-translate-y-1/2"
       >
         {t('flowersTitle')}
