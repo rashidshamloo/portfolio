@@ -8,7 +8,7 @@ interface FishParallaxProps {
 
 const FishParallaxBack = ({ index }: FishParallaxProps) => {
   return (
-    <div className="pointer-events-none aspect-[35/46] relative w-[350px] max-w-full [&>img]:absolute [&>img]:-inset-[7%] [&>img]:h-[114%] [&>img]:w-[114%] [&>img]:max-w-none">
+    <div className="pointer-events-none relative aspect-[35/46] w-[350px] max-w-full [&>img]:absolute [&>img]:-inset-[7%] [&>img]:h-[114%] [&>img]:w-[114%] [&>img]:max-w-none">
       <Image
         data-parallax-offset="-5"
         src="/images/showcase/fish_parallax/01.webp"
@@ -63,7 +63,7 @@ const FishParallaxBack = ({ index }: FishParallaxProps) => {
         data-parallax-offset="2"
         src={`/images/showcase/fish_parallax/fish${String(index).padStart(
           2,
-          '0'
+          '0',
         )}.webp`}
         alt=""
         className="animate-fishFloat"

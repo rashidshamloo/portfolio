@@ -24,7 +24,7 @@ const MockMobile = ({ image }: mockMobileProps) => {
           src={image}
           alt="Mobile View"
           aria-hidden="true"
-          className="w-full aspect-auto"
+          className="aspect-auto w-full"
         />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-[url('/images/projects/phone-mock-no-notch.webp')] bg-cover bg-no-repeat"></div>

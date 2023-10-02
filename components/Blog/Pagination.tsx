@@ -44,7 +44,7 @@ const Pagination = ({
   return (
     <div
       className={
-        'flex gap-2 [&>*]:px-2 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:select-none [&>*]:rounded-lg hover:[&>a]:text-accent hover:[&>a.glass]:bg-grayishGreen/20 dark:hover:[&>a.glass]:bg-grayishGreen/20 [&>a]:transition-all [&>a]:duration-300 ' +
+        'flex gap-2 [&>*]:flex [&>*]:select-none [&>*]:items-center [&>*]:justify-center [&>*]:rounded-lg [&>*]:px-2 hover:[&>a.glass]:bg-grayishGreen/20 dark:hover:[&>a.glass]:bg-grayishGreen/20 [&>a]:transition-all [&>a]:duration-300 hover:[&>a]:text-accent ' +
         className +
         glassClass
       }
@@ -60,14 +60,14 @@ const Pagination = ({
             {page}
           </div>
         ) : page === String(current) ? (
-          <div key={index} className="glass text-accent !bg-grayishGreen/20">
+          <div key={index} className="glass !bg-grayishGreen/20 text-accent">
             {page}
           </div>
         ) : (
           <Link key={index} className="glass" href={url + page}>
             {page}
           </Link>
-        )
+        ),
       )}
       {current < total && (
         <Link className="glass" href={url + total}>

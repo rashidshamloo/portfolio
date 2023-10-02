@@ -28,12 +28,12 @@ const SocialSection = ({
 }: socialSectionProps) => {
   return (
     <a
-      className="will-change-transform mx-auto block max-w-[95dvw] text-grayishBlue/80 transition-transform duration-500 transform hover:scale-105 hover:text-darkViolet/80 sm:max-w-none hover:[&>div]:bg-brightBlue4 dark:hover:[&>div]:bg-grayishBlue [&_.blob-bg]:hover:rotate-[30deg] [&_.blob-bg]:hover:bg-darkViolet dark:[&_.blob-bg]:hover:bg-lightViolet"
+      className="mx-auto block max-w-[95dvw] text-grayishBlue/80 transition-transform duration-500 will-change-transform transform hover:text-darkViolet/80 hover:scale-105 sm:max-w-none hover:[&>div]:bg-brightBlue4 dark:hover:[&>div]:bg-grayishBlue [&_.blob-bg]:hover:bg-darkViolet [&_.blob-bg]:hover:rotate-[30deg] dark:[&_.blob-bg]:hover:bg-lightViolet"
       href={link}
       target="_blank"
     >
       <div className=" mt-[10em] flex w-[25em] max-w-full flex-col items-center justify-center rounded-2xl border-[1px] border-brightBlue/50 bg-brightBlue bg-[url('/images/contact/social/social-wave-2.svg')] bg-cover bg-[center_-4em] bg-no-repeat shadow-[0.5em_0.5em_0_rgba(0,0,0,0.2)] transition-colors duration-500 dark:border-darkViolet/50 dark:bg-grayishBlue2 dark:bg-[url('/images/contact/social/social-wave-2-dark.svg')] dark:text-brightBlue/90">
-        <div className="relative mx-auto -mb-[40%] flex aspect-square w-[80%] -translate-y-1/2 items-center justify-center drop-shadow-[0.5em_0.5em_0_rgba(0,0,0,0.2)]">
+        <div className="relative mx-auto -mb-[40%] flex aspect-square w-[80%] items-center justify-center drop-shadow-[0.5em_0.5em_0_rgba(0,0,0,0.2)] -translate-y-1/2">
           <div
             className="blob-bg absolute inset-0 bg-grayishBlue2 transition-all duration-500 transform dark:bg-mediumViolet"
             style={{
@@ -58,14 +58,14 @@ const SocialSection = ({
           />
         </div>
         <div className="min-h-[20em] px-[2.5em] text-center">
-          <h3 className="will-change-transform text-[2.25em] font-bold">
+          <h3 className="text-[2.25em] font-bold will-change-transform">
             {title}
           </h3>
-          <p className="will-change-transform text-[1.35em] font-medium">
+          <p className="text-[1.35em] font-medium will-change-transform">
             {handle}
           </p>
           <hr className="mx-auto my-4 w-[90%] border-t-2 border-dotted border-darkViolet/30 dark:border-brightBlue/30" />
-          <p className="will-change-transform text-[1.35em] font-medium leading-loose lg:leading-relaxed">
+          <p className="text-[1.35em] font-medium leading-loose will-change-transform lg:leading-relaxed">
             <WordBreak>{text}</WordBreak>
           </p>
         </div>

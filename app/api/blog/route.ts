@@ -35,7 +35,7 @@ export const GET = async () => {
           status: 'fail',
           error: 'bad response from upstream API',
         },
-        { status: 500 }
+        { status: 500 },
       );
     return NextResponse.json(posts);
   } catch (e) {
@@ -44,7 +44,7 @@ export const GET = async () => {
         status: 'fail',
         error: 'upstream API request fail',
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };

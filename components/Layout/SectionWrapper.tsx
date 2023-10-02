@@ -35,7 +35,7 @@ const SectionWrapper = ({
         />
       )}
       <div
-        className={`relative z-[1] text-mediumViolet/90 max-w-full overflow-hidden dark:text-brightBlue/90 flex flex-col ${innerClass} ${
+        className={`relative z-[1] flex max-w-full flex-col overflow-hidden text-mediumViolet/90 dark:text-brightBlue/90 ${innerClass} ${
           separator ? 'pb-[50px] lg:pb-[100px]' : ''
         }`}
         style={

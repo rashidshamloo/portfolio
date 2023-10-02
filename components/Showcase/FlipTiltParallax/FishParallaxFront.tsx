@@ -8,7 +8,7 @@ interface FishParallaxProps {
 
 const FishParallaxFront = ({ index }: FishParallaxProps) => {
   return (
-    <div className="relative aspect-[35/46] w-[350px] max-w-full [&>img]:absolute [&>img]:-inset-[7%] [&>img]:h-[114%] [&>img]:w-[114%] [&>img]:max-w-none pointer-events-none">
+    <div className="pointer-events-none relative aspect-[35/46] w-[350px] max-w-full [&>img]:absolute [&>img]:-inset-[7%] [&>img]:h-[114%] [&>img]:w-[114%] [&>img]:max-w-none">
       <Image
         src={`/images/showcase/fish/${String(index).padStart(2, '0')}.webp`}
         alt=""

@@ -38,7 +38,7 @@ const Glow = () => {
           : '/' + locale + (pathName === '/' ? '' : pathName);
 
       const currentPathElement = document.querySelector<HTMLAnchorElement>(
-        `[href="${pathNametoCheck}"]`
+        `[href="${pathNametoCheck}"]`,
       );
 
       if (!currentPathElement) {
@@ -73,10 +73,10 @@ const Glow = () => {
       } else {
         if (currentId === animationId.current && glowRef.current) {
           glowRef.current.classList.add(
-            'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]'
+            'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]',
           );
           glowRef.current.classList.remove(
-            'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]'
+            'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]',
           );
 
           await Promise.all([animate(scaleX, 1), animate(scaleY, 1)]);
@@ -91,10 +91,10 @@ const Glow = () => {
 
         if (currentId === animationId.current) {
           glowRef.current.classList.add(
-            'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]'
+            'shadow-[0_0_0.25rem_0.1rem_rgba(110,231,183,0.5)]',
           );
           glowRef.current.classList.remove(
-            'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]'
+            'shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)]',
           );
 
           await Promise.all([
@@ -104,7 +104,7 @@ const Glow = () => {
         }
       }
     },
-    [pathname, locale, translateX, scaleX, scaleY]
+    [pathname, locale, translateX, scaleX, scaleY],
   );
 
   useEffect(() => {
@@ -126,7 +126,7 @@ const Glow = () => {
       style={{ translateX, scaleX, scaleY }}
       // style={{ transform: 'none' }}
       ref={glowRef}
-      className="bg-emerald-300/80 shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)] absolute bottom-[5%] -left-[5px] origin-center w-[10px] h-[10px] hidden lg:block rounded-[5px] translate-z-0"
+      className="absolute -left-[5px] bottom-[5%] hidden h-[10px] w-[10px] origin-center rounded-[5px] bg-emerald-300/80 shadow-[0_0_0.5rem_0.1rem_rgba(110,231,183,0.8)] translate-z-0 lg:block"
     ></motion.div>
   );
 };

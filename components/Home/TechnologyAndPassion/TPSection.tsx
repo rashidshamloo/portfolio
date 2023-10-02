@@ -28,7 +28,7 @@ const TPSection = ({ title, text, images, triggerRef }: tPSectionProps) => {
       >
         <WordBreak>{title}</WordBreak>
       </Transition>
-      <div className="relative w-full before:absolute before:left-1/2 before:top-1/2 before:z-20 before:hidden before:h-[95%] before:-translate-x-1/2 before:-translate-y-1/2 before:border-r-2 before:transition-all before:duration-500 lg:before:block">
+      <div className="relative w-full before:absolute before:left-1/2 before:top-1/2 before:z-20 before:hidden before:h-[95%] before:border-r-2 before:transition-all before:duration-500 before:-translate-x-1/2 before:-translate-y-1/2 lg:before:block">
         <div className="relative mx-auto mt-3 flex flex-col items-center justify-center gap-y-8 text-xl leading-[1.75] lg:mt-4 lg:max-w-[65%] lg:gap-y-16 lg:text-2xl [&>p:nth-child(even)]:ml-[5%] [&>p:nth-child(even)]:mr-auto lg:[&>p:nth-child(even)]:ml-auto lg:[&>p:nth-child(even)]:mr-[52%] [&>p:nth-child(odd)]:ml-auto [&>p:nth-child(odd)]:mr-[5%] [&>p:nth-child(odd)]:text-right lg:[&>p:nth-child(odd)]:ml-[52%] lg:[&>p:nth-child(odd)]:mr-auto [&>p]:inline-block [&>p]:w-[70%] [&>p]:border-b-2 [&>p]:p-2 lg:[&>p]:w-[48%]">
           {!!images[0] && (
             <Transition

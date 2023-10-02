@@ -9,13 +9,13 @@ import { Parallax } from 'react-next-parallax';
 const ParallaxDemo = () => {
   return (
     <Parallax
-      className="w-[60%] lg:w-1/2 max-w-[280px] aspect-[35/46]"
+      className="aspect-[35/46] w-[60%] max-w-[280px] lg:w-1/2"
       borderRadius="12px"
       overflowHiddenEnable={true}
       tiltMaxAngleX={15}
       tiltMaxAngleY={15}
     >
-      <div className="relative h-full w-full [&>img]:absolute [&>img]:!-inset-[5%] [&>img]:!h-[110%] [&>img]:!w-[110%] [&>img]:max-w-none pointer-events-none">
+      <div className="pointer-events-none relative h-full w-full [&>img]:absolute [&>img]:!-inset-[5%] [&>img]:!h-[110%] [&>img]:!w-[110%] [&>img]:max-w-none">
         <Image
           data-parallax-offset="-5"
           src="/images/showcase/fish_parallax/01.webp"

@@ -87,12 +87,12 @@ const Post = async ({ params }: articleProps) => {
       {post ? (
         <div
           className={
-            'w-full rounded-xl p-4 md:p-6 glass max-w-full overflow-hidden blog-post ' +
+            'glass blog-post w-full max-w-full overflow-hidden rounded-xl p-4 md:p-6 ' +
             className
           }
         >
           {post.coverImage && (
-            <div className="w-full aspect-[50/21] relative rounded-lg overflow-hidden">
+            <div className="relative aspect-[50/21] w-full overflow-hidden rounded-lg">
               <Image
                 src={post.coverImage}
                 alt={post.title}

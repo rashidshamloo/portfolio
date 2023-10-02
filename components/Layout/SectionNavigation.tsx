@@ -13,7 +13,7 @@ const SectionNavigation = () => {
   const darkMode = useNextThemes();
   // state
   const [sectionElements, setSectionElements] = useState<Array<HTMLElement>>(
-    []
+    [],
   );
   const [sectionsInView, setSectionsInView] = useState<Array<boolean>>([]);
 
@@ -39,7 +39,7 @@ const SectionNavigation = () => {
         behavior: 'smooth',
       });
     },
-    [sectionElements]
+    [sectionElements],
   );
 
   // navigates to the next or previous section based on passed value
@@ -64,7 +64,7 @@ const SectionNavigation = () => {
       // navigate to the section id
       navigateTo(navSectionIndex);
     },
-    [navigateTo, sectionsInView]
+    [navigateTo, sectionsInView],
   );
 
   // event handler for left/right arrow navigation
@@ -76,7 +76,7 @@ const SectionNavigation = () => {
         navigateSection('prev');
       }
     },
-    [navigateSection]
+    [navigateSection],
   );
 
   // adding event listener for keyboard navigation
@@ -105,13 +105,13 @@ const SectionNavigation = () => {
     };
 
     const handleIntersection = (
-      entries: IntersectionObserverEntry[]
+      entries: IntersectionObserverEntry[],
       // , observer: IntersectionObserver
     ) => {
       for (const entry of entries) {
         const index = sectionElements.indexOf(entry.target as HTMLElement);
         setSectionsInView((prev) =>
-          prev.map((p, i) => (i === index ? entry.isIntersecting : p))
+          prev.map((p, i) => (i === index ? entry.isIntersecting : p)),
         );
       }
     };
@@ -139,7 +139,7 @@ const SectionNavigation = () => {
   }, [sectionsInView]);
 
   return (
-    <div className="lg:flex flex-col items-center justify-center fixed lg:right-3 xl:right-12 top-1/2 -translate-y-1/2 gap-8 z-50 hidden">
+    <div className="fixed top-1/2 z-50 hidden flex-col items-center justify-center gap-8 -translate-y-1/2 lg:right-3 lg:flex xl:right-12">
       <button
         className={arrowClassName}
         onClick={() => navigateSection('prev')}
@@ -151,7 +151,7 @@ const SectionNavigation = () => {
       {sectionElements.map((_, index) => (
         <div className="flex flex-col items-center justify-center" key={index}>
           <button
-            className='dark:active:!bg-slate-700 active:!bg-slate-500 border-[1px] dark:border-slate-100/50 border-slate-700/50 dark:hover:!bg-slate-700/60 hover:!bg-slate-400/60 will-change-transform w-[10px] aspect-square before:absolute before:-inset-[0.7rem] before:rounded-full absolute rounded-full scale-100 transition-all duration-300 hover:[&_[data-active="true"]]:bg-blue-500 hover:[&:not([data-active="true"])]:scale-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-black'
+            className='absolute aspect-square w-[10px] rounded-full border-[1px] border-slate-700/50 transition-all duration-300 will-change-transform scale-100 before:absolute before:-inset-[0.7rem] before:rounded-full hover:!bg-slate-400/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-black active:!bg-slate-500 dark:border-slate-100/50 dark:hover:!bg-slate-700/60 dark:active:!bg-slate-700 hover:[&:not([data-active="true"])]:scale-150 hover:[&_[data-active="true"]]:bg-blue-500'
             // drop-shadow-[0_0_2px_rgba(0,0,0,0.4)]
             style={{
               transform: sectionsInView[index] ? 'scale(2)' : 'scale(1)',

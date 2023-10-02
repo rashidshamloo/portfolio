@@ -6,9 +6,9 @@ import { Tilt } from 'react-next-tilt';
 
 const TiltDemo = () => {
   return (
-    <Tilt className="w-[60%] lg:w-1/2 max-w-[280px]" borderRadius="12px">
+    <Tilt className="w-[60%] max-w-[280px] lg:w-1/2" borderRadius="12px">
       <div
-        className="relative pointer-events-none grid h-full rounded-xl backface-hidden transform-style-3d aspect-[350/460]"
+        className="pointer-events-none relative grid aspect-[350/460] h-full rounded-xl transform-style-3d backface-hidden"
         aria-hidden="true"
       >
         <Image
@@ -20,14 +20,14 @@ const TiltDemo = () => {
         />
         <Image
           src="/images/packages/flower.webp"
-          className="col-start-1 col-end-1 row-start-1 row-end-1 translate-z-16 transform object-contain"
+          className="col-start-1 col-end-1 row-start-1 row-end-1 object-contain translate-z-16 transform"
           alt="Flower"
           sizes="350px"
           fill
         />
         <Image
           src="/images/packages/text.webp"
-          className="col-start-1 col-end-1 row-start-1 row-end-1 translate-z-36 transform object-contain"
+          className="col-start-1 col-end-1 row-start-1 row-end-1 object-contain translate-z-36 transform"
           alt="Saffron"
           sizes="350px"
           fill

@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 // components
 import ProjectsTop from '@/components/Projects/ProjectsTop';
 const MoreProjects = dynamic(
-  () => import('@/components/Projects/MoreProjects/MoreProjects')
+  () => import('@/components/Projects/MoreProjects/MoreProjects'),
 );
 
 // metadata

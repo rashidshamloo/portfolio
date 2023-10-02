@@ -20,7 +20,7 @@ const Letter = ({ userName, userEmail }: letterProps) => {
   return (
     <div
       className={
-        "relative -translate-y-[2em] translate-x-[3em] rotate-[-25deg] skew-x-[25deg] rounded-md bg-[url('/images/contact/paper.webp')] bg-cover font-alexBrush text-[1.875em] leading-[1.25] text-darkViolet/70 drop-shadow-md dark:bg-[url('/images/contact/paper-dark.webp')] " +
+        "relative rounded-md bg-[url('/images/contact/paper.webp')] bg-cover font-alexBrush text-[1.875em] leading-[1.25] text-darkViolet/70 drop-shadow-md -translate-y-[2em] translate-x-[3em] rotate-[-25deg] skew-x-[25deg] dark:bg-[url('/images/contact/paper-dark.webp')] " +
         alexBrush.variable +
         (locale === 'ja'
           ? ' px-[0.5em] pt-2 [&_p]:text-[0.65em] [&_p]:leading-relaxed'
@@ -30,7 +30,7 @@ const Letter = ({ userName, userEmail }: letterProps) => {
       <p
         className={
           'overflow-hidden whitespace-nowrap ' +
-          (locale === 'ja' ? 'max-w-[23em]' : 'max-w-[15em]')
+          (locale === 'ja' ? 'max-w-[23em]' : 'max-w-[14.5em]')
         }
       >
         {t('from')} <span className="text-[1.2em]">{userName}</span>
