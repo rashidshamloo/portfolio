@@ -22,7 +22,7 @@ const ContactTop = () => {
 
   return (
     <TopWrapper separator={true}>
-      <div className="mx-auto flex flex-grow w-full flex-col items-center justify-evenly gap-y-10 xl:container lg:flex-row pt-12">
+      <div className="mx-auto flex w-full flex-grow flex-col items-center justify-evenly gap-y-10 pt-12 xl:container lg:flex-row">
         <div
           className="flex w-full items-center justify-center lg:max-w-[50%]"
           aria-hidden="true"
@@ -34,7 +34,7 @@ const ContactTop = () => {
           duration={0.75}
           delay={0.5}
           threshold={0}
-          className="lg:pr-4 xl:pr-6 flex justify-center items-center"
+          className="flex items-center justify-center lg:pr-4 xl:pr-6"
         >
           <ContactForm setUserName={setUserName} setUserEmail={setUserEmail} />
         </Transition>

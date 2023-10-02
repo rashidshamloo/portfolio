@@ -28,11 +28,11 @@ const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
   return (
     <>
       {articles.length > 1 ? (
-        <div className="font-merriweather flex flex-col items-center justify-center gap-4 w-full">
-          <h2 className="text-xl md:text-2xl font-bold border-b-2 pb-2 border-brightBlue dark:border-darkGrayishBlue w-full text-center">
+        <div className="flex w-full flex-col items-center justify-center gap-4 font-merriweather">
+          <h2 className="w-full border-b-2 border-brightBlue pb-2 text-center text-xl font-bold dark:border-darkGrayishBlue md:text-2xl">
             {title}
           </h2>
-          <div className="flex items-center justify-center gap-2 flex-col w-">
+          <div className="flex flex-col items-center justify-center gap-2">
             {articles.map((article, index) => (
               <Tilt
                 key={index}
@@ -48,15 +48,15 @@ const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
               >
                 <Link
                   href={`/blog/post/${article.slug}-${String(article.id)}`}
-                  className="translate-z-[0px] transform flex items-center justify-center gap-1 flex-col glass p-2 rounded-xl hover:shadow-md [&_img]:hover:brightness-[1.15] [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20 [&_img]:transition-all  [&_img]:duration-300 [&_h3]:transition-all [&_h3]:duration-300 [&_img]:hover:scale-110 relative [&_h3]:hover:text-accent"
+                  className="glass relative flex flex-col items-center justify-center gap-1 rounded-xl p-2 translate-z-[0px] transform hover:shadow-md [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20 [&_h3]:transition-all  [&_h3]:duration-300 [&_h3]:hover:text-accent [&_img]:transition-all [&_img]:duration-300 [&_img]:hover:brightness-[1.15] [&_img]:hover:scale-110"
                 >
                   <h3 className="text-center">{article.title}</h3>
                   {article.coverImage !== null && (
-                    <div className="relative w-full aspect-[50/21] overflow-hidden rounded-xl">
+                    <div className="relative aspect-[50/21] w-full overflow-hidden rounded-xl">
                       <Image
                         src={article.coverImage}
                         alt={article.title}
-                        className="object-cover w-full h-full"
+                        className="h-full w-full object-cover"
                         sizes="400px"
                         fill
                       />

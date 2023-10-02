@@ -31,17 +31,17 @@ const BlogAside = () => {
   }, [dispatch, posts.length]);
 
   return (
-    <aside className="mx-auto max-w-[90%] lg:mx-0 lg:w-[calc(27%_-_0.5rem)] glass rounded-xl flex flex-col gap-8 items-center justify-start p-4 md:p-6">
+    <aside className="glass mx-auto flex max-w-[90%] flex-col items-center justify-start gap-8 rounded-xl p-4 md:p-6 lg:mx-0 lg:w-[calc(27%_-_0.5rem)]">
       <ArticlesSection
         title={t('featuredArticles')}
         articles={posts
           .filter((post) =>
-            blogSettings.featuredPosts.includes(String(post.id))
+            blogSettings.featuredPosts.includes(String(post.id)),
           )
           .sort(
             (a, b) =>
               blogSettings.featuredPosts.indexOf(String(a.id)) -
-              blogSettings.featuredPosts.indexOf(String(b.id))
+              blogSettings.featuredPosts.indexOf(String(b.id)),
           )}
       />
       <ArticlesSection

@@ -44,7 +44,7 @@ const Slide = ({
       if (show) hideElement.current?.classList.remove('opacity-0');
       else hideElement.current?.classList.add('opacity-0');
     },
-    [hideElement]
+    [hideElement],
   );
 
   return (
@@ -82,7 +82,7 @@ const Slide = ({
             />
           </div>
           <h2
-            className="will-change-transform pointer-events-none absolute left-[0.5em] top-[5.25em] rounded-[0.75em] bg-black/60 px-[1em] py-[0.5em] font-merriweather leading-[1] text-accent drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] [&>span]:text-[3.75em]"
+            className="pointer-events-none absolute left-[0.5em] top-[5.25em] rounded-[0.75em] bg-black/60 px-[1em] py-[0.5em] font-merriweather leading-[1] text-accent drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] will-change-transform [&>span]:text-[3.75em]"
             data-swiper-parallax-x="30%"
             data-swiper-parallax-z-initial="160"
             data-swiper-parallax-z="50"
@@ -91,7 +91,7 @@ const Slide = ({
             <span>{city}</span>
           </h2>
           <h3
-            className="will-change-transform pointer-events-none absolute left-[1.25em] top-[11.5em] rounded-[0.75em] bg-black/60 px-[1em] py-[0.5em] font-merriweather leading-[1] text-brightBlue drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] [&>span]:text-[2.5em]"
+            className="pointer-events-none absolute left-[1.25em] top-[11.5em] rounded-[0.75em] bg-black/60 px-[1em] py-[0.5em] font-merriweather leading-[1] text-brightBlue drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] will-change-transform [&>span]:text-[2.5em]"
             data-swiper-parallax-x="25%"
             data-swiper-parallax-z-initial="112"
             data-swiper-parallax-z="50"
@@ -100,7 +100,7 @@ const Slide = ({
             <span>{title}</span>
           </h3>
           <p
-            className="will-change-transform absolute left-[2em] right-[7.5em] top-[85%] hidden rounded-[0.75em] bg-black/60 p-[0.5em] text-[max(1em,14px)] leading-[1.5] text-brightBlue drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] sm:right-[8.5em] md:bottom-[3em] md:left-[4em] md:right-[4em] md:top-auto md:block lg:max-w-[50%] lg:p-[1em]"
+            className="absolute left-[2em] right-[7.5em] top-[85%] hidden rounded-[0.75em] bg-black/60 p-[0.5em] text-[max(1em,14px)] leading-[1.5] text-brightBlue drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] will-change-transform sm:right-[8.5em] md:bottom-[3em] md:left-[4em] md:right-[4em] md:top-auto md:block lg:max-w-[50%] lg:p-[1em]"
             data-swiper-parallax-x="-15%"
             data-swiper-parallax-z-initial="64"
             data-swiper-parallax-z="-25"

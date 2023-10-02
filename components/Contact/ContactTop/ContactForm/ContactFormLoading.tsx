@@ -44,7 +44,7 @@ const ContactFormLoading = ({
               </>
             )}
             {!isSending && !isError && (
-              <div className="text-[6rem] flex-col flex items-center justify-center gap-y-4">
+              <div className="flex flex-col items-center justify-center gap-y-4 text-[6rem]">
                 <CheckCircleOutlineRoundedIcon
                   fontSize="inherit"
                   className="text-green-300 dark:text-green-600"

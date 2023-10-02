@@ -12,14 +12,14 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       <div
         ref={ref}
         className={
-          'drop-shadow-[0_0_1px_rgb(51,65,85)] absolute bottom-[calc(100%_+_10px)] px-3 py-[2px] bg-slate-300 w-[max-content] after:border-[6px] after:left-1/2 after:-translate-x-1/2 after:top-full after:border-[rgb(203,213,225)_transparent_transparent_transparent] after:absolute rounded-full text-slate-700 ' +
+          'absolute bottom-[calc(100%_+_10px)] w-[max-content] rounded-full bg-slate-300 px-3 py-[2px] text-slate-700 drop-shadow-[0_0_1px_rgb(51,65,85)] after:absolute after:left-1/2 after:top-full after:border-[6px] after:border-[rgb(203,213,225)_transparent_transparent_transparent] after:-translate-x-1/2 ' +
           className
         }
       >
         {children}
       </div>
     );
-  }
+  },
 );
 
 Tooltip.displayName = 'Tooltip';

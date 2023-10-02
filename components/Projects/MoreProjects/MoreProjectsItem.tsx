@@ -22,12 +22,12 @@ const MoreProjectsItem = ({
   rotateReverse = false,
 }: moreProjectsItemProps) => {
   return (
-    <div className="relative w-[22em] text-xs sm:text-sm lg:text-[0.8rem] xl:text-[0.925rem] drop-shadow-[0.5rem_0.5rem_0_rgba(0,0,0,0.2)]">
+    <div className="relative w-[22em] text-xs drop-shadow-[0.5rem_0.5rem_0_rgba(0,0,0,0.2)] sm:text-sm lg:text-[0.8rem] xl:text-[0.925rem]">
       <a
         href={link}
         target="_blank"
         className={
-          'z-10 relative hover:[&>div]:scale-105 [&_h2]:hover:text-brightBlue dark:[&_h2]:hover:text-darkViolet [&_p]:hover:text-brightBlue/70 dark:[&_p]:hover:text-darkViolet/80 [&~div]:hover:scale-105 [&~div]:hover:bg-grayishBlue  dark:[&~div]:hover:bg-veryLightViolet2 ' +
+          'relative z-10 hover:[&>div]:scale-105 [&_h2]:hover:text-brightBlue dark:[&_h2]:hover:text-darkViolet [&_p]:hover:text-brightBlue/70 dark:[&_p]:hover:text-darkViolet/80 [&~div]:hover:bg-grayishBlue [&~div]:hover:scale-105  dark:[&~div]:hover:bg-veryLightViolet2 ' +
           (rotateReverse
             ? '[&~div]:hover:rotate-[-25deg] '
             : '[&~div]:hover:rotate-[25deg] ') +
@@ -46,14 +46,14 @@ const MoreProjectsItem = ({
               {title}
             </h2>
           </div>
-          <p className="will-change-transform text-center text-[1.5em] leading-relaxed text-darkViolet/50 transition-all duration-300 dark:text-brightBlue/50">
+          <p className="text-center text-[1.5em] leading-relaxed text-darkViolet/50 transition-all duration-300 will-change-transform dark:text-brightBlue/50">
             <WordBreak>{text}</WordBreak>
           </p>
         </div>
       </a>
       <div
         className={
-          'absolute -inset-[8em] md:-inset-[10em] bg-brightBlue/60 backdrop-blur-[2px] transition-all duration-300 dark:bg-black/30 ' +
+          'absolute -inset-[8em] bg-brightBlue/60 backdrop-blur-[2px] transition-all duration-300 dark:bg-black/30 md:-inset-[10em] ' +
           (bgReverse ? 'rotate-y-[180deg]' : '')
         }
         style={{

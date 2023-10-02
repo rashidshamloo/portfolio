@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import Hero from '@/components/Home/Hero/Hero';
 
 const TechnologyAndPassion = dynamic(
-  () => import('@/components/Home/TechnologyAndPassion/TechnologyAndPassion')
+  () => import('@/components/Home/TechnologyAndPassion/TechnologyAndPassion'),
 );
 
 export default function Home() {
