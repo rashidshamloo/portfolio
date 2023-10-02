@@ -27,7 +27,7 @@ const NotFoundPage = () => {
         shadow="0 0 1.5rem rgba(0,0,0,0.5)"
         lineGlareMaxOpacity={0.05}
       >
-        <div className="will-change-transform flex h-full flex-col items-center justify-center gap-4 rounded-[16px] dark:border-black/40 border-[8px] dark:bg-[linear-gradient(to_bottom_right,rgba(53,63,75,0.3),rgba(25,40,55,0.3))] bg-[linear-gradient(to_bottom_right,rgba(203,213,225,0.2),rgba(175,190,205,0.2))] px-4 py-8">
+        <div className="flex h-full flex-col items-center justify-center gap-4 rounded-[16px] border-[8px] bg-[linear-gradient(to_bottom_right,rgba(203,213,225,0.2),rgba(175,190,205,0.2))] px-4 py-8 will-change-transform dark:border-black/40 dark:bg-[linear-gradient(to_bottom_right,rgba(53,63,75,0.3),rgba(25,40,55,0.3))]">
           <p data-parallax-offset="20" className="text-6xl text-accent/90">
             404
           </p>

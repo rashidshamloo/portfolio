@@ -47,7 +47,7 @@ const ScrollToTop = ({ triggerAt = 100 }: ScrollToTopProps) => {
     <button
       ref={ref}
       aria-label="Back to Top"
-      className="hidden lg:flex aspect-square hover:text-slate-100 w-[48px] dark:hover:bg-slate-300/70 dark:hover:text-slate-700 hover:bg-slate-700/70 fixed bottom-4 right-4 xl:bottom-10 xl:right-10 opacity-0 transition-all duration-500 justify-center items-center rounded-full border-[1px] hover:border-slate-100/70 border-slate-700/70 dark:border-slate-100/70 z-[100] bg-slate-300 text-slate-700/70 dark:bg-slate-700/70 dark:text-slate-300"
+      className="fixed bottom-4 right-4 z-[100] hidden aspect-square w-[48px] items-center justify-center rounded-full border-[1px] border-slate-700/70 bg-slate-300 text-slate-700/70 opacity-0 transition-all duration-500 hover:border-slate-100/70 hover:bg-slate-700/70 hover:text-slate-100 dark:border-slate-100/70 dark:bg-slate-700/70 dark:text-slate-300 dark:hover:bg-slate-300/70 dark:hover:text-slate-700 lg:flex xl:bottom-10 xl:right-10"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       onMouseOver={() => {
         timeoutId = setTimeout(() => {
@@ -63,7 +63,7 @@ const ScrollToTop = ({ triggerAt = 100 }: ScrollToTopProps) => {
       <FaArrowUp size={24} />
       <Tooltip
         ref={tooltipRef}
-        className="opacity-0 pointer-events-none transition-all duration-500"
+        className="pointer-events-none opacity-0 transition-all duration-500"
       >
         {t('backToTop')}
       </Tooltip>

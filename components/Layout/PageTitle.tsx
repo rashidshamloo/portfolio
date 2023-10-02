@@ -5,7 +5,7 @@ const PageTitle = ({ children }: React.PropsWithChildren) => {
   return (
     <Transition
       component="h1"
-      className="mx-auto text-[1.85rem] font-bold sm:text-4xl md:text-[2.25rem] xl:text-5xl font-merriweather [&_*:first-child]:first-letter:text-accent [&_*:first-child]:first-letter:text-[1.5em] uppercase mt-16 lg:mt-20"
+      className="mx-auto mt-16 font-merriweather text-[1.85rem] font-bold uppercase sm:text-4xl md:text-[2.25rem] lg:mt-20 xl:text-5xl [&_*:first-child]:first-letter:text-[1.5em] [&_*:first-child]:first-letter:text-accent"
       effect="textReveal"
       duration={0.75}
     >

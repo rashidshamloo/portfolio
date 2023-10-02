@@ -13,7 +13,7 @@ function Hero() {
   const t = useTranslations('Intro');
   return (
     <TopWrapper separator={true} separatorType="steps" title={t('pageTitle')}>
-      <div className="mx-auto flex min-h-screen flex-col-reverse items-center justify-evenly xl:container lg:flex-row [&_li]:font-medium pt-20 lg:pt-0">
+      <div className="mx-auto flex min-h-screen flex-col-reverse items-center justify-evenly pt-20 xl:container lg:flex-row lg:pt-0 [&_li]:font-medium">
         <Intro />
         <Transition
           delay={1.5}

@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/globals.css';
 
 // react
 import React from 'react';
@@ -105,7 +105,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className="scroll-smooth snap-proximity snap-y"
+      className="snap-y snap-proximity scroll-smooth"
       suppressHydrationWarning
     >
       <head>

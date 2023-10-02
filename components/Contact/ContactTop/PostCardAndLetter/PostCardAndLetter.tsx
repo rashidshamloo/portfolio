@@ -20,7 +20,7 @@ const PostCardAndLetter = ({ userName, userEmail }: postCardAndLetterProps) => {
       className="relative mb-[2em] flex aspect-[5/4] w-full max-w-[50em] items-center justify-center text-[0.575rem] sm:text-[0.65rem] lg:text-sm 2xl:text-base"
     >
       <div className="absolute -inset-x-[8em] -bottom-[9em] -top-[4em] -z-[1] bg-[url('/images/contact/blob-anim.svg')] bg-center bg-no-repeat dark:bg-[url('/images/contact/blob-anim-dark.svg')]"></div>
-      <div className="pointer-events-none absolute left-0 top-1/2 z-10 aspect-[4108/6087] w-[18.75em] -translate-y-1/2 drop-shadow-md dark:brightness-75">
+      <div className="pointer-events-none absolute left-0 top-1/2 z-10 aspect-[4108/6087] w-[18.75em] drop-shadow-md -translate-y-1/2 dark:brightness-75">
         <Image
           src="/images/contact/quill.webp"
           fill

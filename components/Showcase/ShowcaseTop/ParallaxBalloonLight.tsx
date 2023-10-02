@@ -28,7 +28,7 @@ const ParallaxBalloon = ({
   return (
     <Parallax
       className={
-        'relative [&_img]:-top-[5%] [&_img]:absolute [&_img]:left-[30%] md:[&_img]:left-[60%] lg:[&_img]:left-1/2 [&_img]:pointer-events-none [&_img]:-translate-x-1/2 [&_img]:h-[110%] aspect-[3/4] md:aspect-[1.8] lg:aspect-[2.25] [&_img]:w-auto [&_img]:max-w-none ' +
+        'relative aspect-[3/4] md:aspect-[1.8] lg:aspect-[2.25] [&_img]:pointer-events-none [&_img]:absolute [&_img]:-top-[5%] [&_img]:left-[30%] [&_img]:h-[110%] [&_img]:w-auto [&_img]:max-w-none [&_img]:-translate-x-1/2 md:[&_img]:left-[60%] lg:[&_img]:left-1/2 ' +
         className
       }
       borderRadius="24px"
@@ -41,7 +41,7 @@ const ParallaxBalloon = ({
       tiltMaxAngleY={15}
       spotGlareEnable={false}
     >
-      <div className="absolute inset-0 rounded-[24px] overflow-hidden border-2 border-white/80">
+      <div className="absolute inset-0 overflow-hidden rounded-[24px] border-2 border-white/80">
         {items.map((item, index) => (
           <Image
             key={index}
@@ -50,7 +50,7 @@ const ParallaxBalloon = ({
             alt=""
             className={
               index === 5
-                ? 'animate-balloonFloat lg:!-left-[7%] hidden lg:block !-top-[5%]'
+                ? '!-top-[5%] hidden animate-balloonFloat lg:!-left-[7%] lg:block'
                 : ''
             }
             width="2296"
@@ -64,7 +64,7 @@ const ParallaxBalloon = ({
       <Image
         data-parallax-offset="4.5"
         src="/images/showcase/balloon_light/06.webp"
-        className="animate-balloonFloat2 lg:!-left-[7%] md:!-left-[10%] !-left-[75%] !-top-[15%] md:!-top-[10%] scale-[85%] md:scale-100"
+        className="!-left-[75%] !-top-[15%] animate-balloonFloat2 scale-[85%] md:!-left-[10%] md:!-top-[10%] md:scale-100 lg:!-left-[7%]"
         alt=""
         width="2296"
         height="1020"

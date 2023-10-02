@@ -37,7 +37,7 @@ const TechnologyAndPassion = () => {
     () => !show && setShow(true),
     typeof window !== 'undefined' && document.documentElement.scrollTop > 0
       ? 0
-      : 3000
+      : 3000,
   );
 
   useEffect(() => {

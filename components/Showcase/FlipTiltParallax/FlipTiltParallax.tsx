@@ -18,7 +18,7 @@ const FlipTiltParallax = () => {
   const t = useTranslations('Showcase');
   return (
     <SectionWrapper
-      className="lg:snap-always lg:snap-center"
+      className="lg:snap-center lg:snap-always"
       innerClass="dark:bg-[#3a4461] bg-[rgb(146,180,207)] bg-[url('/images/showcase/fish/blob.svg'),url('/images/showcase/fish/bg.svg')] bg-[length:100%_100%,auto] flex items-center justify-center flex-col gap-16"
       zIndex={7}
     >
@@ -26,11 +26,11 @@ const FlipTiltParallax = () => {
         effect="textReveal"
         threshold={1}
         component="h2"
-        className="relative inline-block font-merriweather text-[clamp(1.5rem,_1rem_+_3vw,_3.5rem)] leading-[1] dark:text-brightGrayishBlue3 text-darkGrayishBlue/90 before:absolute before:right-[105%] before:top-1/2 before:w-[1em] before:origin-right before:border-b-2 before:border-brightGrayishBlue before:-translate-y-1/2 after:absolute after:left-[105%] after:top-1/2 after:w-[1em] after:origin-right after:border-b-2 after:border-brightGrayishBlue after:-translate-y-1/2"
+        className="relative inline-block font-merriweather text-[clamp(1.5rem,_1rem_+_3vw,_3.5rem)] leading-[1] text-darkGrayishBlue/90 before:absolute before:right-[105%] before:top-1/2 before:w-[1em] before:origin-right before:border-b-2 before:border-brightGrayishBlue before:-translate-y-1/2 after:absolute after:left-[105%] after:top-1/2 after:w-[1em] after:origin-right after:border-b-2 after:border-brightGrayishBlue after:-translate-y-1/2 dark:text-brightGrayishBlue3"
       >
         {t('fishTitle')}
       </Transition>
-      <div className="inline-grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[90%] mx-auto">
+      <div className="mx-auto inline-grid max-w-[90%] grid-cols-2 gap-4 md:grid-cols-4">
         {[...Array(8)].map((_, i) => (
           <Transition key={i} delay={i * 0.2} effect="scaleUpS">
             <FlipTilt
@@ -44,7 +44,7 @@ const FlipTiltParallax = () => {
               lineGlareMixBlendMode="overlay"
               lineGlareMaxOpacity={0.15}
               tabIndex={0}
-              className="aspect-[35/46] outline-none [&>div]:focus-visible:outline [&>div]:focus-visible:outline-2 [&>div]:focus-visible:outline-black max-w-[250px]"
+              className="aspect-[35/46] max-w-[250px] outline-none [&>div]:focus-visible:outline [&>div]:focus-visible:outline-2 [&>div]:focus-visible:outline-black"
               aria-label={'Flip-Tilt Component ' + (i + 1)}
               role="figure"
               tiltMaxAngleX={15}

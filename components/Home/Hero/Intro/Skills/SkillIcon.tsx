@@ -20,7 +20,7 @@ const SkillIcon = ({ text, image, imageDark, delay }: SkillIconProps) => {
 
   return (
     <Transition
-      className="will-change-transform flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center will-change-transform"
       duration={0.5}
       delay={delay}
       effect="scaleUp"
@@ -30,7 +30,7 @@ const SkillIcon = ({ text, image, imageDark, delay }: SkillIconProps) => {
         alt={text}
         width="48"
         height="48"
-        className="w-[48px] h-[48px]"
+        className="h-[48px] w-[48px]"
       />
       <p className="mt-2 text-sm font-semibold">{text}</p>
     </Transition>

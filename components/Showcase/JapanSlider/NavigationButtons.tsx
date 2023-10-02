@@ -27,8 +27,8 @@ const NavigationButtons = ({
         className={
           'z-10 transition-all duration-300 lg:absolute lg:-left-[7.5em] lg:top-[65%] lg:-translate-y-1/2 ' +
           (!isStart
-            ? 'dark:text-grayishBlue text-slate-300 hover:text-brightBlue hover:drop-shadow-lg hover:scale-125'
-            : 'dark:text-gray-400/10 text-gray-200/20')
+            ? 'text-slate-300 hover:text-brightBlue hover:drop-shadow-lg hover:scale-125 dark:text-grayishBlue'
+            : 'text-gray-200/20 dark:text-gray-400/10')
         }
         disabled={isStart}
       >
@@ -40,8 +40,8 @@ const NavigationButtons = ({
         className={
           'z-10 transition-all duration-300 lg:absolute lg:-right-[7.5em] lg:top-[65%] lg:-translate-y-1/2 ' +
           (!isEnd
-            ? 'dark:text-grayishBlue text-slate-300 hover:text-brightBlue hover:drop-shadow-lg hover:scale-125'
-            : 'dark:text-gray-400/10 text-gray-200/10')
+            ? 'text-slate-300 hover:text-brightBlue hover:drop-shadow-lg hover:scale-125 dark:text-grayishBlue'
+            : 'text-gray-200/10 dark:text-gray-400/10')
         }
         disabled={isEnd}
       >

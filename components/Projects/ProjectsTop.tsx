@@ -27,7 +27,7 @@ const ProjectsTop = () => {
       <PageTitle>{t('pageTitle')}</PageTitle>
       <div
         className={
-          'mt-4 lg:mt-8 gap-y-4 flex flex-col xl:container mx-auto [&_li]:font-medium ' +
+          'mx-auto mt-4 flex flex-col gap-y-4 xl:container lg:mt-8 [&_li]:font-medium ' +
           glassClass
         }
       >
@@ -37,10 +37,10 @@ const ProjectsTop = () => {
               effect="fadeBTTS"
               threshold={0.15}
               duration={0.75}
-              className="w-full min-h-[31.25rem]"
+              className="min-h-[31.25rem] w-full"
               key={i}
             >
-              <hr className="mx-auto w-[70%] border-b-2 border-t-0 border-dashed border-darkViolet/10 drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] dark:border-brightBlue/10 mb-4" />
+              <hr className="mx-auto mb-4 w-[70%] border-b-2 border-t-0 border-dashed border-darkViolet/10 drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] dark:border-brightBlue/10" />
               <Project data={data} reverse={!!(i % 2)} />
             </Transition>
           );

@@ -67,14 +67,14 @@ const MovingBackground = forwardRef<HTMLDivElement, movingBackgroundProps>(
     return (
       <div
         ref={ref}
-        className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/home/tech-bg-mobile.webp')] md:bg-[url('/images/home/tech-bg.webp')] bg-[length:max(calc(100dvw_+_100px)_,_800px)] md:bg-[length:calc(100dvw_+_100px)] bg-center transition-opacity duration-1000"
+        className="absolute -bottom-[100px] -right-[100px] left-0 top-0 bg-[url('/images/home/tech-bg-mobile.webp')] bg-[length:max(calc(100dvw_+_100px)_,_800px)] bg-center transition-opacity duration-1000 md:bg-[url('/images/home/tech-bg.webp')] md:bg-[length:calc(100dvw_+_100px)]"
         style={{
           backgroundPositionX: String(translate.x) + 'px',
           backgroundPositionY: String(translate.y) + 'px',
         }}
       ></div>
     );
-  }
+  },
 );
 
 MovingBackground.displayName = 'MovingBackground';

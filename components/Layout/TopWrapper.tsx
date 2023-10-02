@@ -48,7 +48,7 @@ const TopWrapper = ({
       {title && <h1 className="sr-only">{title}</h1>}
       <div
         className={
-          'text-mediumViolet/90 relative max-w-full overflow-x-hidden bg-heroBg bg-[length:1.5rem,auto] pb-10 lg:py-0 dark:bg-heroBgDark dark:text-brightBlue/90 flex flex-col items-center justify-center ' +
+          'relative flex max-w-full flex-col items-center justify-center overflow-x-hidden bg-heroBg bg-[length:1.5rem,auto] pb-10 text-mediumViolet/90 dark:bg-heroBgDark dark:text-brightBlue/90 lg:py-0 ' +
           (!separator ? `min-h-[calc(100vh_+_50px)] pb-14 lg:pb-20` : '') +
           innerClass
         }

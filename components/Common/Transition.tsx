@@ -46,12 +46,12 @@ const Transition = forwardRef<HTMLElement, transitionProps & MotionProps>(
       disableOnMobile = false,
       ...props
     },
-    ref
+    ref,
   ) => {
     const disableMotion = useReducedMotion();
     const MotionElement = useMemo(
       () => m(component) as CustomDomComponent<transitionProps>,
-      [component]
+      [component],
     );
 
     const transition: Transition = {
@@ -94,7 +94,7 @@ const Transition = forwardRef<HTMLElement, transitionProps & MotionProps>(
             : children)}
       </MotionElement>
     );
-  }
+  },
 );
 
 Transition.displayName = 'Transition';

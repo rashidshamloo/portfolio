@@ -20,7 +20,7 @@ const Social = () => {
       separator={false}
     >
       {/* <div className=""> */}
-      <div className="mx-auto xl:container flex-grow flex flex-col justify-center py-[100px] lg:py-[50px]">
+      <div className="mx-auto flex flex-grow flex-col justify-center py-[100px] xl:container lg:py-[50px]">
         <Transition
           component="h2"
           className="mx-[5%] text-center text-[2rem] font-bold uppercase leading-[1.5] text-brightBlue drop-shadow-[0.075em_0.075em_0_rgba(0,0,0,0.3)] transition-all duration-500 dark:text-brightBlue/80 md:text-4xl lg:mx-auto lg:text-[2.65rem]"

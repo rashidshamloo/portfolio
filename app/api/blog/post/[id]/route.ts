@@ -20,7 +20,7 @@ export const GET = async (req: Request) => {
   if (!id || !validator.isNumeric(id))
     return NextResponse.json(
       { status: 'fail', error: 'bad request' },
-      { status: 400 }
+      { status: 400 },
     );
 
   try {
@@ -43,7 +43,7 @@ export const GET = async (req: Request) => {
           status: 'fail',
           error: 'bad response from upstream API',
         },
-        { status: 500 }
+        { status: 500 },
       );
     return NextResponse.json(post);
   } catch (e) {
@@ -52,7 +52,7 @@ export const GET = async (req: Request) => {
         status: 'fail',
         error: 'upstream API request fail',
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 };
