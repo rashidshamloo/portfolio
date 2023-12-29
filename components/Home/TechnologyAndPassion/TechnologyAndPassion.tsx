@@ -20,6 +20,9 @@ import MovingBackground from './MovingBackground';
 const TechnologyAndPassion = () => {
   const darkMode = useNextThemes();
 
+  // state
+  const [show, setShow] = useState(false);
+
   // next-intl
   const t = useTranslations('TechnologyAndPassion');
 
@@ -28,8 +31,20 @@ const TechnologyAndPassion = () => {
   const triggerRef = useRef<HTMLHeadingElement>(null);
   const movingBackgroundRef = useRef<HTMLDivElement>(null);
 
+  // preload/show moving background and the sections after 3 seconds
+  // and show immediately if the page is already scrolled
+  setTimeout(
+    () => !show && setShow(true),
+    typeof window !== 'undefined' && document.documentElement.scrollTop > 0
+      ? 0
+      : 3000,
+  );
+
   useEffect(() => {
     const handleScroll = () => {
+      // show moving background and sections only after scroll
+      if (!show) setShow(true);
+
       if (
         !containerRef.current ||
         !triggerRef.current ||
@@ -71,7 +86,7 @@ const TechnologyAndPassion = () => {
       passive: true,
     });
     return () => window?.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [show]);
 
   return (
     <section
@@ -84,35 +99,44 @@ const TechnologyAndPassion = () => {
         }' fill-opacity='0.33'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E")`,
       }}
     >
-      <MovingBackground
-        containerElement={containerRef.current}
-        ref={movingBackgroundRef}
-      />
+      {show && (
+        <MovingBackground
+          containerElement={containerRef.current}
+          ref={movingBackgroundRef}
+        />
+      )}
       <div className="relative mx-auto flex flex-col items-center lg:container">
-        <TPSection
-          title={t('techTitle')}
-          text={[
-            t('techText1'),
-            t('techText2'),
-            t('techText3'),
-            t('techText4'),
-          ]}
-          images={['/images/home/tech-01.webp', '/images/home/tech-02.webp']}
-        />
-        <TPSection
-          title={t('passionTitle')}
-          text={[
-            t('passionText1'),
-            t('passionText2'),
-            t('passionText3'),
-            t('passionText4'),
-          ]}
-          images={[
-            '/images/home/passion-01.webp',
-            '/images/home/passion-02.webp',
-          ]}
-          triggerRef={triggerRef}
-        />
+        {show && (
+          <>
+            <TPSection
+              title={t('techTitle')}
+              text={[
+                t('techText1'),
+                t('techText2'),
+                t('techText3'),
+                t('techText4'),
+              ]}
+              images={[
+                '/images/home/tech-01.webp',
+                '/images/home/tech-02.webp',
+              ]}
+            />
+            <TPSection
+              title={t('passionTitle')}
+              text={[
+                t('passionText1'),
+                t('passionText2'),
+                t('passionText3'),
+                t('passionText4'),
+              ]}
+              images={[
+                '/images/home/passion-01.webp',
+                '/images/home/passion-02.webp',
+              ]}
+              triggerRef={triggerRef}
+            />
+          </>
+        )}
       </div>
     </section>
   );

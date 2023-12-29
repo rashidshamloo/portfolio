@@ -27,10 +27,11 @@ interface transitionProps extends React.HTMLAttributes<HTMLElement> {
   once?: boolean;
   ease?: string;
   component?: string;
-  ref?: React.Ref<HTMLElement>;
+  disableOnMobile?: boolean;
+  // ref?: React.Ref<HTMLElement>;
 }
-
-const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
+// : React.FC<transitionProps & MotionProps>
+const Transition = forwardRef<HTMLElement, transitionProps & MotionProps>(
   (
     {
       effect = 'fadeIn',
@@ -42,25 +43,32 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
       component = 'div',
       children,
       className,
+      disableOnMobile = false,
       ...props
     },
-    ref
+    ref,
   ) => {
     const disableMotion = useReducedMotion();
     const MotionElement = useMemo(
       () => m(component) as CustomDomComponent<transitionProps>,
-      [component]
+      [component],
     );
 
     const transition: Transition = {
-      duration: disableMotion ? 0 : duration,
+      duration: disableMotion || (disableOnMobile && isMobile) ? 0 : duration,
       delay: disableMotion || isMobile ? 0 : delay,
       ease,
       staggerChildren: effect === 'textReveal' ? 0.1 : 0,
     };
     return (
       <MotionElement
-        variants={effect !== 'textReveal' ? variants[effect] : undefined}
+        variants={
+          disableMotion
+            ? undefined
+            : effect !== 'textReveal'
+            ? variants[effect]
+            : undefined
+        }
         initial="initial"
         whileInView="animate"
         animate="animateNIV"
@@ -86,7 +94,7 @@ const Transition: React.FC<transitionProps & MotionProps> = forwardRef(
             : children)}
       </MotionElement>
     );
-  }
+  },
 );
 
 Transition.displayName = 'Transition';

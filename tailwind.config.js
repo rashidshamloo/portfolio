@@ -73,6 +73,22 @@ module.exports = {
             transform: 'translateX(-1rem) translateY(1rem) translateZ(125px)',
           },
         },
+        balloonFloat: {
+          '0%, 100%': {
+            translate: '1rem 1rem',
+          },
+          '50%': {
+            translate: '-1rem -1rem',
+          },
+        },
+        balloonFloat2: {
+          '0%, 100%': {
+            translate: '1rem -1rem',
+          },
+          '50%': {
+            translate: '-1rem 1rem',
+          },
+        },
         fishFloat: {
           '0%, 100%': {
             translate: '0 -1rem',
@@ -102,6 +118,8 @@ module.exports = {
     animation: {
       float: 'float 7s ease-in-out infinite',
       float2: 'float2 7s ease-in-out infinite',
+      balloonFloat: 'balloonFloat 7s ease-in-out infinite',
+      balloonFloat2: 'balloonFloat2 7s ease-in-out infinite',
       rotate: 'rotate 7s linear infinite',
       rotateY: 'rotateY 7s linear infinite',
       fishFloat: 'fishFloat 5s ease-in-out infinite',

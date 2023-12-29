@@ -36,14 +36,14 @@ function HeroCard() {
       lineGlareColor={!darkMode ? undefined : 'silver'}
       borderRadius="12px"
     >
-      <div className="will-change-transform glass relative aspect-[3/4] w-[25em] rounded-xl transform-style-3d">
+      <div className="glass relative aspect-[3/4] w-[25em] rounded-xl will-change-transform transform-style-3d">
         <div className="glass relative -top-[2.5em] mx-auto aspect-square w-3/4 select-none rounded-full p-[1em] translate-z-16 transform">
           <span
-            className="absolute -inset-[0.1rem] block animate-rotate rounded-full bg-glowRotate blur-md "
+            className="absolute -inset-[0.1rem] block animate-rotate rounded-full bg-glowRotate blur-md"
             style={{
-              maskImage: 'radial-gradient(transparent 0% 70%,black 70.1%)',
+              maskImage: 'radial-gradient(transparent 0% 69.5%,black 70.2%)',
               WebkitMaskImage:
-                'radial-gradient(transparent 0% 69.5%,#0000dd 70.2%)',
+                'radial-gradient(transparent 0% 69.5%,black 70.2%)',
             }}
           ></span>
           <div className="translae-z-16 relative aspect-square overflow-hidden rounded-full">

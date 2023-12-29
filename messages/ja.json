@@ -91,8 +91,11 @@
   },
   "Social": {
     "otherWaysToContactMe": "他の連絡方法",
+    "linkedinTitle": "Linkedin",
+    "twitterTitle": "X",
+    "emailTitle": "メール",
     "linkedin": "常に Linkedin を利用しています。 お気軽にメッセージや接続リクエストをお送りください。",
-    "twitter": "ご質問がある場合でも、単にご挨拶したい場合でも、お気軽に Twitter でメッセージを送ってください。",
+    "twitter": "ご質問がある場合でも、単にご挨拶したい場合でも、お気軽に X（ツイッター）でメッセージを送ってください。",
     "email": "メールを送って私に直接ご連絡いただくこともできます。"
   },
   "Blog": {

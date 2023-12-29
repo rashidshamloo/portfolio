@@ -66,13 +66,13 @@ const BlogPage = () => {
   ) : (
     <>
       {posts.posts.length > 0 ? (
-        <div className="flex flex-col items-center justify-center gap-y-4 text-[0.65rem] sm:text-sm lg:text-base w-full">
+        <div className="flex w-full flex-col items-center justify-center gap-y-4 text-[0.65rem] sm:text-sm lg:text-base">
           {posts !== undefined &&
             posts.posts
               .slice(
                 (pages.current - 1) * blogSettings.postsPerPage,
                 (pages.current - 1) * blogSettings.postsPerPage +
-                  blogSettings.postsPerPage
+                  blogSettings.postsPerPage,
               )
               .map((post, index) => (
                 <Tilt
@@ -88,11 +88,11 @@ const BlogPage = () => {
                   perspective="5000px"
                   className="w-full"
                 >
-                  <article className="relative rounded-xl p-4 glass flex flex-col gap-3 transform-style-3d">
-                    <h2 className="font-merriweather text-2xl font-bold border-b-2 pb-2 border-brightBlue text-center dark:border-darkGrayishBlue">
+                  <article className="glass relative flex flex-col gap-3 rounded-xl p-4 transform-style-3d">
+                    <h2 className="border-b-2 border-brightBlue pb-2 text-center font-merriweather text-2xl font-bold dark:border-darkGrayishBlue">
                       <Link
                         href={`/blog/post/${post.slug}-${String(post.id)}`}
-                        className="hover:text-accent/70 transition-all duration-300"
+                        className="transition-all duration-300 hover:text-accent/70"
                       >
                         {post.title}
                       </Link>
@@ -100,18 +100,18 @@ const BlogPage = () => {
                     {post.coverImage !== null && (
                       <Link
                         href={`/blog/post/${post.slug}-${String(post.id)}`}
-                        className="aspect-[50/21] overflow-hidden rounded-xl hover:border-darkGrayishBlue/50 dark:hover:border-grayishGreen/50 border-[1px] border-transparent hover:shadow-md hover:brightness-[1.15] [&_img]:transition-all transition-all [&_img]:duration-300 duration-300 hover:[&_img]:scale-110 relative"
+                        className="relative aspect-[50/21] overflow-hidden rounded-xl border-[1px] border-transparent transition-all duration-300 hover:border-darkGrayishBlue/50 hover:shadow-md hover:brightness-[1.15] dark:hover:border-grayishGreen/50 [&_img]:transition-all [&_img]:duration-300 hover:[&_img]:scale-110"
                       >
                         <Image
                           src={post.coverImage}
                           alt={post.title}
-                          className="object-cover w-full h-full"
+                          className="h-full w-full object-cover"
                           sizes="600px"
                           fill
                         />
                       </Link>
                     )}
-                    <div className="flex justify-between items-center border-t-2 pt-2 border-brightBlue dark:border-darkGrayishBlue md:flex-row flex-col gap-2 text-sm">
+                    <div className="flex flex-col items-center justify-between gap-2 border-t-2 border-brightBlue pt-2 text-sm dark:border-darkGrayishBlue md:flex-row">
                       <p className="inline-block">
                         {t('published')}:{' '}
                         {new Date(post.publishedAt).toLocaleDateString()} -{' '}
@@ -122,7 +122,7 @@ const BlogPage = () => {
                         {post.tagList.map((tag, index) => (
                           <div
                             key={index}
-                            className="inline-block glass rounded-lg px-2"
+                            className="glass inline-block rounded-lg px-2"
                           >
                             {tag}
                           </div>
@@ -131,7 +131,7 @@ const BlogPage = () => {
                     </div>
                     <Link
                       href={`/blog/post/${post.slug}-${String(post.id)}`}
-                      className="py-[2px] text-center mt-2 rounded-xl glass block [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20 hover:text-accent transition-all duration-300"
+                      className="glass mt-2 block rounded-xl py-[2px] text-center transition-all duration-300 hover:text-accent [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20"
                     >
                       {t('readTheFullArticle')}
                     </Link>

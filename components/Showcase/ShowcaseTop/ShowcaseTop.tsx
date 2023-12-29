@@ -1,3 +1,5 @@
+'use client';
+
 // hooks
 import useNextThemes from '@/hooks/useNextThemes';
 
@@ -43,12 +45,12 @@ const ShowcaseTop = () => {
         effect="scaleUpS"
         duration={1}
         delay={1}
-        className="w-full flex justify-center items-center flex-grow"
+        className="flex w-full flex-grow items-center justify-center"
       >
         {darkMode ? (
-          <ParallaxBalloonDark className="max-w-[65%] w-[1024px] md:max-w-[90%]" />
+          <ParallaxBalloonDark className="w-[1024px] max-w-[65%] md:max-w-[90%]" />
         ) : (
-          <ParallaxBalloonLight className="max-w-[65%] w-[1024px] md:max-w-[90%]" />
+          <ParallaxBalloonLight className="w-[1024px] max-w-[65%] md:max-w-[90%]" />
         )}
       </Transition>
       <Transition duration={1} delay={1.5} className="w-full">

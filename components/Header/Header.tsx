@@ -120,7 +120,7 @@ function Header() {
                 href={pathname}
                 locale="ja"
                 className={
-                  'flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
+                  'flex items-center justify-center gap-x-1 transition-all duration-300 will-change-transform transform hover:text-accent hover:opacity-100 hover:drop-shadow-md hover:scale-110 ' +
                   (locale === 'en'
                     ? 'opacity-50'
                     : 'pointer-events-none font-bold')
@@ -141,7 +141,7 @@ function Header() {
                 href={pathname}
                 locale="en"
                 className={
-                  'flex items-center justify-center gap-x-1 transition-all duration-300 transform hover:scale-110 hover:text-accent hover:opacity-100 hover:drop-shadow-md ' +
+                  'flex items-center justify-center gap-x-1 transition-all duration-300 will-change-transform transform hover:text-accent hover:opacity-100 hover:drop-shadow-md hover:scale-110 ' +
                   (locale === 'ja'
                     ? 'opacity-50'
                     : 'pointer-events-none font-bold')
@@ -160,7 +160,7 @@ function Header() {
             </div>
             <Within
               duration={500}
-              className="h-8 text-3xl text-moon transition-all duration-300 hover:scale-110 hover:text-accent hover:brightness-90 hover:drop-shadow-md dark:text-yellow-200 dark:hover:text-accent lg:text-2xl"
+              className="h-8 text-3xl text-moon transition-all duration-300 hover:text-accent hover:brightness-90 hover:drop-shadow-md hover:scale-110 dark:text-yellow-200 dark:hover:text-accent lg:text-2xl"
               toggled={!darkMode}
               onToggle={() => {
                 setTheme(darkMode ? 'light' : 'dark');

@@ -43,6 +43,7 @@ function Intro() {
           className="w-full font-merriweather"
           duration={0.75}
           threshold={0}
+          disableOnMobile={true}
         >
           <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl">
             {t('greeting')}
@@ -51,12 +52,13 @@ function Intro() {
             {t('iam') + ' '}
             <Typed
               strings={[
-                t('name'),
                 t('developer'),
                 t('engineer'),
                 t('programmer'),
                 t('learner'),
+                // t('name'),
               ]}
+              initialString={t('name')}
               className="text-accent"
             />
           </p>

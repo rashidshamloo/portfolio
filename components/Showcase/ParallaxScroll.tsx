@@ -20,7 +20,7 @@ function ParallexScroll() {
   const t = useTranslations('Showcase');
   return (
     <SectionWrapper
-      className={`lg:snap-always lg:snap-center ${montserrat.className}`}
+      className={`lg:snap-center lg:snap-always ${montserrat.className}`}
       separator={true}
       innerClass="relative font-montserrat [&_div]:absolute [&_div]:inset-[-1rem] [&_div]:bg-cover [&_div]:bg-bottom "
       zIndex={9}

@@ -29,13 +29,13 @@ const SectionWrapper = ({
       {/* using an image for shadow instead of drop-shadow for performance */}
       {separator && (
         <div
-          className="pointer-events-none absolute left-0 right-0 h-[80px] bg-[url('/images/shadow.png')]"
+          className="pointer-events-none absolute left-0 right-0 h-[80px] bg-[url('/images/shadow.png')] opacity-80 dark:opacity-100"
           aria-hidden="true"
           style={{ bottom: `-${separatorHeight - 10}px` }}
         />
       )}
       <div
-        className={`relative z-[1] text-mediumViolet/90 max-w-full overflow-hidden dark:text-brightBlue/90 flex flex-col ${innerClass} ${
+        className={`relative z-[1] flex max-w-full flex-col overflow-hidden text-mediumViolet/90 dark:text-brightBlue/90 ${innerClass} ${
           separator ? 'pb-[50px] lg:pb-[100px]' : ''
         }`}
         style={
@@ -51,7 +51,7 @@ const SectionWrapper = ({
                 paddingTop: `calc(${separatorHeight * 2}px)`,
               }
             : {
-                minHeight: `calc(100dvh + 100px)`,
+                minHeight: `calc(100vh + 100px)`,
               }
         }
       >

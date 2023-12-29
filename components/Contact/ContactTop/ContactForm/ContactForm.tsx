@@ -91,7 +91,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
           message: d.user_email,
           'g-recaptcha-response': captcha,
         },
-        EMAILJS_API_KEY
+        EMAILJS_API_KEY,
       );
       setIsSending(false);
       setTimeout(() => setIsLoading(false), 1000);
@@ -129,7 +129,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
     inputColor,
     inputHoverColor,
     inputBGColor,
-    inputHoverBgColor
+    inputHoverBgColor,
   );
 
   return (
@@ -143,7 +143,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
       lineGlareColor={!darkMode ? undefined : 'silver'}
       borderRadius="12px"
       className={
-        'relative mx-auto max-w-[98%] inline-flex items-center justify-center rounded-xl text-[0.75rem] sm:text-sm lg:text-[0.925rem] xl:text-base' +
+        'relative mx-auto inline-flex max-w-[98%] items-center justify-center rounded-xl text-[0.75rem] sm:text-sm lg:text-[0.925rem] xl:text-base' +
         glassProvider
       }
       disableScrollOnTouch={false}
@@ -155,7 +155,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
       />
       {/* setting backdrop-blur on a child div because it flattens the transform-style-3d if set on parent */}
       <div className="absolute inset-0 -z-[1] backdrop-blur-[2px]"></div>
-      <div className="max-w-full glass relative flex aspect-[3/4] w-[30em] flex-col items-center justify-center gap-y-[3em] rounded-xl px-[1.5em] py-[3em] text-darkViolet/70 transform-style-3d dark:text-brightBlue/50 sm:max-w-[unset] sm:pb-[1.5em] sm:pt-[2em]">
+      <div className="glass relative flex aspect-[3/4] w-[30em] max-w-full flex-col items-center justify-center gap-y-[3em] rounded-xl px-[1.5em] py-[3em] text-darkViolet/70 transform-style-3d dark:text-brightBlue/50 sm:max-w-[unset] sm:pb-[1.5em] sm:pt-[2em]">
         <h1
           className="
         text-center text-[1.875em] font-bold uppercase translate-z-16 transform"
@@ -164,7 +164,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
         </h1>
 
         <form
-          className="will-change-transform flex w-full flex-col items-center gap-y-[1em] translate-z-8 transform [&_input]:autofill:bg-transparent [&_textarea]:autofill:bg-transparent"
+          className="flex w-full flex-col items-center gap-y-[1em] will-change-transform translate-z-8 transform [&_input]:autofill:bg-transparent [&_textarea]:autofill:bg-transparent"
           onSubmit={onSubmit}
         >
           <TextField
@@ -276,7 +276,7 @@ const ContactForm = ({ setUserName, setUserEmail }: contactFormProps) => {
               {t('errorCaptcha')}
             </p>
           </div>
-          <div className="mt-[0.5em] inline-block rounded-xl bg-darkViolet/10 p-1 dark:bg-brightBlue/10 dark:[&_.aws-btn>span>span>*]:opacity-80 [&_a>span>span>span>svg]:text-base [&_.aws-btn>span>span>span]:text-xs [&_.aws-btn>span>span>span]:font-medium xl:[&_.aws-btn>span>span>span]:text-sm">
+          <div className="mt-[0.5em] inline-block rounded-xl bg-darkViolet/10 p-1 dark:bg-brightBlue/10 dark:[&_.aws-btn>span>span>*]:opacity-80 [&_.aws-btn>span>span>span]:text-xs [&_.aws-btn>span>span>span]:font-medium xl:[&_.aws-btn>span>span>span]:text-sm [&_a>span>span>span>svg]:text-base">
             <Button type="contact" text={t('buttonSend')} />
           </div>
         </form>

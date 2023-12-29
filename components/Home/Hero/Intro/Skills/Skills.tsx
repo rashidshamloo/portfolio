@@ -11,7 +11,7 @@ function Skills() {
         return (
           <li
             key={index}
-            className="w-[5.25rem] px-[0.125rem] py-2 ease-skillIcon lg:w-[5.75rem] will-change-transform lg:p-2"
+            className="w-[5.25rem] px-[0.125rem] py-2 ease-skillIcon will-change-transform lg:w-[5.75rem] lg:p-2"
           >
             <SkillIcon
               text={skill.text}
