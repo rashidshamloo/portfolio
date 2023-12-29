@@ -71,18 +71,28 @@ function Intro() {
           <WordBreak>{t('about')}</WordBreak>
         </Transition>
         <div className="mb-8 mt-2 flex w-full flex-col justify-center gap-4 lg:mt-0 lg:flex-row xl:justify-end xl:gap-x-6 [&_span]:font-semibold [&_span]:tracking-wide">
-          <Transition effect="fadeRTL" duration={0.75} delay={1.25}>
+          <Transition effect="fadeRTL" duration={0.75} delay={1.75}>
             <Button
               text={t('resume')}
               type="resume"
               href={
                 locale === 'en'
                   ? '/resume/rashid-shamloo-resume.pdf'
-                  : '/resume/rashid-shamloo-rerikisho.pdf'
+                  : '/resume/rashid-shamloo-履歴書.pdf'
               }
               target="_blank"
             />
           </Transition>
+          {locale === 'ja' && (
+            <Transition effect="fadeRTL" duration={0.75} delay={1.25}>
+              <Button
+                text={t('resumeWork')}
+                type="resume"
+                href={'/resume/rashid-shamloo-職務経歴書.pdf'}
+                target="_blank"
+              />
+            </Transition>
+          )}
           <Transition effect="fadeLTR" duration={0.75} delay={1}>
             <Button
               text={t('sendMessage')}

@@ -20,7 +20,8 @@
     "programmer": "プログラマー",
     "engineer": "エンジニア",
     "learner": "熱心な学習者",
-    "resume": "履歴書を見る"
+    "resume": "履歴書を見る",
+    "resumeWork": "職務経歴書を見る"
   },
   "TechnologyAndPassion": {
     "techTitle": "テクノロジー",
