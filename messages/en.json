@@ -55,7 +55,8 @@
     "pageTitle": "Projects",
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code",
-    "backendSourceCode": "Back-end Source Code"
+    "backendSourceCode": "Back-end Source Code",
+    "design": "Design"
   },
   "MoreProjects": {
     "title": "More Projects",

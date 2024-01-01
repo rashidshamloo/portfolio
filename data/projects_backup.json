@@ -1,0 +1,147 @@
+[
+  {
+    "title": {
+      "en": "My Portfolio",
+      "ja": "私のポートフォリオ"
+    },
+    "description": {
+      "en": "I have integrated different cutting-edge technologies with unique design ideas i've had after working on many smaller projects. It will allow you not only to read about my skills but to see them in action as well. Make sure to check the [GitHub readme](https://github.com/rashidshamloo/portfolio#readme) for a detailed list of features and technologies used in this project.",
+      "ja": "さまざまな最先端のテクノロジーを、多くの小規模プロジェクトに取り組んだ後に得たユニークなデザインアイデアと統合しました。 私のスキルについて読むだけでなく、実際のスキルを見ることもできます。 このプロジェクトで使用されている機能とテクノロジーの詳細なリストについては、[GitHubのリードミー](https://github.com/rashidshamloo/portfolio#readme) を必ず確認してください。"
+    },
+    "points": {
+      "en": [
+        "Unique design and Interactive elements",
+        "Internationalization (Japanese/English)",
+        "Designed with scalability and ease of use in mind",
+        "In-depth performance and asset optimization"
+      ],
+      "ja": [
+        "ユニークなデザインとインタラクティビティー",
+        "国際化（日本語・英語）",
+        "拡張性と使いやすさを念頭に置いた設計",
+        "徹底的なパフォーマンスと資産の最適化"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Material UI",
+      "Framer Motion",
+      "i18n"
+    ],
+    "imageDesktop": "/images/projects/portfolio-desktop.webp",
+    "imageDesktopDark": "/images/projects/portfolio-desktop-dark.webp",
+    "imageMobile": "/images/projects/portfolio-mobile.webp",
+    "imageMobileDark": "/images/projects/portfolio-mobile-dark.webp",
+    "demoLink": "https://www.rashidshamloo.com",
+    "sourceLink": "https://github.com/rashidshamloo/portfolio",
+    "backendSourceLink": ""
+  },
+  {
+    "title": {
+      "en": "Todo App",
+      "ja": "やることアプリ"
+    },
+    "description": {
+      "en": "While it may seem like a smiple todo app at first glance, It contains extra featres like user authentication, database integration, latency compensation, drag/drop reordering, and animations.",
+      "ja": "一見するとシンプルなやることアプリのように見えますが、ユーザー認証、データベース統合、遅延補正、ドラッグ アンド ドロップの並べ替え、アニメーションなどの追加機能が含まれています。"
+    },
+    "points": {
+      "en": [
+        "User Authentication using Firebase (Email/Google)",
+        "Anonymouse User login and upgrade",
+        "Database storage using Firestore",
+        "Animations and reordering using Framer Motion"
+      ],
+      "ja": [
+        "Firebaseを利用したユーザー認証（メール/Google）",
+        "匿名ユーザーのログインとアップグレード",
+        "Firestoreを使用したデータベースストレージ",
+        "Framer Motion を使用したアニメーションと並べ替え"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "Vite.js",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Firebase",
+      "Firestore"
+    ],
+    "imageDesktop": "/images/projects/todo-desktop.webp",
+    "imageDesktopDark": "/images/projects/todo-desktop-dark.webp",
+    "imageMobile": "/images/projects/todo-mobile.webp",
+    "imageMobileDark": "/images/projects/todo-mobile-dark.webp",
+    "demoLink": "https://rashidshamloo.github.io/fem_034_todo-app_firebase/",
+    "sourceLink": "https://github.com/rashidshamloo/fem_034_todo-app_firebase",
+    "backendSourceLink": ""
+  },
+  {
+    "title": {
+      "en": "IP Address Tracker",
+      "ja": "IPアドレストラッカー"
+    },
+    "description": {
+      "en": "In this project i worked with Leaflet.js (for map display and interaction) and multiple public IP geolocation APIs and implemented my own API in Node.js/Express.js to pull data from them and send it to the front-end for extra security.",
+      "ja": "このプロジェクトでは、Leaflet.js (地図表示) および複数のパブリック IP 地理位置情報 API を使用し、セキュリティのために独自の API を Node.js/Express.js に実装して、それからデータを取得し、フロントエンドに送信しました。"
+    },
+    "points": {
+      "en": [
+        "Custom API acting as a proxy between public APIs and the front-end",
+        "API security using CORS, private key, and rate-limiting per IP",
+        "Custom middleware to verify the private key, apply rate limiting, and add custom fields to the JSON response"
+      ],
+      "ja": [
+        "パブリック API とフロントエンドの間のプロキシとして機能するカスタム API",
+        "CORS、秘密キー、IP ごとのレート制限を使用した API セキュリティ",
+        "秘密キーを検証し、レート制限を適用し、JSON 応答にカスタム フィールドを追加するカスタム ミドルウェアの開発"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "Vite.js",
+      "React.js",
+      "Leaflet.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "REST API"
+    ],
+    "imageDesktop": "/images/projects/ip-tracker-desktop.webp",
+    "imageMobile": "/images/projects/ip-tracker-mobile.webp",
+    "demoLink": "https://rashidshamloo.github.io/fem_033_ip-address-tracker/",
+    "sourceLink": "https://github.com/rashidshamloo/fem_033_ip-address-tracker",
+    "backendSourceLink": "https://github.com/rashidshamloo/fem_033_ip-address-tracker_backend"
+  },
+  {
+    "title": {
+      "en": "Clipboard Landing Page",
+      "ja": "クリップボードのランディング ページ"
+    },
+    "description": {
+      "en": "This project's layout is done entirely using Material UI. I've also added reveal animations, scroll snapping, and full page navigation. you can check my process in [this article](https://dev.to/rashidshamloo/clipboard-landing-page-the-process-311i).",
+      "ja": "このプロジェクトのレイアウトはすべて Material UI を使用して行われます。 また、アニメーション、スクロール スナップ、およびページ全体のナビゲーションも追加しました。 [この記事](https://dev.to/rashidshamloo/clipboard-landing-page-the-process-311i)で私のプロセスを確認できます。"
+    },
+    "points": {
+      "en": [
+        "Material UI Customization using TypeScript",
+        "Full page navigation and scroll snapping",
+        "Smooth animations using AOS library"
+      ],
+      "ja": [
+        "TypeScript を使用した Material UI のカスタマイズ",
+        "ページ全体のナビゲーションとスクロール スナップ",
+        "AOSライブラリを使用したスムーズなアニメーション"
+      ]
+    },
+    "tags": ["TypeScript", "Vite.js", "React.js", "Material UI", "AOS"],
+    "imageDesktop": "/images/projects/clipboard-desktop.webp",
+    "imageMobile": "/images/projects/clipboard-mobile.webp",
+    "demoLink": "https://rashidshamloo.github.io/fem_031_clipboard-landing-page/",
+    "sourceLink": "https://github.com/rashidshamloo/fem_031_clipboard-landing-page",
+    "backendSourceLink": ""
+  }
+]

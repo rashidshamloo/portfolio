@@ -56,7 +56,8 @@
     "pageTitle": "プロジェクト",
     "liveDemo": "ライブデモ",
     "sourceCode": "ソースコード",
-    "backendSourceCode": "バックエンドのソースコード"
+    "backendSourceCode": "バックエンドのソースコード",
+    "design": "デザイン"
   },
   "MoreProjects": {
     "title": "その他のプロジェクト",

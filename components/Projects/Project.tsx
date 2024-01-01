@@ -15,13 +15,14 @@ interface projectData {
   description: Record<string, string>;
   points: Record<string, string[]>;
   tags: string[];
-  imageDesktop: string;
+  imageDesktop?: string;
   imageDesktopDark?: string;
   imageMobile: string;
   imageMobileDark?: string;
-  demoLink: string;
+  demoLink?: string;
   sourceLink: string;
   backendSourceLink?: string;
+  design?: string;
 }
 
 interface projectProps {
@@ -44,12 +45,23 @@ const Project = ({ reverse = false, data }: projectProps) => {
           <WordBreak>{data.title[locale]}</WordBreak>
         </h2>
         <div className="mx-auto w-[300px] sm:w-[450px] 2xl:w-[600px]">
-          <MockCombined
-            imageDesktop={data.imageDesktop}
-            imageDesktopDark={data.imageDesktopDark}
-            imageMobile={data.imageMobile}
-            imageMobileDark={data.imageMobileDark}
-          />
+          {data.imageDesktop != undefined ? (
+            <MockCombined
+              imageDesktop={data.imageDesktop}
+              imageDesktopDark={data.imageDesktopDark}
+              imageMobile={data.imageMobile}
+              imageMobileDark={data.imageMobileDark}
+            />
+          ) : (
+            <div className="relative mt-4 min-h-[250px] md:min-h-[350px]">
+              <Image
+                src={data.imageMobile}
+                alt={data.title[locale]}
+                fill
+                className="object-contain"
+              />
+            </div>
+          )}
         </div>
         <ul className="mx-auto flex flex-wrap items-center justify-center gap-2 text-sm font-bold sm:w-[90%] 2xl:text-base [&>li]:rounded-full [&>li]:px-[1em] [&>li]:py-[0.25em]">
           {data.tags.map((tag, index) => (
@@ -64,14 +76,16 @@ const Project = ({ reverse = false, data }: projectProps) => {
           <WordBreak>{data.title[locale]}</WordBreak>
         </h2>
         <div className="mb-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row lg:my-3 lg:justify-start [&>*]:rounded-xl [&>*]:bg-darkViolet/10 [&>*]:p-1 dark:[&>*]:bg-brightBlue/10 [&>div]:w-[90%] sm:[&>div]:w-auto dark:[&_.aws-btn>span>span>*]:opacity-80 [&_.aws-btn]:w-full sm:[&_.aws-btn]:w-auto [&_a>span>span>span>svg]:text-base [&_a>span]:text-xs [&_a>span]:font-medium xl:[&_a>span]:text-sm">
-          <div>
-            <Button
-              href={data.demoLink}
-              text={t('liveDemo')}
-              type="live"
-              target="_blank"
-            />
-          </div>
+          {!!data.demoLink && (
+            <div>
+              <Button
+                href={data.demoLink}
+                text={t('liveDemo')}
+                type="live"
+                target="_blank"
+              />
+            </div>
+          )}
           <div>
             <Button
               href={data.sourceLink}
@@ -86,6 +100,16 @@ const Project = ({ reverse = false, data }: projectProps) => {
                 href={data.backendSourceLink}
                 text={t('backendSourceCode')}
                 type="source"
+                target="_blank"
+              />
+            </div>
+          )}
+          {!!data.design && (
+            <div>
+              <Button
+                href={data.design}
+                text={t('design')}
+                type="design"
                 target="_blank"
               />
             </div>

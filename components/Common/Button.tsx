@@ -9,7 +9,7 @@ import 'react-awesome-button/dist/styles.css';
 import '@/styles/button.scss';
 
 // icons
-import { FaPaperPlane, FaRegFileAlt } from 'react-icons/fa';
+import { FaPaperPlane, FaRegFileAlt, FaImage } from 'react-icons/fa';
 import { BsLightningFill, BsGithub } from 'react-icons/bs';
 
 // hooks
@@ -19,7 +19,7 @@ import useNextThemes from '@/hooks/useNextThemes';
 interface buttonProps {
   text: string;
   href?: string;
-  type?: 'contact' | 'resume' | 'source' | 'live';
+  type?: 'contact' | 'resume' | 'source' | 'live' | 'design';
   className?: string;
   target?: string;
 }
@@ -41,6 +41,8 @@ const Button = ({
         return <FaRegFileAlt />;
       case 'source':
         return <BsGithub />;
+      case 'design':
+        return <FaImage />;
       case 'live':
       default:
         return <BsLightningFill />;
