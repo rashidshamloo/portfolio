@@ -72,7 +72,7 @@ const Project = ({ reverse = false, data }: projectProps) => {
         </ul>
       </div>
       <div className="flex w-full flex-col gap-y-4 py-4 text-center lg:gap-y-6 lg:text-left">
-        <h2 className="hidden font-merriweather text-[2rem] font-bold lg:block xl:text-4xl">
+        <h2 className="hidden font-merriweather text-[2rem] font-bold lg:block xl:text-[2.25rem] ">
           <WordBreak>{data.title[locale]}</WordBreak>
         </h2>
         <div className="mb-2 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row lg:my-3 lg:justify-start [&>*]:rounded-xl [&>*]:bg-darkViolet/10 [&>*]:p-1 dark:[&>*]:bg-brightBlue/10 [&>div]:w-[90%] sm:[&>div]:w-auto dark:[&_.aws-btn>span>span>*]:opacity-80 [&_.aws-btn]:w-full sm:[&_.aws-btn]:w-auto [&_a>span>span>span>svg]:text-base [&_a>span]:text-xs [&_a>span]:font-medium xl:[&_a>span]:text-sm">

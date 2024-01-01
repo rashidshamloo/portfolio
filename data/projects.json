@@ -49,7 +49,7 @@
   },
   {
     "title": {
-      "en": "AI face detection with age, gender, and ethnicity recognition",
+      "en": "AI Face Detection with Age, Gender, and Ethnicity Recognition",
       "ja": "AI 顔検出 （年齢、性別、民族を検出する機能付き）"
     },
     "description": {
@@ -179,7 +179,7 @@
       "ja": "レシピランキング モバイルアプリ"
     },
     "description": {
-      "en": "This project a A mobile application for top cooking recipes I made using React Native.",
+      "en": "This project is a mobile application for top cooking recipes that I made using React Native.",
       "ja": "このプロジェクトは React Native を使用して作成しました人気の料理レシピのモバイル アプリケーションです。"
     },
     "points": {
