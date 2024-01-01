@@ -94,8 +94,8 @@
       "ja": "衣料品店のECサイト - Rumusha"
     },
     "description": {
-      "en": "This project is an e-commerce website for a Japanese clothing store called Rumusha that showcases my ability to design and implement e-commerce websites using component-based frameworks (React.js/Next.js) for the front end and Shopify for the back end.",
-      "ja": "このプロジェクトは、Rumusha という日本の衣料品店の電子商取引 Web サイトです。フロントエンドにはコンポーネントベースのフレームワーク (React.js/Next.js) を、バックエンドには Shopify を使用して電子商取引 Web サイトを設計および実装する私の能力を示しています。"
+      "en": "This project is an e-commerce website for a Japanese clothing store called Rumusha that showcases my ability to design and implement e-commerce websites using component-based frameworks (React/Next.js) for the front end and Shopify for the back end.",
+      "ja": "このプロジェクトは、Rumusha という日本の衣料品店の電子商取引 Web サイトです。フロントエンドにはコンポーネントベースのフレームワーク (React/Next.js) を、バックエンドには Shopify を使用して電子商取引 Web サイトを設計および実装する私の能力を示しています。"
     },
     "points": {
       "en": [
@@ -138,8 +138,8 @@
       "ja": "日本の寿司レストランのウェブサイト - 鮨どしら"
     },
     "description": {
-      "en": "This is the website for a Japanese sushi restaurant called Sushi Doshira that showcases my ability to design responsive layouts and implement them using component-based frameworks (React.js/Next.js) with internationalization (i18n), SEO optimization, animations, and accessibility features.",
-      "ja": "このプロジェクトでは、レスポンシブ レイアウトを設計し、国際化 (i18n)、SEO 最適化、アニメーション、アクセシビリティ機能を備えたコンポーネント ベースのフレームワーク (React.js/Next.js) を使用してそれらを実装する私の能力を紹介します。"
+      "en": "This is the website for a Japanese sushi restaurant called Sushi Doshira that showcases my ability to design responsive layouts and implement them using component-based frameworks (React/Next.js) with internationalization (i18n), SEO optimization, animations, and accessibility features.",
+      "ja": "このプロジェクトでは、レスポンシブ レイアウトを設計し、国際化 (i18n)、SEO 最適化、アニメーション、アクセシビリティ機能を備えたコンポーネント ベースのフレームワーク (React/Next.js) を使用してそれらを実装する私の能力を紹介します。"
     },
     "points": {
       "en": [
@@ -234,7 +234,7 @@
     },
     "tags": [
       "TypeScript",
-      "React.js",
+      "React",
       "Next.js",
       "Tailwind CSS",
       "Material UI",
@@ -274,7 +274,7 @@
     "tags": [
       "TypeScript",
       "Vite.js",
-      "React.js",
+      "React",
       "Tailwind CSS",
       "Framer Motion",
       "Firebase",
@@ -311,7 +311,7 @@
     "tags": [
       "TypeScript",
       "Vite.js",
-      "React.js",
+      "React",
       "Leaflet.js",
       "Tailwind CSS",
       "Node.js",
@@ -345,7 +345,7 @@
         "AOSライブラリを使用したスムーズなアニメーション"
       ]
     },
-    "tags": ["TypeScript", "Vite.js", "React.js", "Material UI", "AOS"],
+    "tags": ["TypeScript", "Vite.js", "React", "Material UI", "AOS"],
     "imageDesktop": "/images/projects/clipboard-desktop.webp",
     "imageMobile": "/images/projects/clipboard-mobile.webp",
     "demoLink": "https://rashidshamloo.github.io/fem_031_clipboard-landing-page/",
