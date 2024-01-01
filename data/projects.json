@@ -1,6 +1,216 @@
 [
   {
     "title": {
+      "en": "Food Log",
+      "ja": "フードログ"
+    },
+    "description": {
+      "en": "Food Log is a full stack web application that helps you keep track of your daily calorie intake and monitor your macronutrient intake. I made this application to learn and gain more experience with back-end technologies like databases, ORMs, RSC (react Server Components), Server Actions, and User Authentication.",
+      "ja": "フードログは、毎日のカロリー摂取量を追跡し、主要栄養素の摂取量を監視するのに役立つフルスタック Web アプリケーションです。 このアプリケーションは、データベース、ORM、RSC (React Server Components)、サーバー アクション、ユーザー認証などのバックエンド テクノロジを学び、経験を積むために作成しました。"
+    },
+    "points": {
+      "en": [
+        "User Authentication using Clerk",
+        "CRUD opertations using RSC (React Server Components) and Server Actions",
+        "Data storage using Turso (Database) and Prisma (ORM)",
+        "Form validation using react-hook-form and Zod",
+        "Custom design using Shadcn plus custom dark/light switch",
+        "SEO, asset, and performance optimizaion"
+      ],
+      "ja": [
+        "Clerkを使用したユーザー認証",
+        "RSC (React Server Components) とサーバー アクションを使用した CRUD 操作",
+        "Turso (データベース) と Prisma (ORM) を使用したデータ ストレージ",
+        "react-hook-form と Zod を使用したフォーム検証",
+        "Shadcn を使用したカスタム デザインとカスタムのダーク/ライト スイッチ",
+        "SEO、アセット、パフォーマンスの最適化"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "RSC (React Server Components)",
+      "Server Actions",
+      "Tailwind CSS",
+      "Shadcn",
+      "react-hook-form",
+      "Zod",
+      "Prisma",
+      "Turso",
+      "Clerk"
+    ],
+    "imageDesktop": "/images/projects/food-log-desktop-light.webp",
+    "imageDesktopDark": "/images/projects/food-log-desktop-dark.webp",
+    "imageMobile": "/images/projects/food-log-mobile-light.webp",
+    "imageMobileDark": "/images/projects/food-log-mobile-dark.webp",
+    "demoLink": "https://food-log.rashidshamloo.com",
+    "sourceLink": "https://github.com/rashidshamloo/food-log"
+  },
+  {
+    "title": {
+      "en": "AI Face Detection with Age, Gender, and Ethnicity Recognition",
+      "ja": "AI 顔検出 （年齢、性別、民族を検出する機能付き）"
+    },
+    "description": {
+      "en": "This AI-powered face detection application can detect faces at various angles and detect multiple faces in a photo simultaneously with high accuracy. It can also recognize the age, gender, and ethnicity of each detected face.",
+      "ja": "この AI 顔検出アプリケーションは、さまざまな角度で顔を検出し、写真内の複数の顔を同時に高精度で検出できます。検出された各顔の年齢、性別、民族も認識できます。"
+    },
+    "points": {
+      "en": [
+        "Data exchange with 3rd-party API using Next.js API routes",
+        "File Handling using UploadThing (upload, url generation, size, type, and count limit)",
+        "End-to-End testing using Cypress and intercepted API responses",
+        "Skeleton UI loading animation",
+        "SEO, asset, and performance optimizaion"
+      ],
+      "ja": [
+        "Next.js API ルートを使用したサードパーティ API とのデータ交換",
+        "UploadThing を使用したファイル処理 (アップロード、URL 生成、サイズ、タイプ、および数制限)",
+        "Cypress とインターセプトされた API 応答を使用したエンドツーエンドのテスト",
+        "スケルトン UI 読み込みアニメーション",
+        "SEO、アセット、パフォーマンスの最適化"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Next.js API Routes",
+      "Tailwind CSS",
+      "RTK Query",
+      "Zod",
+      "UploadThing",
+      "Cypress"
+    ],
+    "imageDesktop": "/images/projects/ai-face-detection-desktop.webp",
+    "imageMobile": "/images/projects/ai-face-detection-mobile.webp",
+    "demoLink": "https://ai-face-detection.rashidshamloo.com",
+    "sourceLink": "https://github.com/rashidshamloo/ai-face-detection"
+  },
+  {
+    "title": {
+      "en": "Clothing Store E-Commerce Website - Rumusha",
+      "ja": "衣料品店のECサイト - Rumusha"
+    },
+    "description": {
+      "en": "This project is an e-commerce website for a Japanese clothing store called Rumusha that showcases my ability to design and implement e-commerce websites using component-based frameworks (React/Next.js) for the front end and Shopify for the back end.",
+      "ja": "このプロジェクトは、Rumusha という日本の衣料品店の電子商取引 Web サイトです。フロントエンドにはコンポーネントベースのフレームワーク (React/Next.js) を、バックエンドには Shopify を使用して電子商取引 Web サイトを設計および実装する私の能力を示しています。"
+    },
+    "points": {
+      "en": [
+        "Custom responsive design using Figma",
+        "Shopify Integration using the Storefront GraphQL API",
+        "Reveal animations using Framer Motion",
+        "Customized sliders using Swiper",
+        "State management using Search Params",
+        "SEO, asset, and performance optimizaion"
+      ],
+      "ja": [
+        "Figmaを使用したカスタムレスポンシブデザイン",
+        "Storefront GraphQL API を使用した Shopify 統合",
+        "Framer Motion を使用したアニメーション",
+        "Swiperを使用したカスタマイズされたスライダー",
+        "Search Params を使用した状態管理",
+        "SEO、アセット、パフォーマンスの最適化"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Shopify",
+      "Tailwind CSS",
+      "GraphQL",
+      "Swiper",
+      "Framer Motion",
+      "Figma"
+    ],
+    "imageDesktop": "/images/projects/clothing-store-desktop.webp",
+    "imageMobile": "/images/projects/clothing-store-mobile.webp",
+    "demoLink": "https://clothing-store.rashidshamloo.com",
+    "sourceLink": "https://github.com/rashidshamloo/clothing-store",
+    "design": "https://www.behance.net/gallery/185094947/Clothing-Store-E-Commerce-Website-Design"
+  },
+  {
+    "title": {
+      "en": "Japanese Sushi Restaurant Website - Sushi Doshira",
+      "ja": "日本の寿司レストランのウェブサイト - 鮨どしら"
+    },
+    "description": {
+      "en": "This is the website for a Japanese sushi restaurant called Sushi Doshira that showcases my ability to design responsive layouts and implement them using component-based frameworks (React/Next.js) with internationalization (i18n), SEO optimization, animations, and accessibility features.",
+      "ja": "このプロジェクトでは、レスポンシブ レイアウトを設計し、国際化 (i18n)、SEO 最適化、アニメーション、アクセシビリティ機能を備えたコンポーネント ベースのフレームワーク (React/Next.js) を使用してそれらを実装する私の能力を紹介します。"
+    },
+    "points": {
+      "en": [
+        "Custom responsive design using Figma",
+        "English and Japanese internationalization (i18n) using next-intl",
+        "Reveal animations using Framer Motion",
+        "Customized slider using Swiper",
+        "SEO, asset, and performance optimizaion"
+      ],
+      "ja": [
+        "Figmaを使用したカスタムレスポンシブデザイン",
+        "next-intl を使用した英語と日本語の国際化 (i18n)",
+        "Framer Motion を使用したアニメーション",
+        "Swiperを使用したカスタマイズされたスライダー",
+        "SEO、アセット、パフォーマンスの最適化"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "internationalization (i18n)",
+      "Swiper",
+      "Framer Motion",
+      "Figma"
+    ],
+    "imageDesktop": "/images/projects/sushi-restaurant-desktop.webp",
+    "imageMobile": "/images/projects/sushi-restaurant-mobile.webp",
+    "demoLink": "https://sushi-restaurant.rashidshamloo.com",
+    "sourceLink": "https://github.com/rashidshamloo/sushi-restaurant",
+    "design": "https://www.behance.net/gallery/184447629/Japanese-Sushi-Restaurant-Website-Design"
+  },
+  {
+    "title": {
+      "en": "Recipe Ranking Mobile Application",
+      "ja": "レシピランキング モバイルアプリ"
+    },
+    "description": {
+      "en": "This project is a mobile application for top cooking recipes that I made using React Native.",
+      "ja": "このプロジェクトは React Native を使用して作成しました人気の料理レシピのモバイル アプリケーションです。"
+    },
+    "points": {
+      "en": [
+        "Custom design implemented using NativeWind",
+        "Data fetching from third-party API using RTK Query",
+        "API response validation using Zod",
+        "Modal elements, pull-to-refresh, loading indicators, and other functionalities",
+        "APK file built using EAS Build"
+      ],
+      "ja": [
+        "NativeWind を使用して実装されたカスタム デザイン",
+        "RTK Queryを使用したサードパーティ API からのデータ取得",
+        "Zod を使用した API レスポンスの検証",
+        "モーダル要素、プルして更新、読み込みインジケーター、およびその他の機能",
+        "EAS Build を使用してビルドされた APK ファイル"
+      ]
+    },
+    "tags": [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "RTK Query",
+      "Zod"
+    ],
+    "imageMobile": "/images/projects/recipe-ranking.webp",
+    "sourceLink": "https://github.com/rashidshamloo/recipe-ranking"
+  },
+  {
+    "title": {
       "en": "My Portfolio",
       "ja": "私のポートフォリオ"
     },
@@ -24,7 +234,7 @@
     },
     "tags": [
       "TypeScript",
-      "React.js",
+      "React",
       "Next.js",
       "Tailwind CSS",
       "Material UI",
@@ -36,8 +246,7 @@
     "imageMobile": "/images/projects/portfolio-mobile.webp",
     "imageMobileDark": "/images/projects/portfolio-mobile-dark.webp",
     "demoLink": "https://www.rashidshamloo.com",
-    "sourceLink": "https://github.com/rashidshamloo/portfolio",
-    "backendSourceLink": ""
+    "sourceLink": "https://github.com/rashidshamloo/portfolio"
   },
   {
     "title": {
@@ -65,7 +274,7 @@
     "tags": [
       "TypeScript",
       "Vite.js",
-      "React.js",
+      "React",
       "Tailwind CSS",
       "Framer Motion",
       "Firebase",
@@ -76,8 +285,7 @@
     "imageMobile": "/images/projects/todo-mobile.webp",
     "imageMobileDark": "/images/projects/todo-mobile-dark.webp",
     "demoLink": "https://rashidshamloo.github.io/fem_034_todo-app_firebase/",
-    "sourceLink": "https://github.com/rashidshamloo/fem_034_todo-app_firebase",
-    "backendSourceLink": ""
+    "sourceLink": "https://github.com/rashidshamloo/fem_034_todo-app_firebase"
   },
   {
     "title": {
@@ -103,7 +311,7 @@
     "tags": [
       "TypeScript",
       "Vite.js",
-      "React.js",
+      "React",
       "Leaflet.js",
       "Tailwind CSS",
       "Node.js",
@@ -137,11 +345,10 @@
         "AOSライブラリを使用したスムーズなアニメーション"
       ]
     },
-    "tags": ["TypeScript", "Vite.js", "React.js", "Material UI", "AOS"],
+    "tags": ["TypeScript", "Vite.js", "React", "Material UI", "AOS"],
     "imageDesktop": "/images/projects/clipboard-desktop.webp",
     "imageMobile": "/images/projects/clipboard-mobile.webp",
     "demoLink": "https://rashidshamloo.github.io/fem_031_clipboard-landing-page/",
-    "sourceLink": "https://github.com/rashidshamloo/fem_031_clipboard-landing-page",
-    "backendSourceLink": ""
+    "sourceLink": "https://github.com/rashidshamloo/fem_031_clipboard-landing-page"
   }
 ]
