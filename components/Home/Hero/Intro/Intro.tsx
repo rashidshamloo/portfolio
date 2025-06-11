@@ -36,7 +36,7 @@ function Intro() {
   }, []);
 
   return (
-    <div ref={ref} className="w-full md:max-w-[50%]">
+    <div ref={ref} className="w-full md:max-w-[55%]">
       <div className="mt-8 flex flex-col items-start text-center lg:mt-0 lg:text-left">
         <Transition
           effect="fadeTTB"
