@@ -13,12 +13,15 @@ import {
 /* Instruments */
 import { reducer } from './rootReducer';
 import { middleware } from './middleware';
+import type { Middleware } from '@reduxjs/toolkit';
 
 export const reduxStore = configureStore({
   reducer,
   middleware: (getDefaultMiddleware) => {
     if (process.env.NODE_ENV !== 'production')
-      return getDefaultMiddleware().concat(middleware);
+      return getDefaultMiddleware().concat(
+        middleware as unknown as Middleware[]
+      );
     return getDefaultMiddleware();
   },
 });

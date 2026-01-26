@@ -12,8 +12,8 @@ import {
   useReducedMotion,
   CustomDomComponent,
   MotionProps,
-  Transition,
 } from 'framer-motion';
+import type { Transition } from 'framer-motion';
 
 // variants
 import { variants, variantsType } from '@/settings/variants';

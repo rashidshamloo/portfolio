@@ -159,12 +159,15 @@ function Header() {
               </Link>
             </div>
             <Within
-              duration={500}
-              className="h-8 text-3xl text-moon transition-all duration-300 hover:text-accent hover:brightness-90 hover:drop-shadow-md hover:scale-110 dark:text-yellow-200 dark:hover:text-accent lg:text-2xl"
-              toggled={!darkMode}
-              onToggle={() => {
-                setTheme(darkMode ? 'light' : 'dark');
-              }}
+              {...({
+                duration: 500,
+                className:
+                  'h-8 text-3xl text-moon transition-all duration-300 hover:text-accent hover:brightness-90 hover:drop-shadow-md hover:scale-110 dark:text-yellow-200 dark:hover:text-accent lg:text-2xl',
+                toggled: !darkMode,
+                onToggle: () => {
+                  setTheme(darkMode ? 'light' : 'dark');
+                },
+              } as unknown as React.ComponentProps<typeof Within>)}
             />
           </div>
         </div>
