@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/s",
+      "destination": "/resume/rashid-shamloo-%E8%81%B7%E5%8B%99%E7%B5%8C%E6%AD%B4%E6%9B%B8.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/r",
+      "destination": "/resume/rashid-shamloo-%E5%B1%A5%E6%AD%B4%E6%9B%B8.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/e",
+      "destination": "/resume/rashid-shamloo-resume.pdf",
+      "permanent": true
+    }
+  ]
+}
