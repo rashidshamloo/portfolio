@@ -66,7 +66,7 @@ const BlogPage = () => {
   ) : (
     <>
       {posts.posts.length > 0 ? (
-        <div className="flex w-full flex-col items-center justify-center gap-y-4 text-[0.65rem] sm:text-sm lg:text-base">
+        <div className="flex w-full flex-col items-center justify-center gap-y-4 text-[0.65rem] hover:cursor-pointer sm:text-sm lg:text-base">
           {posts !== undefined &&
             posts.posts
               .slice(
@@ -100,7 +100,7 @@ const BlogPage = () => {
                     {post.coverImage !== null && (
                       <Link
                         href={`/blog/post/${post.slug}-${String(post.id)}`}
-                        className="relative aspect-[50/21] overflow-hidden rounded-xl border-[1px] border-transparent transition-all duration-300 hover:border-darkGrayishBlue/50 hover:shadow-md hover:brightness-[1.15] dark:hover:border-grayishGreen/50 [&_img]:transition-all [&_img]:duration-300 hover:[&_img]:scale-110"
+                        className="relative aspect-[50/21] overflow-hidden rounded-xl border-[1px] border-transparent transition-all duration-300 hover:border-darkGrayishBlue/50 hover:shadow-md dark:hover:border-grayishGreen/50 [&_img]:transition-all [&_img]:duration-300 [&_img]:hover:brightness-110 [&_img]:hover:scale-110"
                       >
                         <Image
                           src={post.coverImage}

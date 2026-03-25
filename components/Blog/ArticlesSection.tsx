@@ -28,7 +28,7 @@ const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
   return (
     <>
       {articles.length > 1 ? (
-        <div className="flex w-full flex-col items-center justify-center gap-4 font-merriweather">
+        <div className="flex w-full flex-col items-center justify-center gap-4 font-merriweather hover:cursor-pointer">
           <h2 className="w-full border-b-2 border-brightBlue pb-2 text-center text-xl font-bold dark:border-darkGrayishBlue md:text-2xl">
             {title}
           </h2>
@@ -48,7 +48,7 @@ const ArticlesSection = ({ title, articles }: ArticleSectionProps) => {
               >
                 <Link
                   href={`/blog/post/${article.slug}-${String(article.id)}`}
-                  className="glass relative flex flex-col items-center justify-center gap-1 rounded-xl p-2 translate-z-[0px] transform hover:shadow-md [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20 [&_h3]:transition-all  [&_h3]:duration-300 [&_h3]:hover:text-accent [&_img]:transition-all [&_img]:duration-300 [&_img]:hover:brightness-[1.15] [&_img]:hover:scale-110"
+                  className="glass relative flex flex-col items-center justify-center gap-1 rounded-xl p-2 hover:shadow-md [&.glass]:hover:bg-grayishGreen/20 dark:[&.glass]:hover:bg-grayishGreen/20 [&_h3]:transition-all  [&_h3]:duration-300 [&_h3]:hover:text-accent [&_img]:transition-all [&_img]:duration-300 [&_img]:hover:brightness-110 [&_img]:hover:scale-110"
                 >
                   <h3 className="text-center">{article.title}</h3>
                   {article.coverImage !== null && (
